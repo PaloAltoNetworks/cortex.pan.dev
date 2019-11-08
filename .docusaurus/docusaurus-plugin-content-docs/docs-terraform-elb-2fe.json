@@ -1,0 +1,10 @@
+{
+  "id": "terraform_elb",
+  "title": "Terraform ELB Integration",
+  "sidebar_label": "Terraform ELB Integration",
+  "description": "### AWS ELB Sandwich with PANFW Deployed using terraform_version",
+  "source": "@site/docs/terraform_elb.md",
+  "permalink": "/docs/terraform_elb",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

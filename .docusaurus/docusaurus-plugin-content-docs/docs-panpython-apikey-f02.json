@@ -1,0 +1,24 @@
+{
+  "id": "panpython_apikey",
+  "title": "API Key Generation",
+  "sidebar_label": "API Key Generation",
+  "hide_title": false,
+  "description": "Generating an API key with pan-python",
+  "keywords": [
+    "pan-os",
+    "panos",
+    "xml",
+    "api",
+    "quickstart",
+    "pan-python",
+    "sdk",
+    "apikey",
+    "key",
+    "python"
+  ],
+  "image": "/img/panos_apis.svg",
+  "source": "@site/docs/panpython_apikey.md",
+  "permalink": "/docs/panpython_apikey",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

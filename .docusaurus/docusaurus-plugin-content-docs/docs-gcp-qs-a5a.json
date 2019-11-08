@@ -1,0 +1,10 @@
+{
+  "id": "gcp_qs",
+  "title": "GCP",
+  "sidebar_label": "Overview",
+  "description": "# VM-Series on Google Cloud Platform Overview",
+  "source": "@site/docs/gcp_qs.md",
+  "permalink": "/docs/gcp_qs",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

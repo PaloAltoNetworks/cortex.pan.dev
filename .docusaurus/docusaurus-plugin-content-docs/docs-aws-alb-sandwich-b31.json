@@ -1,0 +1,10 @@
+{
+  "id": "aws_alb_sandwich",
+  "title": "ALB/NLB Load Balancer Sandwich",
+  "sidebar_label": "ALB/NLB Load Balancer Sandwich",
+  "description": "# Using VM-Series Firewalls and an ALB Sandwich in AWS",
+  "source": "@site/docs/aws_alb_sandwich.md",
+  "permalink": "/docs/aws_alb_sandwich",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

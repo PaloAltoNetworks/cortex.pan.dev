@@ -1,0 +1,24 @@
+{
+  "id": "cortex",
+  "title": "Cortex™",
+  "sidebar_label": "Cortex™",
+  "hide_title": false,
+  "description": "Overview of Cortex™",
+  "keywords": [
+    "cortex",
+    "data lake",
+    "overview",
+    "api",
+    "sdk"
+  ],
+  "image": "/img/cortexfordevelopers.png",
+  "source": "@site/docs/cortex.md",
+  "permalink": "/docs/cortex",
+  "sidebar": "cortex",
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/docs/pancloud_python_qs"
+  },
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

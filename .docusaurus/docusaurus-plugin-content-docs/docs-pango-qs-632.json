@@ -1,0 +1,23 @@
+{
+  "id": "pango_qs",
+  "title": "Quickstart",
+  "sidebar_label": "Quickstart",
+  "hide_title": false,
+  "description": "Getting started with pango",
+  "keywords": [
+    "pan-os",
+    "panos",
+    "xml",
+    "api",
+    "rest",
+    "sdk",
+    "pango",
+    "go",
+    "golang"
+  ],
+  "image": "/img/panos_apis.svg",
+  "source": "@site/docs/pango_qs.md",
+  "permalink": "/docs/pango_qs",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

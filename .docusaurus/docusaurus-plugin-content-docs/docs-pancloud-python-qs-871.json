@@ -1,0 +1,15 @@
+{
+  "id": "pancloud_python_qs",
+  "title": "Quickstart",
+  "sidebar_label": "Quickstart",
+  "description": "[![GitHub page](https://img.shields.io/badge/GitHub-Repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/PaloAltoNetworks/pancloud) [![GitHub stars](https://img.shields.io/github/stars/PaloAltoNetworks/pancloud?style=for-the-badge)](https://github.com/PaloAltoNetworks/pancloud)",
+  "source": "@site/docs/pancloud_python_qs.md",
+  "permalink": "/docs/pancloud_python_qs",
+  "sidebar": "cortex",
+  "previous": {
+    "title": "Cortex™",
+    "permalink": "/docs/cortex"
+  },
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

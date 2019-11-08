@@ -1,0 +1,10 @@
+{
+  "id": "autoscaling_aws",
+  "title": "Auto Scaling VM-Series Firewalls on AWS 2.1",
+  "sidebar_label": "ELB Integration v2.1",
+  "description": "Version 2.1 Firewall Template GA release",
+  "source": "@site/docs/autoscaling_aws.md",
+  "permalink": "/docs/autoscaling_aws",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}

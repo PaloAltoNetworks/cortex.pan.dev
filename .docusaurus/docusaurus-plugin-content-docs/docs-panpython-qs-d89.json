@@ -1,0 +1,22 @@
+{
+  "id": "panpython_qs",
+  "title": "Quickstart",
+  "sidebar_label": "Quickstart",
+  "hide_title": false,
+  "description": "Getting started with pan-python",
+  "keywords": [
+    "pan-os",
+    "panos",
+    "xml",
+    "api",
+    "quickstart",
+    "pan-python",
+    "sdk",
+    "python"
+  ],
+  "image": "/img/panos_apis.svg",
+  "source": "@site/docs/panpython_qs.md",
+  "permalink": "/docs/panpython_qs",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": "1539502055"
+}
