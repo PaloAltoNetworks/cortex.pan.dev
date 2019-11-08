@@ -123,5 +123,11 @@ module.exports = {
       changefreq: "weekly",
       priority: 0.5
     }
+  ],
+  scripts: [
+    {
+      src: "//app-ab28.marketo.com/js/forms2/js/forms2.min.js",
+      async: true
+    }
   ]
 };

@@ -122,5 +122,11 @@ export default {
         }
       }
     ]
+  ],
+  "scripts": [
+    {
+      "src": "//app-ab28.marketo.com/js/forms2/js/forms2.min.js",
+      "async": true
+    }
   ]
 };
