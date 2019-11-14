@@ -17,7 +17,7 @@ export default {
       "title": "",
       "logo": {
         "alt": "Cortex® for Developers",
-        "src": "img/cortexfordevelopers.png"
+        "src": "img/cortexglow.png"
       },
       "menus": [
         {
@@ -104,7 +104,7 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/sserrata/projects/cortex.pan.dev/sidebars.js",
+          "sidebarPath": "/Users/csestito/dev/cortex.pan.dev/sidebars.js",
           "routeBasePath": "docs",
           "include": [
             "**/*.md",
@@ -118,7 +118,7 @@ export default {
           "showLastUpdateTime": true
         },
         "theme": {
-          "customCss": "/Users/sserrata/projects/cortex.pan.dev/src/css/custom.css"
+          "customCss": "/Users/csestito/dev/cortex.pan.dev/src/css/custom.css"
         }
       }
     ]
