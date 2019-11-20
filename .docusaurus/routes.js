@@ -65,19 +65,19 @@ export default [
   
 },
 {
-  path: '/docs/:route',
-  component: ComponentCreator('/docs/:route'),
+  path: '/docs',
+  component: ComponentCreator('/docs'),
   
   routes: [
 {
-  path: '/docs/pancloud_python_qs',
-  component: ComponentCreator('/docs/pancloud_python_qs'),
+  path: '/docs/cortex',
+  component: ComponentCreator('/docs/cortex'),
   exact: true,
   
 },
 {
-  path: '/docs/cortex',
-  component: ComponentCreator('/docs/cortex'),
+  path: '/docs/pancloud_python_qs',
+  component: ComponentCreator('/docs/pancloud_python_qs'),
   exact: true,
   
 }],
