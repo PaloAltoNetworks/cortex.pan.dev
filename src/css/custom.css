@@ -22,6 +22,7 @@
   --ifm-color-primary-lighter: #a4a9ad;
   --ifm-color-primary-lightest: #b6babd;
   --ifm-color-info: #16c2b8;
+  --ifm-link-color: #16c2b8;
 }
 
 /* Dark mode overrides */
@@ -84,4 +85,10 @@ blockquote {
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+/* Override content links active color */
+
+.contents__link--active {
+  --ifm-color-primary: #16c2b8;
 }
