@@ -10,7 +10,7 @@ module.exports = {
   tagline: "using the most advanced cybersecurity data platform",
   url: "https://cortex.pan.dev",
   baseUrl: "/",
-  favicon: "img/panospeelable.png",
+  favicon: "img/cortexfordevelopers.png",
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
@@ -86,8 +86,9 @@ module.exports = {
         }
       ],
       logo: {
-        alt: "PAN-OS® for developers",
-        src: "img/panosfordevelopers.png"
+        alt: "PAN-OS® for Developers",
+        src: "img/pandev.png",
+        href: "https://pan.dev"
       },
       copyright: `Copyright © ${new Date().getFullYear()} Palo Alto Networks, Inc.`
     }

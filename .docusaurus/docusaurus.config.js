@@ -86,8 +86,9 @@ export default {
         }
       ],
       "logo": {
-        "alt": "PAN-OS® for developers",
-        "src": "img/panosfordevelopers.png"
+        "alt": "PAN-OS® for Developers",
+        "src": "img/pandev.png",
+        "href": "https://pan.dev"
       },
       "copyright": "Copyright © 2019 Palo Alto Networks, Inc."
     }
@@ -96,7 +97,7 @@ export default {
   "tagline": "using the most advanced cybersecurity data platform",
   "url": "https://cortex.pan.dev",
   "baseUrl": "/",
-  "favicon": "img/panospeelable.png",
+  "favicon": "img/cortexfordevelopers.png",
   "organizationName": "PaloAltoNetworks",
   "projectName": "cortex.pan.dev",
   "presets": [
