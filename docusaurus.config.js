@@ -14,6 +14,12 @@ module.exports = {
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: "cbeca27e98d8a51d98d5163f5c46dd8e",
+      appId: "QAP3NZH9FJ",
+      indexName: "cortex.pan.dev",
+      algoliaOptions: {} // Optional, if provided by Algolia
+    },
     sidebarCollapsible: true,
     navbar: {
       title: "",
