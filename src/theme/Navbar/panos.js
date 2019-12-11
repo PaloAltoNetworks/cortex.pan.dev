@@ -23,16 +23,16 @@ function NavLink({ to, href, label, position, ...props }) {
       className="navbar__item navbar__link"
       {...(href
         ? {
-          target: "_blank",
-          rel: "noopener noreferrer",
-          href
-        }
-      : {
-          activeClassName: "navbar__link--active",
-          to: toUrl
-        })}
-    {...props}
-  >
+            target: "_blank",
+            rel: "noopener noreferrer",
+            href
+          }
+        : {
+            activeClassName: "navbar__link--active",
+            to: toUrl
+          })}
+      {...props}
+    >
       {label}
     </Link>
   );
@@ -164,12 +164,12 @@ function Navbar() {
                 onChange={onToggleChange}
               />
             )}
-                <SearchBar
-                  handleSearchBarToggle={setIsSearchBarExpanded}
-                  isSearchBarExpanded={isSearchBarExpanded}
-                />
-              </div>
+            <SearchBar
+              handleSearchBarToggle={setIsSearchBarExpanded}
+              isSearchBarExpanded={isSearchBarExpanded}
+            />
           </div>
+        </div>
         <div
           role="presentation"
           className="navbar-sidebar__backdrop"
@@ -196,7 +196,7 @@ function Navbar() {
           <div className="navbar-sidebar__items">
             <div className="menu">
               <ul className="menu__list">
-              {menus.map((menuItem, i) => {
+                {menus.map((menuItem, i) => {
                   var className = menuShown[i]
                     ? "menu__list-item"
                     : "menu__list-item menu__list-item--collapsed";
