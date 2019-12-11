@@ -65,7 +65,7 @@
   color: white;
   text-align: center;
   justify-content: center;
-  background-color: #263238;
+  background-color: 	#44CEC7;
 }
 
 .headerImage {
@@ -106,6 +106,7 @@
 
 .hero__title {
   z-index: 1 !important;
+  color: #000000 !important;
 }
 
 .hero__subtitle {
@@ -114,5 +115,5 @@
 }
 
 .text__gray {
-  color: #a4a9ad !important;
+  color: #000000 !important;
 }

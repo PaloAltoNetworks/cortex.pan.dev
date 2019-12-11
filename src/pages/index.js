@@ -122,7 +122,7 @@ const features = [
             "button button--outline button--info button--md",
             styles.getStarted
           )}
-          href="/docs/cortex"
+          href="/docs/what"
         >
           Learn More
         </Link>
@@ -145,7 +145,7 @@ const features = [
             "button button--outline button--info button--md",
             styles.getStarted
           )}
-          href="/docs/cortex"
+          href="/docs/why"
         >
           Learn More
         </Link>
@@ -168,7 +168,7 @@ const features = [
             "button button--outline button--info button--md",
             styles.getStarted
           )}
-          href="/docs/cortex"
+          href="/docs/use"
         >
           Learn More
         </Link>

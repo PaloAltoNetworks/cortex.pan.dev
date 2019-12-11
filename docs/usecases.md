@@ -1,3 +1,9 @@
+---
+id: use
+title: Cortex™ Use Cases
+sidebar_label: Cortex™ Use Cases
+---
+
 There are virtually infinite scenarios for applications that consume information in Cortex™ Data Lake. Here are some of the most common use-cases. As new features and data are added to the Cortex API and Data Lake schema, the scenarios will continue to grow over time.
 
 

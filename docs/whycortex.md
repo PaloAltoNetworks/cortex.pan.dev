@@ -1,3 +1,9 @@
+---
+id: why
+title: Why Cortex™
+sidebar_label: Why Cortex™
+---
+
 ## Fail Faster, Succeed Sooner
 
 Cybersecurity startups provide continuous innovation to stay on top of malicious actors and protect customers against attacks. In the early stages, startups will focus on proving their idea and building the best product for an initial few customers:

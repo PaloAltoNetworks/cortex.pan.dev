@@ -14,7 +14,7 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-color-primary: #49535b;
+  --ifm-color-primary: #16c2b8;
   --ifm-color-primary-dark: #5a636b;
   --ifm-color-primary-darker: #6d757b;
   --ifm-color-primary-dt: #7f868c;
@@ -25,6 +25,7 @@
   --ifm-link-color: #16c2b8;
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
+  
 }
 
 /* Dark mode overrides */
@@ -73,6 +74,7 @@ blockquote {
 }
 
 .button {
+  background-color: var(--ifm-color-gray-900);
   z-index: 1;
 }
 
@@ -93,4 +95,8 @@ blockquote {
 
 .contents__link--active {
   --ifm-color-primary: #16c2b8;
+}
+
+.footer.footer--dark { 
+  background-color: var(--ifm-color-gray-900);
 }

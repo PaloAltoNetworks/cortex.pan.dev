@@ -1,9 +1,0 @@
-SIDEBARS:
-  - categories:
-      - category: Overview
-        ids:
-          - cortex
-      - category: PAN Cloud Python SDK
-        ids:
-          - pancloud_python_qs
-    sidebar: cortex

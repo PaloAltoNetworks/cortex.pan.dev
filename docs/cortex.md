@@ -2,15 +2,6 @@
 id: cortex
 title: Cortex™
 sidebar_label: Cortex™
-hide_title: false
-description: Overview of Cortex™
-keywords:
-  - cortex
-  - data lake
-  - overview
-  - api
-  - sdk
-image: /img/cortexfordevelopers.png
 ---
 
 > When configuring and managing the Palo Alto Networks Next-Generation firewall for scale and agility, it’s important to have a collection of powerful APIs and tools to automate activities and events. Our APIs and SDKs provide a collection of open, feature-rich automation opportunities for the beginning scripter and advanced developer alike.
