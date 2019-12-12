@@ -10,7 +10,7 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.37",
+    "@docusaurus/core": "^2.0.0-alpha.39",
     "@docusaurus/mdx-loader": "^2.0.0-alpha.37",
     "@docusaurus/plugin-content-blog": "^2.0.0-alpha.37",
     "@docusaurus/plugin-content-docs": "^2.0.0-alpha.37",

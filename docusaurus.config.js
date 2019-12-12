@@ -44,6 +44,24 @@ module.exports = {
             }
           ],
           position: "left"
+        },
+        {
+          label: "About Cortex®",
+          items: [
+            {
+              to: "docs/why",
+              label: "Why Cortex®"
+            },
+            {
+              to: "docs/what",
+              label: "What is Cortex®"
+            },
+            {
+              to: "docs/use",
+              label: "Cortex® Use Cases"
+            }
+          ],
+          position: "left"
         }
       ],
       links: [

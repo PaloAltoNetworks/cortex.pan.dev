@@ -23,16 +23,16 @@ function NavLink({ to, href, label, position, ...props }) {
       className="navbar__item navbar__link"
       {...(href
         ? {
-            target: "_blank",
-            rel: "noopener noreferrer",
-            href
-          }
-        : {
-            activeClassName: "navbar__link--active",
-            to: toUrl
-          })}
-      {...props}
-    >
+          target: "_blank",
+          rel: "noopener noreferrer",
+          href
+        }
+      : {
+          activeClassName: "navbar__link--active",
+          to: toUrl
+        })}
+    {...props}
+  >
       {label}
     </Link>
   );
@@ -56,6 +56,7 @@ function NavMenu(props) {
 function Navbar() {
   const context = useDocusaurusContext();
   const [sidebarShown, setSidebarShown] = useState(false);
+  const [menuShown, setMenuShown] = useState({});
   const [isSearchBarExpanded, setIsSearchBarExpanded] = useState(false);
   const [theme, setTheme] = useTheme();
   const { siteConfig = {} } = context;
@@ -69,6 +70,12 @@ function Navbar() {
   const hideSidebar = useCallback(() => {
     setSidebarShown(false);
   }, [setSidebarShown]);
+
+  const toggleMenu = id => {
+    setMenuShown(menuShown => {
+      return { ...menuShown, [id]: !menuShown[id] };
+    });
+  };
 
   const onToggleChange = useCallback(
     e => setTheme(e.target.checked ? "dark" : ""),
@@ -140,7 +147,7 @@ function Navbar() {
           </div>
           <div className="navbar__items navbar__items--right">
             {menus
-              .filter(menuItem => menuItem.position !== "right")
+              .filter(menuItem => menuItem.position === "right")
               .map((menuItem, i) => (
                 <NavMenu {...menuItem} key={i} />
               ))}
@@ -157,12 +164,12 @@ function Navbar() {
                 onChange={onToggleChange}
               />
             )}
-            <SearchBar
-              handleSearchBarToggle={setIsSearchBarExpanded}
-              isSearchBarExpanded={isSearchBarExpanded}
-            />
+                <SearchBar
+                  handleSearchBarToggle={setIsSearchBarExpanded}
+                  isSearchBarExpanded={isSearchBarExpanded}
+                />
+              </div>
           </div>
-        </div>
         <div
           role="presentation"
           className="navbar-sidebar__backdrop"
@@ -189,6 +196,33 @@ function Navbar() {
           <div className="navbar-sidebar__items">
             <div className="menu">
               <ul className="menu__list">
+              {menus.map((menuItem, i) => {
+                  var className = menuShown[i]
+                    ? "menu__list-item"
+                    : "menu__list-item menu__list-item--collapsed";
+
+                  return (
+                    <li className={className} key={i}>
+                      <a
+                        className="menu__link menu__link--sublist"
+                        onClick={() => toggleMenu(i)}
+                      >
+                        {menuItem.label}
+                      </a>
+                      <ul className="menu__list">
+                        {menuItem.items.map((item, i) => (
+                          <li className="menu__list-item" key={i}>
+                            <NavLink
+                              className="menu__link"
+                              {...item}
+                              onClick={hideSidebar}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  );
+                })}
                 {links.map((linkItem, i) => (
                   <li className="menu__list-item" key={i}>
                     <NavLink
