@@ -25,7 +25,6 @@
   --ifm-link-color: #16c2b8;
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
-  
 }
 
 /* Dark mode overrides */
@@ -97,6 +96,57 @@ blockquote {
   --ifm-color-primary: #16c2b8;
 }
 
-.footer.footer--dark { 
+.footer.footer--dark {
   background-color: var(--ifm-color-gray-900);
+}
+
+/* Marketo overrides */
+.mktoAsterix {
+  color: var(--ifm-color-primary) !important;
+}
+
+.mktoForm input {
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  font-size: unset !important;
+  font-family: unset !important;
+}
+
+.mktoForm select.mktoField {
+  border-radius: 0 !important;
+}
+
+.mktoForm .mktoCheckboxList {
+  color: var(--ifm-color-primary) !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton {
+  display: inline-block !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 !important;
+  text-decoration: none !important;
+  background: var(--ifm-color-primary) !important;
+  color: #ffffff !important;
+  font-family: sans-serif !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  transition: background 250ms ease-in-out, transform 150ms ease !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:hover,
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:focus {
+  background: #0c948d !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:focus {
+  outline: 1px solid #fff !important;
+  outline-offset: -4px !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:active {
+  transform: scale(0.99) !important;
 }
