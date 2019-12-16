@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f73eff08-3be7-4f77-b6d1-84e03c7ba83c/deploy-status)](https://app.netlify.com/sites/silly-shannon-6360a4/deploys) [![CircleCI](https://circleci.com/gh/PaloAltoNetworks/cortex.pan.dev.svg?style=svg&circle-token=28f02ab6dfab3b46c8ccb9551fb4e2ba6452e8dd)](https://circleci.com/gh/PaloAltoNetworks/cortex.pan.dev)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f73eff08-3be7-4f77-b6d1-84e03c7ba83c/deploy-status)](https://app.netlify.com/sites/silly-shannon-6360a4/deploys)
 
 # Cortex™ for Developers
 
