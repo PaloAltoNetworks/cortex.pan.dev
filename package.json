@@ -19,7 +19,6 @@
     "@docusaurus/theme-search-algolia": "^2.0.0-alpha.37",
     "classnames": "^2.2.6",
     "js-yaml": "^3.13.1",
-    "netlify-cms-app": "^2.9.8-beta.4",
     "node-sass": "^4.13.0",
     "panw-blox": "^1.2.0",
     "react": "^16.8.4",
