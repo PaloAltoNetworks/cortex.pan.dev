@@ -150,3 +150,7 @@ blockquote {
 .mktoForm .mktoButtonWrap.mktoRound .mktoButton:active {
   transform: scale(0.99) !important;
 }
+
+.mktoForm .mktoButtonWrap {
+  margin-left: 0 !important; /* override */
+}
