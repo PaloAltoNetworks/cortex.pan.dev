@@ -10,7 +10,7 @@ module.exports = {
   tagline: "using the most advanced cybersecurity data platform",
   url: "https://cortex.pan.dev",
   baseUrl: "/",
-  favicon: "img/cortexfordevelopers.png",
+  favicon: "img/cortexfavicon.png",
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {

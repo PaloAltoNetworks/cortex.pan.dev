@@ -15,11 +15,38 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom-left-radius: 100% 100px;
+  border-bottom-right-radius: 100% 100px;
+
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .heroInner {
+    padding: 0;
+  }
+
+  .heroProjectTagline {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .heroLogo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .indexCtas {
+    text-align: center;
+  }
+
+  .indexCtasGitHubButton {
+    display: none;
   }
 }
 
@@ -55,9 +82,13 @@
   padding: 2rem 0;
   width: 100%;
   display: flex;
+  border-bottom-left-radius: 100% 600px;
+  border-bottom-right-radius: 100% 600px;
 }
 
-.tools {
+.toolsback {
+  border-top-left-radius: 100% 100px;
+  border-top-right-radius: 100% 100px;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
@@ -68,6 +99,26 @@
   background-color: 	#44CEC7;
 }
 
+.tools {
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.heroLogo {
+  animation-duration: 2s;
+  animation-name: jackInTheBox;
+  float: left;
+  height: 15rem;
+  margin-top: 1px;
+  padding: 5px;
+  padding-right: 5rem;
+}
+
 .headerImage {
   height: 300px;
   width: 200px;
@@ -75,6 +126,19 @@
   max-height: 100%;
   width: auto;
   padding: 1rem 0;
+}
+
+.heroProjectTagline {
+  color: #fff;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 1rem;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+.heroProjectKeywords {
+  color: var(--ifm-color-black);
 }
 
 .featureImage {
@@ -116,4 +180,26 @@
 
 .text__gray {
   color: #000000 !important;
+}
+
+/* Animation */
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
