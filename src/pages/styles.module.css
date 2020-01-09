@@ -20,33 +20,9 @@
 
 }
 
-@media only screen and (max-width: 768px) {
-  .hero {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .heroInner {
-    padding: 0;
-  }
-
-  .heroProjectTagline {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .heroLogo {
-    display: block;
-    float: none;
-    margin: 0 auto;
-  }
-
-  .indexCtas {
-    text-align: center;
-  }
-
-  .indexCtasGitHubButton {
-    display: none;
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
   }
 }
 
@@ -82,6 +58,9 @@
   padding: 2rem 0;
   width: 100%;
   display: flex;
+  color: white;
+  text-align: center;
+  justify-content: center;
   border-bottom-left-radius: 100% 600px;
   border-bottom-right-radius: 100% 600px;
 }
@@ -117,6 +96,38 @@
   margin-top: 1px;
   padding: 5px;
   padding-right: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .heroInner {
+    padding: 0;
+  }
+
+  .heroProjectTagline {
+    font-size: 36px !important;
+    text-align: center !important;
+  }
+
+  .heroLogo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    height: 8rem;
+    padding: 5px;
+  }
+
+  .indexCtas {
+    text-align: center;
+  }
+
+  .indexCtasGitHubButton {
+    display: none;
+  }
 }
 
 .headerImage {

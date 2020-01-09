@@ -22,7 +22,7 @@ module.exports = {
     {
       type: "category",
       label: "Why Cortex",
-      items: ["why", "what", "use", "packagedir", "linting"]
+      items: ["why", "what", "use"]
     }
   ]
 }; 

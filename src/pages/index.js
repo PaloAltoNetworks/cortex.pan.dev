@@ -16,7 +16,7 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: <>What is Cortex?</>,
+    title: <>What is Cortex®?</>,
     imageUrl: "img/undraw_teaching.svg",
     description: (
       <>
@@ -39,7 +39,7 @@ const features = [
     )
   },
   {
-    title: <>Why Cortex?</>,
+    title: <>Why Cortex®?</>,
     imageUrl: "img/undraw_void.svg",
     description: (
       <>
@@ -177,7 +177,7 @@ function Home() {
                 </div>
                 <h4>PAN Cloud Python SDK</h4>
                 <p className={styles.text__gray}>
-                  Python idiomatic SDK for Cortex™
+                  Python idiomatic SDK for Cortex®
                 </p>
                 <div className={styles.buttons}>
                   <Link

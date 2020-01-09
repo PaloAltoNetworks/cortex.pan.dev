@@ -90,12 +90,19 @@ module.exports = {
           ]
         },
         {
-          title: "Community",
+          title: "About Cortex®",
           items: [
             {
-              label: "Automation and API",
-              href:
-                "https://live.paloaltonetworks.com/t5/Automation-API/ct-p/automation"
+              label: "Why Cortex®?",
+              to: "docs/why"
+            },
+            {
+              label: "What is Cortex®?",
+              to: "docs/what"
+            },
+            {
+              label: "Cortex® Use Cases",
+              to: "docs/use"
             }
           ]
         },
