@@ -15,12 +15,12 @@
 
 :root {
   --ifm-color-primary: #16c2b8;
-  --ifm-color-primary-dark: #5a636b;
-  --ifm-color-primary-darker: #6d757b;
-  --ifm-color-primary-dt: #7f868c;
-  --ifm-color-primary-light: #91979c;
-  --ifm-color-primary-lighter: #a4a9ad;
-  --ifm-color-primary-lightest: #b6babd;
+  --ifm-color-primary-dark: #5bd4ce;
+  --ifm-color-primary-darker: #44cec7;
+  --ifm-color-primary-dt: #2dc8c0;
+  --ifm-color-primary-light: #73dad5;
+  --ifm-color-primary-lighter: #8ae0dc;
+  --ifm-color-primary-lightest: #a1e6e3;
   --ifm-color-info: #16c2b8;
   --ifm-link-color: #16c2b8;
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
@@ -76,6 +76,11 @@ blockquote {
 .button {
   background-color: var(--ifm-color-gray-900);
   z-index: 1;
+}
+
+.button:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: #000000;
 }
 
 /* Dropdown menu overrides */

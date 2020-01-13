@@ -11,103 +11,12 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import classnames from "classnames";
 import React, { useRef } from "react";
-import Particles from "react-particles-js";
 import ScrollUpButton from "react-scroll-up-button";
 import styles from "./styles.module.css";
 
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 100,
-      density: {
-        enable: true,
-        value_area: 900
-      }
-    },
-    color: {
-      value: "#ffffff"
-    },
-    shape: {
-      type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000"
-      },
-      polygon: {
-        nb_sides: 5
-      },
-      image: {
-        src: "img/github.svg",
-        width: 100,
-        height: 100
-      }
-    },
-    opacity: {
-      value: 0.2,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.2,
-        sync: false
-      }
-    },
-    size: {
-      value: 3,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
-        sync: false
-      }
-    },
-    line_linked: {
-      enable: true,
-      distance: 250,
-      color: "#ffffff",
-      opacity: 0.2,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 4,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200
-      }
-    }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: true,
-        mode: "grab"
-      },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 200,
-        line_linked: {
-          opacity: 0.4
-        }
-      }
-    }
-  },
-  retina_detect: true
-};
-
 const features = [
   {
-    title: <>What is Cortex?</>,
+    title: <>What is Cortex®?</>,
     imageUrl: "img/undraw_teaching.svg",
     description: (
       <>
@@ -130,7 +39,7 @@ const features = [
     )
   },
   {
-    title: <>Why Cortex?</>,
+    title: <>Why Cortex®?</>,
     imageUrl: "img/undraw_void.svg",
     description: (
       <>
@@ -209,23 +118,34 @@ function Home() {
       <ScrollUpButton />
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          <div>
-            <Particles className="particles" params={particlesOptions} />
-          </div>
-          <h1 className="hero__title">Develop Security</h1>
-          <p className="hero__subtitle">
-            using the most advanced cybersecurity data platform
-          </p>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                "button button--outline button--info button--lg",
-                styles.getStarted
-              )}
-              onClick={scrollToTools}
-            >
-              Explore Tools
-            </Link>
+          <div className={styles.hero}>
+            <div className={styles.heroInner}>
+              <h1 className={styles.heroProjectTagline}>
+                <img
+                  alt="Devin the Developer Advocate"
+                  className={styles.heroLogo}
+                  src={useBaseUrl("img/cortexpeelable.png")}
+                />
+                Develop{" "}
+                <span className={styles.heroProjectKeywords}>security</span>{" "}
+                using the{" "}
+                <span className={styles.heroProjectKeywords}>
+                  most advanced
+                </span>{" "}
+                cybersecurity platform
+              </h1>
+              <div className={styles.buttons}>
+                <Link
+                  className={classnames(
+                    "button button--outline button--info button--lg",
+                    styles.getStarted
+                  )}
+                  onClick={scrollToTools}
+                >
+                  Explore Tools
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -241,7 +161,7 @@ function Home() {
             </div>
           </section>
         )}
-        <section className={styles.tools} ref={toolsRef}>
+        <section className={styles.toolsback} ref={toolsRef}>
           <div className="container">
             <div className="row">
               {/* Placeholder */}
@@ -257,7 +177,7 @@ function Home() {
                 </div>
                 <h4>PAN Cloud Python SDK</h4>
                 <p className={styles.text__gray}>
-                  Python idiomatic SDK for Cortex™
+                  Python idiomatic SDK for Cortex®
                 </p>
                 <div className={styles.buttons}>
                   <Link

@@ -10,7 +10,7 @@ module.exports = {
   tagline: "using the most advanced cybersecurity data platform",
   url: "https://cortex.pan.dev",
   baseUrl: "/",
-  favicon: "img/cortexfordevelopers.png",
+  favicon: "img/cortexfavicon.png",
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
@@ -90,12 +90,19 @@ module.exports = {
           ]
         },
         {
-          title: "Community",
+          title: "About Cortex®",
           items: [
             {
-              label: "Automation and API",
-              href:
-                "https://live.paloaltonetworks.com/t5/Automation-API/ct-p/automation"
+              label: "Why Cortex®?",
+              to: "docs/why"
+            },
+            {
+              label: "What is Cortex®?",
+              to: "docs/what"
+            },
+            {
+              label: "Cortex® Use Cases",
+              to: "docs/use"
             }
           ]
         },
