@@ -74,6 +74,11 @@ module.exports = {
           href: "https://github.com/PaloAltoNetworks",
           label: "GitHub",
           position: "left"
+        },
+        {
+          to: "/register",
+          label: "Register",
+          position: "right"
         }
       ]
     },
@@ -154,6 +159,12 @@ module.exports = {
       cacheTime: 600 * 1000, // 600 sec - cache purge period
       changefreq: "weekly",
       priority: 0.5
+    }
+  ],
+  scripts: [
+    {
+      src: "https://app-ab28.marketo.com/js/forms2/js/forms2.min.js",
+      async: true
     }
   ]
 };

@@ -144,6 +144,16 @@ function Home() {
                 >
                   Explore Tools
                 </Link>
+                <Link
+                  className={classnames(
+                    "button button--outline button--info button--lg",
+                    styles.getStarted
+                  )}
+                  href="register"
+                  target="_blank"
+                >
+                  Register
+                </Link>
               </div>
             </div>
           </div>
