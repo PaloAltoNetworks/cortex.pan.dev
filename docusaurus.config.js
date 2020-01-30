@@ -68,12 +68,12 @@ module.exports = {
         {
           href: "https://medium.com/palo-alto-networks-developer-blog",
           label: "Blog",
-          position: "left"
+          position: "right"
         },
         {
           href: "https://github.com/PaloAltoNetworks",
           label: "GitHub",
-          position: "left"
+          position: "right"
         },
         {
           to: "/register",
