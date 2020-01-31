@@ -25,7 +25,7 @@ module.exports = {
       title: "",
       logo: {
         alt: "Cortex® for Developers",
-        src: "img/cortexfordevelopers.png"
+        src: "img/cortexgreen.png"
       },
       menus: [
         {
