@@ -16,11 +16,11 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: <>What is Cortex®?</>,
+    title: <>What is Cortex?</>,
     imageUrl: "img/undraw_teaching.svg",
     description: (
       <>
-        Cortex® is an open, continuously evolving security platform, rich with
+        Cortex is an open, continuously evolving security platform, rich with
         context from cloud, endpoint and network sensors.
       </>
     ),
@@ -39,7 +39,7 @@ const features = [
     )
   },
   {
-    title: <>Why Cortex®?</>,
+    title: <>Why Cortex?</>,
     imageUrl: "img/undraw_void.svg",
     description: (
       <>
@@ -113,7 +113,7 @@ function Home() {
   return (
     <Layout
       title={`${siteConfig.themeConfig.navbar.title}`}
-      description="All things related to automation and development with Cortex®"
+      description="All things related to automation and development with Cortex"
     >
       <ScrollUpButton />
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
@@ -124,7 +124,7 @@ function Home() {
                 <img
                   alt="Devin the Developer Advocate"
                   className={styles.heroLogo}
-                  src={useBaseUrl("img/cortexpeelable.png")}
+                  src={useBaseUrl("img/cortexfavicon.png")}
                 />
                 Develop{" "}
                 <span className={styles.heroProjectKeywords}>security</span>{" "}
@@ -187,7 +187,7 @@ function Home() {
                 </div>
                 <h4>PAN Cloud Python SDK</h4>
                 <p className={styles.text__gray}>
-                  Python idiomatic SDK for Cortex®
+                  Python idiomatic SDK for Cortex
                 </p>
                 <div className={styles.buttons}>
                   <Link

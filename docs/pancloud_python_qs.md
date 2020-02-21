@@ -6,7 +6,7 @@ sidebar_label: Quickstart
 
 [![GitHub page](https://img.shields.io/badge/GitHub-Repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/PaloAltoNetworks/pancloud) [![GitHub stars](https://img.shields.io/github/stars/PaloAltoNetworks/pancloud?style=for-the-badge)](https://github.com/PaloAltoNetworks/pancloud)
 
-> The following guide will walk you through installing `pancloud`, a powerful SDK capable of supporting your next Cortex™ app, integration or automation project.
+> The following guide will walk you through installing `pancloud`, a powerful SDK capable of supporting your next Cortex app, integration or automation project.
 
 ## Installing with pip
 

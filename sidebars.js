@@ -21,7 +21,7 @@ module.exports = {
   why: [
     {
       type: "category",
-      label: "Why Cortex",
+      label: "About Cortex",
       items: ["why", "what", "use"]
     }
   ]

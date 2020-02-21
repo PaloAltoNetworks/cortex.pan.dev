@@ -232,8 +232,8 @@ Example:
 ```text
 ---
 id: panos_api
-title: PAN-OS® API
-sidebar_label: PAN-OS® API
+title: PAN-OS API
+sidebar_label: PAN-OS API
 hide_title: false
 description: Overview of the PAN-OS API
 keywords:

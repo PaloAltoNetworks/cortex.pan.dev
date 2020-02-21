@@ -1,7 +1,7 @@
 ---
 id: why
-title: Why Cortex™
-sidebar_label: Why Cortex™
+title: Why Cortex
+sidebar_label: Why Cortex
 ---
 
 ## Fail Faster, Succeed Sooner
