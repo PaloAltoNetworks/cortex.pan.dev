@@ -14,15 +14,15 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-color-primary: #16c2b8;
-  --ifm-color-primary-dark: #5bd4ce;
-  --ifm-color-primary-darker: #44cec7;
-  --ifm-color-primary-dt: #2dc8c0;
-  --ifm-color-primary-light: #73dad5;
-  --ifm-color-primary-lighter: #8ae0dc;
-  --ifm-color-primary-lightest: #a1e6e3;
-  --ifm-color-info: #16c2b8;
-  --ifm-link-color: #16c2b8;
+  --ifm-color-primary: #00cc66;
+  --ifm-color-primary-dark: #00b85c;
+  --ifm-color-primary-darker: #00ad57;
+  --ifm-color-primary-darkest: #008f47;
+  --ifm-color-primary-light: #00e070;
+  --ifm-color-primary-lighter: #00eb75;
+  --ifm-color-primary-lightest: #0aff85;
+  --ifm-color-info: #00cc66;
+  --ifm-link-color: #00cc66;
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
   
@@ -63,16 +63,6 @@ blockquote {
   border-top: 1px solid var(--ifm-color-primary) !important;
 }
 
-/* Hero overrides */
-.particles canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  top: 0;
-  left: 0;
-}
-
 .button {
   background-color: var(--ifm-color-gray-900);
   z-index: 1;
@@ -103,5 +93,62 @@ blockquote {
 }
 
 .footer.footer--dark { 
-  background-color: var(--ifm-color-gray-900);
+  background-color: #000000;
+}
+
+
+/* Marketo overrides */
+.mktoAsterix {
+  color: var(--ifm-color-primary) !important;
+}
+
+.mktoForm input {
+  border-radius: 3 !important;
+  box-sizing: border-box !important;
+  font-size: unset !important;
+  font-family: unset !important;
+}
+
+.mktoForm select.mktoField {
+  border-radius:3 !important;
+}
+
+.mktoForm .mktoCheckboxList {
+  color: var(--ifm-color-primary) !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton {
+  display: inline-block !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 !important;
+  text-decoration: none !important;
+  background: var(--ifm-color-primary) !important;
+  color: #ffffff !important;
+  font-family: sans-serif !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+  text-align: center !important;
+
+  transition: background 250ms ease-in-out, transform 150ms ease !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:hover,
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:focus {
+  background: #0c948d !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:focus {
+  outline: 1px solid #fff !important;
+  outline-offset: -4px !important;
+}
+
+.mktoForm .mktoButtonWrap.mktoRound .mktoButton:active {
+  transform: scale(0.99) !important;
+}
+
+.mktoForm .mktoButtonWrap {
+  margin-left: 0 !important; /* override */
 }

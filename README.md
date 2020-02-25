@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f73eff08-3be7-4f77-b6d1-84e03c7ba83c/deploy-status)](https://app.netlify.com/sites/silly-shannon-6360a4/deploys)
 
-# Cortex™ for Developers
+# Cortex for Developers
 
 This website is built using Docusaurus 2, a modern static website generator.
 

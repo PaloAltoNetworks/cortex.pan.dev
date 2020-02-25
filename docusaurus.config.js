@@ -24,8 +24,8 @@ module.exports = {
     navbar: {
       title: "",
       logo: {
-        alt: "Cortex® for Developers",
-        src: "img/cortexfordevelopers.png"
+        alt: "Cortex for Developers",
+        src: "img/cortexgreen.png"
       },
       menus: [
         {
@@ -40,25 +40,25 @@ module.exports = {
           items: [
             {
               to: "docs/cortex",
-              label: "Cortex® APIs"
+              label: "Cortex APIs"
             }
           ],
           position: "left"
         },
         {
-          label: "About Cortex®",
+          label: "About Cortex",
           items: [
             {
               to: "docs/why",
-              label: "Why Cortex®"
+              label: "Why Cortex"
             },
             {
               to: "docs/what",
-              label: "What is Cortex®"
+              label: "What is Cortex"
             },
             {
               to: "docs/use",
-              label: "Cortex® Use Cases"
+              label: "Cortex Use Cases"
             }
           ],
           position: "left"
@@ -68,12 +68,17 @@ module.exports = {
         {
           href: "https://medium.com/palo-alto-networks-developer-blog",
           label: "Blog",
-          position: "left"
+          position: "right"
         },
         {
           href: "https://github.com/PaloAltoNetworks",
           label: "GitHub",
-          position: "left"
+          position: "right"
+        },
+        {
+          to: "/register",
+          label: "Register",
+          position: "right"
         }
       ]
     },
@@ -84,24 +89,24 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Cortex® APIs",
+              label: "Cortex APIs",
               to: "docs/cortex"
             }
           ]
         },
         {
-          title: "About Cortex®",
+          title: "About Cortex",
           items: [
             {
-              label: "Why Cortex®?",
+              label: "Why Cortex?",
               to: "docs/why"
             },
             {
-              label: "What is Cortex®?",
+              label: "What is Cortex?",
               to: "docs/what"
             },
             {
-              label: "Cortex® Use Cases",
+              label: "Cortex Use Cases",
               to: "docs/use"
             }
           ]
@@ -117,7 +122,7 @@ module.exports = {
         }
       ],
       logo: {
-        alt: "PAN-OS® for Developers",
+        alt: "Palo Alto Networks for Developers",
         src: "img/pandev.png",
         href: "https://pan.dev"
       },
@@ -154,6 +159,12 @@ module.exports = {
       cacheTime: 600 * 1000, // 600 sec - cache purge period
       changefreq: "weekly",
       priority: 0.5
+    }
+  ],
+  scripts: [
+    {
+      src: "https://app-ab28.marketo.com/js/forms2/js/forms2.min.js",
+      async: true
     }
   ]
 };

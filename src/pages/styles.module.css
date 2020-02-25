@@ -17,6 +17,7 @@
   overflow: hidden;
   border-bottom-left-radius: 100% 100px;
   border-bottom-right-radius: 100% 100px;
+  background-color: #807d7c !important;
 
 }
 
@@ -74,7 +75,7 @@
   color: white;
   text-align: center;
   justify-content: center;
-  background-color: 	#44CEC7;
+  background-color: 	#807d7c;
 }
 
 .tools {
@@ -176,6 +177,9 @@
   height: "100%";
   top: 0;
   left: 0;
+}
+.hero.hero--primary {
+  background-color: #807d7c !important;
 }
 
 .hero__title {

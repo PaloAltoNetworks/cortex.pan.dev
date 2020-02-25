@@ -1,9 +1,9 @@
 ---
 id: cortex
-title: Cortex™
-sidebar_label: Cortex™
+title: Cortex
+sidebar_label: Cortex
 hide_title: false
-description: Overview of Cortex™
+description: Overview of Cortex
 keywords:
   - cortex
   - data lake
@@ -21,7 +21,7 @@ A powerful low-level API that covers all the firewall's features. Take full cont
 
 ### SDKs
 
-Jumpstart building your Cortex™ app with SDKs written in Python, NodeJS, Java and Go!
+Jumpstart building your Cortex app with SDKs written in Python, NodeJS, Java and Go!
 
 ##### PAN Cloud Python SDK
 
