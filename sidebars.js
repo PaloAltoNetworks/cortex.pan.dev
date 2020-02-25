@@ -16,6 +16,16 @@ module.exports = {
       type: "category",
       label: "PAN Cloud Python SDK",
       items: ["pancloud_python_qs"]
+    },
+    {
+      type: "category",
+      label: "PAN Cortex NodeJS libs",
+      items: ["pan_cortex_data_lake_nodejs_qs", "pan_cortex_hub_nodejs_qs"]
+    },
+    {
+      type: "category",
+      label: "PAN Cortex JAVA libs",
+      items: ["pan_cortex_data_lake_java_qs", "pan_cortex_hub_java_qs"]
     }
   ],
   why: [

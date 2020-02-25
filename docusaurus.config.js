@@ -31,7 +31,9 @@ module.exports = {
         {
           label: "Quickstart",
           items: [
-            { to: "docs/pancloud_python_qs", label: "PAN Cloud Python SDK" }
+            { to: "docs/pancloud_python_qs", label: "PAN Cloud Python SDK" },
+            { to: "docs/pan_cortex_data_lake_nodejs_qs", label: "Cortex NodeJS libs" },
+            { to: "docs/pan_cortex_data_lake_java_qs", label: "Cortex JAVA libs" }
           ],
           position: "left"
         },
