@@ -165,9 +165,9 @@ function Home() {
           <div className="container">
             <div className="row">
               {/* Placeholder */}
-              <div className={classnames("col col--4", styles.tools)}></div>
+              <div className={classnames("col col--1", styles.tools)}></div>
               {/* PAN Cloud Python SDK */}
-              <div className={classnames("col col--4", styles.tools)}>
+              <div className={classnames("col col--3", styles.tools)}>
                 <div className="text text--center">
                   <img
                     className={styles.toolImage}
@@ -195,6 +195,86 @@ function Home() {
                       styles.github
                     )}
                     href="https://github.com/PaloAltoNetworks/pancloud"
+                  >
+                    <img
+                      src="/img/GitHub_Logo_White.png"
+                      width="auto"
+                      height="19"
+                    />
+                  </Link>
+                </div>
+                {/* Placeholder */}
+                <div className={classnames("col col--4", styles.tools)}></div>
+              </div>
+              {/* PAN Corex NodeJS Libraries */}
+              <div className={classnames("col col--4", styles.tools)}>
+                <div className="text text--center">
+                  <img
+                    className={styles.toolImage}
+                    src="img/nodejs.png"
+                    alt="Cortex NodeJS libs"
+                  />
+                </div>
+                <h4>Cortex NodeJS libraries</h4>
+                <p className={styles.text__gray}>
+                  NodeJS idiomatic SDK for Cortex®
+                </p>
+                <div className={styles.buttons}>
+                  <Link
+                    className={classnames(
+                      "button button--outline button--info button--md",
+                      styles.quickstart
+                    )}
+                    href="/docs/pan_cortex_data_lake_nodejs_qs"
+                  >
+                    Quickstart
+                  </Link>
+                  <Link
+                    className={classnames(
+                      "button button--outline button--info button--md",
+                      styles.github
+                    )}
+                    href="https://github.com/paloaltonetworks/pan-cortex-data-lake-nodejs"
+                  >
+                    <img
+                      src="/img/GitHub_Logo_White.png"
+                      width="auto"
+                      height="19"
+                    />
+                  </Link>
+                </div>
+                {/* Placeholder */}
+                <div className={classnames("col col--4", styles.tools)}></div>
+              </div>
+              {/* PAN Corex JAVA Libraries */}
+              <div className={classnames("col col--3", styles.tools)}>
+                <div className="text text--center">
+                  <img
+                    className={styles.toolImage}
+                    src="img/java.png"
+                    alt="Cortex JAVA libs"
+                  />
+                </div>
+                <h4>Cortex JAVA libraries</h4>
+                <p className={styles.text__gray}>
+                  NodeJS idiomatic SDK for Cortex®
+                </p>
+                <div className={styles.buttons}>
+                  <Link
+                    className={classnames(
+                      "button button--outline button--info button--md",
+                      styles.quickstart
+                    )}
+                    href="/docs/pan_cortex_data_lake_java_qs"
+                  >
+                    Quickstart
+                  </Link>
+                  <Link
+                    className={classnames(
+                      "button button--outline button--info button--md",
+                      styles.github
+                    )}
+                    href="https://github.com/paloaltonetworks/pan-cortex-data-lake-java"
                   >
                     <img
                       src="/img/GitHub_Logo_White.png"
