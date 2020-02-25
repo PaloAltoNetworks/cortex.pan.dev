@@ -27,6 +27,16 @@ Jumpstart building your Cortex™ app with SDKs written in Python, NodeJS, Java 
 
 Powerful, low-level SDK for interacting with **Cortex**. [Get Started](/docs/pancloud_python_qs)
 
+##### PAN Cortex NodeJS libraries
+
+* **Data Lake**: Provides low-level language bindings as well as high-level *Stream.Readable* and *async Iterator* (ES2018 / NodeJS 10) interfaces to simplify SQL command execution. [Get Started](/docs/pan_cortex_data_lake_nodejs_qs)
+* **Hub**: Provides a collection of classes implementing the `Credentials` interface needed for Cortex authorization [Get Started](/docs/pan_cortex_hub_nodejs_qs)
+
+##### PAN Cortex JAVA libraries
+
+* **Data Lake**: Provides low-level language bindings as well as high-level *Stream * and *Iterable* interfaces to simplify SQL command execution. [Get Started](/docs/pan_cortex_data_lake_java_qs)
+* **Hub**: Provides a collection of classes implementing the `Credentials` interface needed for Cortex authorization [Get Started](/docs/pan_cortex_hub_java_qs)
+
 ---
 
 _Join the conversation_ on our <a href="https://live.paloaltonetworks.com/t5/Automation-API/ct-p/automation" target="_blank">API and Automation discussion forum</a>.
