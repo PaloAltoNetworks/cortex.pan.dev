@@ -64,15 +64,14 @@ blockquote {
 }
 
 .button {
-  background-color: var(--ifm-color-gray-900);
   z-index: 1;
 }
+
 
 .button:hover {
   background-color: var(--ifm-color-primary-dark);
   border-color: #000000;
 }
-
 /* Dropdown menu overrides */
 .dropdown .dropdown__menu {
   min-width: 14rem !important;
@@ -86,10 +85,36 @@ blockquote {
   padding: 0 var(--ifm-pre-padding);
 }
 
+.button--active--tab {
+  background-color: var(--ifm-background-color) !important;
+  color: var(--ifm-color-primary) !important;
+  border-color: var(--ifm-color-primary) !important;
+  border-width: medium !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+:target:before {
+  height: 105px !important;
+  margin: -105px 0 0 !important;
+}
+
+.shadow--md{
+  min-height: 250px !important;
+  margin-bottom: 15px;
+}
+
+.stretch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Override content links active color */
 
 .contents__link--active {
-  --ifm-color-primary: #16c2b8;
+  --ifm-color-primary: #00cc66;
 }
 
 .footer.footer--dark { 

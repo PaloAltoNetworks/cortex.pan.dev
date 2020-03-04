@@ -20,53 +20,19 @@ module.exports = {
       indexName: "cortex.pan.dev",
       algoliaOptions: {} // Optional, if provided by Algolia
     },
-    sidebarCollapsible: true,
+    sidebarCollapsible: false,
     navbar: {
       title: "",
       logo: {
         alt: "Cortex for Developers",
         src: "img/cortexgreen.png"
       },
-      menus: [
-        {
-          label: "Quickstart",
-          items: [
-            { to: "docs/pancloud_python_qs", label: "PAN Cloud Python SDK" },
-            { to: "docs/pan_cortex_data_lake_nodejs_qs", label: "Cortex NodeJS libs" },
-            { to: "docs/pan_cortex_data_lake_java_qs", label: "Cortex JAVA libs" }
-          ],
-          position: "left"
-        },
-        {
-          label: "Docs",
-          items: [
-            {
-              to: "docs/cortex",
-              label: "Cortex APIs"
-            }
-          ],
-          position: "left"
-        },
-        {
-          label: "About Cortex",
-          items: [
-            {
-              to: "docs/why",
-              label: "Why Cortex"
-            },
-            {
-              to: "docs/what",
-              label: "What is Cortex"
-            },
-            {
-              to: "docs/use",
-              label: "Cortex Use Cases"
-            }
-          ],
-          position: "left"
-        }
-      ],
       links: [
+        {
+          to: "/docs",
+          label: "Docs",
+          position: "left"
+        },
         {
           href: "https://medium.com/palo-alto-networks-developer-blog",
           label: "Blog",
@@ -82,7 +48,27 @@ module.exports = {
           label: "Register",
           position: "right"
         }
-      ]
+      ],
+      menus: [
+        {
+          label: "Partnerships",
+          items: [
+            {
+              to: "docs/partner/why",
+              label: "Why Cortex"
+            },
+            {
+              to: "docs/partner/what",
+              label: "What is Cortex"
+            },
+            {
+              to: "docs/partner/use",
+              label: "Cortex Use Cases"
+            }
+          ],
+          position: "right"
+        }
+      ],
     },
     footer: {
       style: "dark",
@@ -101,15 +87,15 @@ module.exports = {
           items: [
             {
               label: "Why Cortex?",
-              to: "docs/why"
+              to: "docs/partner/why"
             },
             {
               label: "What is Cortex?",
-              to: "docs/what"
+              to: "docs/partner/what"
             },
             {
               label: "Cortex Use Cases",
-              to: "docs/use"
+              to: "docs/partner/use"
             }
           ]
         },
@@ -168,5 +154,23 @@ module.exports = {
       src: "https://app-ab28.marketo.com/js/forms2/js/forms2.min.js",
       async: true
     }
-  ]
+  ],
+  customFields: {
+    docbar: {
+      options: [
+        {
+          label: "Docs Home",
+          to: "docs"
+        },
+        {
+          label: "Learn & Play",
+          to: "docs/learn"
+        },
+        {
+          label: "Develop",
+          to: "docs/develop"
+        }
+      ]
+    }
+  }
 };

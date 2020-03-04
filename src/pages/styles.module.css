@@ -54,6 +54,15 @@
   border-radius: 0 1em 1em 0 !important;
 }
 
+.doc {
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  border-bottom-left-radius: 100% 600px;
+  border-bottom-right-radius: 100% 600px;
+}
+
 .features {
   align-items: center;
   padding: 2rem 0;
@@ -64,6 +73,7 @@
   border-bottom-left-radius: 100% 600px;
   border-bottom-right-radius: 100% 600px;
 }
+
 
 .toolsback {
   border-top-left-radius: 100% 100px;

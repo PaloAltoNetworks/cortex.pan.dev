@@ -36,7 +36,7 @@ import * as cortex from '@paloaltonetworks/pan-cortex-data-lake'
 
 The classes in the package `@paloaltonetworks/pan-cortex-data-lake` require an object that implements the [Credentials Interface](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-nodejs/blob/master/doc/interfaces/credentials.md).
 
-A collection of objects implementing the interface is available in the package  `@paloaltonetworks/pan-cortex-hub` [See Hub Quickstart](/docs/pan_cortex_hub_nodejs_qs)
+A collection of objects implementing the interface is available in the package  `@paloaltonetworks/pan-cortex-hub` [See Hub Quickstart](/docs/develop/pan_cortex_hub_nodejs_qs)
 
 #### Getting started with a Developer Token
 
