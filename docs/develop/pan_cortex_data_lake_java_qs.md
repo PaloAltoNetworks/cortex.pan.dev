@@ -26,7 +26,7 @@ The `Entry` returned is expected to behave as:
 
 The functional method (`apply(Boolean force)`) can return `null` instead of an `Entry` object only if `force` is either `null` or `false`. In such a case a `null` response can be interpreted by the caller as a signal that the latest `Entry` returned is still valid.
 
-A collection of objects implementing the interface is available in the package `com.paloaltonetworks.cortex.hub` [See Hub Quickstart](/docs/pan_cortex_hub_java_qs)
+A collection of objects implementing the interface is available in the package `com.paloaltonetworks.cortex.hub` [See Hub Quickstart](/docs/develop/pan_cortex_hub_java_qs)
 
 #### Getting started with a Developer Token
 
