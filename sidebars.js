@@ -19,12 +19,18 @@ module.exports = {
     {
       type: "category",
       label: "PAN Cortex NodeJS libs",
-      items: ["develop/pan_cortex_data_lake_nodejs_qs", "develop/pan_cortex_hub_nodejs_qs"]
+      items: [
+        "develop/pan_cortex_data_lake_nodejs_qs",
+        "develop/pan_cortex_hub_nodejs_qs"
+      ]
     },
     {
       type: "category",
       label: "PAN Cortex JAVA libs",
-      items: ["develop/pan_cortex_data_lake_java_qs", "develop/pan_cortex_hub_java_qs"]
+      items: [
+        "develop/pan_cortex_data_lake_java_qs",
+        "develop/pan_cortex_hub_java_qs"
+      ]
     }
   ],
   partner: [
@@ -45,5 +51,10 @@ module.exports = {
       items: ["learn"]
     }
   ],
-
-}; 
+  contrib: [
+    {
+      type: "doc",
+      id: "contributing"
+    }
+  ]
+};
