@@ -25,7 +25,6 @@
   --ifm-link-color: #00cc66;
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
-  
 }
 
 /* Dark mode overrides */
@@ -58,6 +57,13 @@ html[data-theme="dark"] {
   color: var(--ifm-color-gray-800) !important;
 }
 
+/* Admonition overrides */
+.admonition .admonition-content a,
+.admonition .admonition-content p,
+.admonition .admonition-heading h5 {
+  color: var(--ifm-heading-color) !important;
+}
+
 blockquote {
   border-left: 10px solid var(--ifm-color-primary) !important;
   border-top: 1px solid var(--ifm-color-primary) !important;
@@ -66,7 +72,6 @@ blockquote {
 .button {
   z-index: 1;
 }
-
 
 .button:hover {
   background-color: var(--ifm-color-primary-dark);
@@ -100,7 +105,7 @@ blockquote {
   margin: -105px 0 0 !important;
 }
 
-.shadow--md{
+.shadow--md {
   min-height: 250px !important;
   margin-bottom: 15px;
 }
@@ -117,10 +122,9 @@ blockquote {
   --ifm-color-primary: #00cc66;
 }
 
-.footer.footer--dark { 
+.footer.footer--dark {
   background-color: #000000;
 }
-
 
 /* Marketo overrides */
 .mktoAsterix {
@@ -135,7 +139,7 @@ blockquote {
 }
 
 .mktoForm select.mktoField {
-  border-radius:3 !important;
+  border-radius: 3 !important;
 }
 
 .mktoForm .mktoCheckboxList {
