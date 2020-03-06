@@ -9,7 +9,7 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import classnames from "classnames";
+import { default as classnames } from "classnames";
 import React, { useRef } from "react";
 import ScrollUpButton from "react-scroll-up-button";
 import styles from "./styles.module.css";
@@ -28,7 +28,7 @@ const features = [
       <div className={styles.buttons}>
         <Link
           className={classnames(
-            "button button--outline button--info button--md",
+            "button button--primary button--md",
             styles.getStarted
           )}
           href="/docs/partner/what"
@@ -51,7 +51,7 @@ const features = [
       <div className={styles.buttons}>
         <Link
           className={classnames(
-            "button button--outline button--info button--md",
+            "button button--primary button--md",
             styles.getStarted
           )}
           href="/docs/partner/why"
@@ -74,7 +74,7 @@ const features = [
       <div className={styles.buttons}>
         <Link
           className={classnames(
-            "button button--outline button--info button--md",
+            "button button--primary button--md",
             styles.getStarted
           )}
           href="/docs/partner/usecases"
@@ -116,49 +116,52 @@ function Home() {
       description="All things related to automation and development with Cortex"
     >
       <ScrollUpButton />
-      <header className={classnames("hero hero--primary", styles.heroBanner)}>
+      <div className="hero">
         <div className="container">
-          <div className={styles.hero}>
-            <div className={styles.heroInner}>
-              <h1 className={styles.heroProjectTagline}>
-                <img
-                  alt="Devin the Developer Advocate"
-                  className={styles.heroLogo}
-                  src={useBaseUrl("img/cortexfavicon.png")}
-                />
-                Develop{" "}
-                <span className={styles.heroProjectKeywords}>security</span>{" "}
-                using the{" "}
-                <span className={styles.heroProjectKeywords}>
-                  most advanced
-                </span>{" "}
-                cybersecurity platform
-              </h1>
-              <div className={styles.buttons}>
+          <div className="row">
+            <div className="col">
+              <span
+                className={classnames(
+                  styles.description,
+                  styles.text,
+                  styles["text-huge"]
+                )}
+              >
+                Develop security using the most advanced cybersecurity platform
+              </span>
+              <div>
                 <Link
                   className={classnames(
-                    "button button--outline button--info button--lg",
-                    styles.getStarted
+                    "button button--info button--lg",
+                    styles.headerButtons
                   )}
                   onClick={scrollToTools}
+                  style={{ marginRight: 4 }}
                 >
                   Explore Tools
                 </Link>
                 <Link
                   className={classnames(
-                    "button button--outline button--info button--lg",
-                    styles.getStarted
+                    "button button--primary button--lg",
+                    styles.headerButtons
                   )}
                   href="register"
-                  target="_blank"
+                  target="_self"
                 >
                   Register
                 </Link>
               </div>
             </div>
+            <div className="col">
+              <img
+                alt="Cortex Data Lake"
+                src={useBaseUrl("img/cortex_diagram.svg")}
+                style={{ marginTop: 10 }}
+              />
+            </div>
           </div>
         </div>
-      </header>
+      </div>
       <main>
         {features && features.length && (
           <section className={styles.features} ref={vertificalsRef}>
@@ -182,17 +185,17 @@ function Home() {
                   <img
                     className={styles.toolImage}
                     src="img/python.png"
-                    alt="PAN Cloud Python SDK"
+                    alt="Cortex Data Lake SDK"
                   />
                 </div>
-                <h4>PAN Cloud Python SDK</h4>
+                <h4>Cortex Data Lake SDK</h4>
                 <p className={styles.text__gray}>
-                  Python idiomatic SDK for Cortex
+                  Python idiomatic SDK for the Cortex Data Lake
                 </p>
                 <div className={styles.buttons}>
                   <Link
                     className={classnames(
-                      "button button--outline button--info button--md",
+                      "button button--primary button--md",
                       styles.quickstart
                     )}
                     href="/docs/develop/pancloud_python_qs"
@@ -201,16 +204,12 @@ function Home() {
                   </Link>
                   <Link
                     className={classnames(
-                      "button button--outline button--info button--md",
+                      "button button--secondary button--md",
                       styles.github
                     )}
-                    href="https://github.com/PaloAltoNetworks/pancloud"
+                    href="https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python"
                   >
-                    <img
-                      src="/img/GitHub_Logo_White.png"
-                      width="auto"
-                      height="19"
-                    />
+                    <img src="/img/github_logo.png" width="auto" height="19" />
                   </Link>
                 </div>
                 {/* Placeholder */}
@@ -232,7 +231,7 @@ function Home() {
                 <div className={styles.buttons}>
                   <Link
                     className={classnames(
-                      "button button--outline button--info button--md",
+                      "button button--primary button--md",
                       styles.quickstart
                     )}
                     href="/docs/develop/pan_cortex_data_lake_nodejs_qs"
@@ -241,16 +240,12 @@ function Home() {
                   </Link>
                   <Link
                     className={classnames(
-                      "button button--outline button--info button--md",
+                      "button button--secondary button--md",
                       styles.github
                     )}
                     href="https://github.com/paloaltonetworks/pan-cortex-data-lake-nodejs"
                   >
-                    <img
-                      src="/img/GitHub_Logo_White.png"
-                      width="auto"
-                      height="19"
-                    />
+                    <img src="/img/github_logo.png" width="auto" height="19" />
                   </Link>
                 </div>
                 {/* Placeholder */}
@@ -272,7 +267,7 @@ function Home() {
                 <div className={styles.buttons}>
                   <Link
                     className={classnames(
-                      "button button--outline button--info button--md",
+                      "button button--primary button--md",
                       styles.quickstart
                     )}
                     href="/docs/develop/pan_cortex_data_lake_java_qs"
@@ -281,16 +276,12 @@ function Home() {
                   </Link>
                   <Link
                     className={classnames(
-                      "button button--outline button--info button--md",
+                      "button button--secondary button--md",
                       styles.github
                     )}
                     href="https://github.com/paloaltonetworks/pan-cortex-data-lake-java"
                   >
-                    <img
-                      src="/img/GitHub_Logo_White.png"
-                      width="auto"
-                      height="19"
-                    />
+                    <img src="/img/github_logo.png" width="auto" height="19" />
                   </Link>
                 </div>
                 {/* Placeholder */}
