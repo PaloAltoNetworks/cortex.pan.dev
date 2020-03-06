@@ -6,33 +6,44 @@
  */
 
 module.exports = {
-  docs: [
+  develop: [
     {
-      type: "category",
-      label: "Overview",
-      items: ["cortex"]
+      type: "doc",
+      id: "develop"
     },
     {
       type: "category",
       label: "PAN Cloud Python SDK",
-      items: ["pancloud_python_qs"]
+      items: ["develop/pancloud_python_qs"]
     },
     {
       type: "category",
       label: "PAN Cortex NodeJS libs",
-      items: ["pan_cortex_data_lake_nodejs_qs", "pan_cortex_hub_nodejs_qs"]
+      items: ["develop/pan_cortex_data_lake_nodejs_qs", "develop/pan_cortex_hub_nodejs_qs"]
     },
     {
       type: "category",
       label: "PAN Cortex JAVA libs",
-      items: ["pan_cortex_data_lake_java_qs", "pan_cortex_hub_java_qs"]
+      items: ["develop/pan_cortex_data_lake_java_qs", "develop/pan_cortex_hub_java_qs"]
     }
   ],
-  why: [
+  partner: [
+    {
+      type: "category",
+      label: "Partner",
+      items: ["partner/why", "partner/what", "partner/use"]
+    }
+  ],
+  learn: [
+    {
+      type: "doc",
+      id: "learn"
+    },
     {
       type: "category",
       label: "About Cortex",
-      items: ["why", "what", "use"]
+      items: ["learn"]
     }
-  ]
+  ],
+
 }; 

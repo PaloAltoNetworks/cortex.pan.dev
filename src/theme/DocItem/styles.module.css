@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-.docTitle {
+ .docTitle {
   font-size: 3rem;
   margin-bottom: 3rem;
 }
@@ -20,7 +20,12 @@
 .docItemContainer {
   margin: 0 auto;
   padding: 0 0.5rem;
-  max-width: 45em;
+}
+
+@media only screen and (min-width: 997px) {
+  .docItemCol {
+    max-width: 75% !important;
+  }
 }
 
 .tableOfContents {
