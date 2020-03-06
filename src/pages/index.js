@@ -31,7 +31,7 @@ const features = [
             "button button--outline button--info button--md",
             styles.getStarted
           )}
-          href="/docs/what"
+          href="/docs/partner/what"
         >
           Learn More
         </Link>
@@ -54,7 +54,7 @@ const features = [
             "button button--outline button--info button--md",
             styles.getStarted
           )}
-          href="/docs/why"
+          href="/docs/partner/why"
         >
           Learn More
         </Link>
@@ -77,7 +77,7 @@ const features = [
             "button button--outline button--info button--md",
             styles.getStarted
           )}
-          href="/docs/usecases"
+          href="/docs/partner/usecases"
         >
           Learn More
         </Link>
@@ -195,7 +195,7 @@ function Home() {
                       "button button--outline button--info button--md",
                       styles.quickstart
                     )}
-                    href="/docs/pancloud_python_qs"
+                    href="/docs/develop/pancloud_python_qs"
                   >
                     Quickstart
                   </Link>
@@ -235,7 +235,7 @@ function Home() {
                       "button button--outline button--info button--md",
                       styles.quickstart
                     )}
-                    href="/docs/pan_cortex_data_lake_nodejs_qs"
+                    href="/docs/develop/pan_cortex_data_lake_nodejs_qs"
                   >
                     Quickstart
                   </Link>
@@ -275,7 +275,7 @@ function Home() {
                       "button button--outline button--info button--md",
                       styles.quickstart
                     )}
-                    href="/docs/pan_cortex_data_lake_java_qs"
+                    href="/docs/develop/pan_cortex_data_lake_java_qs"
                   >
                     Quickstart
                   </Link>

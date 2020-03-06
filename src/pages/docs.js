@@ -11,7 +11,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import classnames from "classnames";
 import React, { useRef } from "react";
-import ScrollUpButton from "react-scroll-up-button";
 import styles from "./styles.module.css";
 
 function Docs() {
@@ -32,9 +31,10 @@ function Docs() {
           <div className="container">
             <h1>Cortex For Developers</h1>
             <description>
-            Join a growing developer ecosystem building innovative apps. Use comprehensive data 
-            and global threat intelligence to fuel AI and machine learning for your apps while 
-            growing your own business and reputation.
+              Join a growing developer ecosystem building innovative apps. Use
+              comprehensive data and global threat intelligence to fuel AI and
+              machine learning for your apps while growing your own business and
+              reputation.
             </description>
             <br></br>
             <br></br>
@@ -44,14 +44,13 @@ function Docs() {
                   <div class="card__header">
                     <h3>Learn & Play</h3>
                     <description>
-                      Wants to learn more about Cortex APIs? Ready to play with the APIs and see the data? This is a great place to 
-                      start and build a foundation before you began developing! 
+                      Wants to learn more about Cortex APIs? Ready to play with
+                      the APIs and see the data? This is a great place to start
+                      and build a foundation before you began developing!
                     </description>
                   </div>
                   <div class="card__body">
-                    <Link href={useBaseUrl("docs/learn")}>
-                      PAN-OS® XML API
-                    </Link>
+                    <Link href={useBaseUrl("docs/learn")}>Start Exploring</Link>
                     <br></br>
                   </div>
                   <div class="card__footer">
@@ -62,7 +61,7 @@ function Docs() {
                       )}
                       href={useBaseUrl("/docs/learn")}
                     >
-                      APIs and SDKS
+                      Learn and Play
                     </Link>
                   </div>
                 </div>
@@ -72,24 +71,29 @@ function Docs() {
                   <div class="card__header">
                     <h2>Develop</h2>
                     <description>
-                      Dive straight into buildling your own apps, scripts, and tools using our 
-                      APIs and SDKs. Guides ranging from Hello, World! to real life use cases.
+                      Dive straight into buildling your own apps, scripts, and
+                      tools using our APIs and SDKs. Guides ranging from Hello,
+                      World! to real life use cases.
                     </description>
                   </div>
                   <div class="card__body">
-                    <Link
-                      href={useBaseUrl(
-                        "docs/develop/pancloud_python_qs"
-                      )}
-                    >
+                    <Link href={useBaseUrl("docs/develop/pancloud_python_qs")}>
                       PAN Cloud Python
                     </Link>
                     <br></br>
-                    <Link href={useBaseUrl("docs/develop/pan_cortex_data_lake_nodejs_qs")}>
+                    <Link
+                      href={useBaseUrl(
+                        "docs/develop/pan_cortex_data_lake_nodejs_qs"
+                      )}
+                    >
                       PAN Cortex NodeJS
                     </Link>
                     <br></br>
-                    <Link href={useBaseUrl("docs/develop/pan_cortex_data_lake_java_qs")}>
+                    <Link
+                      href={useBaseUrl(
+                        "docs/develop/pan_cortex_data_lake_java_qs"
+                      )}
+                    >
                       PAN Cortex JAVA
                     </Link>
                   </div>
@@ -115,11 +119,14 @@ function Docs() {
             <div className="col col--12">
               <h3>Want to contribute? See something missing?</h3>
               <description>
-                Visit our <a href={useBaseUrl("docs/contributing")}>Contributing Guide</a> to learn how easy it is to help make Cortex for Developers better!
+                Visit our{" "}
+                <a href={useBaseUrl("docs/contributing")}>Contributing Guide</a>{" "}
+                to learn how easy it is to help make Cortex for Developers
+                better!
               </description>
-              <br></br><br></br>
+              <br></br>
+              <br></br>
             </div>
-            
           </div>
         </section>
       </main>
