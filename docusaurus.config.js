@@ -25,7 +25,8 @@ module.exports = {
       title: "",
       logo: {
         alt: "Cortex for Developers",
-        src: "img/cortexgreen.png"
+        src: "img/Cortex_Tagline_Logo_RGB_K.png",
+        srcDark: "img/Cortex_Tagline_Logo_RGB_KO.png"
       },
       links: [
         {
@@ -51,7 +52,7 @@ module.exports = {
       ],
       menus: [
         {
-          label: "Partnerships",
+          label: "Partner",
           items: [
             {
               to: "docs/partner/why",
@@ -66,9 +67,9 @@ module.exports = {
               label: "Cortex Use Cases"
             }
           ],
-          position: "right"
+          position: "left"
         }
-      ],
+      ]
     },
     footer: {
       style: "dark",

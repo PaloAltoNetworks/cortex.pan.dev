@@ -6,11 +6,11 @@ function Register() {
   return (
     <Layout description="Register for Cortex email updates">
       <div className="container margin-vert--xl">
-        <h1>Sign up for early access!</h1>
+        <h1>Sign up for more information!</h1>
         <div className="margin-bottom--lg">
           <h4>
-            Register to become a Cortex technology partner and to be notified
-            when the developer platform becomes available.
+            Register for information on becoming a Cortex™ Data Lake technology
+            partner.
           </h4>
           <Form />
         </div>
