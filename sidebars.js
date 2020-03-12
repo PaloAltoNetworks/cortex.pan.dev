@@ -12,6 +12,10 @@ module.exports = {
       id: "develop"
     },
     {
+      type: "doc",
+      id: "develop/quickstart"
+    },
+    {
       type: "category",
       label: "PAN Cloud Python SDK",
       items: ["develop/pancloud_python_qs"]
