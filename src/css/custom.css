@@ -23,6 +23,7 @@
   --ifm-color-primary-lightest: #0aff85;
   --ifm-hero-background-color: #f9f9f9 !important;
   --ifm-link-color: #00cc66;
+  --ifm-background-color: #fff;
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
   --ra-color-tip: var(--ifm-color-primary);
