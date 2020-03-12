@@ -1,0 +1,585 @@
+---
+id: quickstart
+title: Cortex Data Lake Quickstart
+sidebar_label: Quickstart
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Link from "@docusaurus/Link";
+
+:::note
+The following guide will walk you through making your first API request to the Cortex Data Lake.
+:::
+
+export function SetLanguage (lang) {
+  if (typeof window !== 'undefined'){
+    localStorage.setItem('defaultLanguage', lang)
+    window.location.reload()
+  }
+}
+
+## Choose a Language
+
+<a className="button button--primary" onClick={() => SetLanguage('python')}>
+Python
+</a>&nbsp;
+<a className="button button--info" onClick={() => SetLanguage('nodejs')}>
+NodeJS
+</a>&nbsp;
+<a className="button button--warning" onClick={() => SetLanguage('java')}>
+Java
+</a>
+
+## SDK Installation
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```bash
+pip install pan-cortex-data-lake
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```bash
+npm i @paloaltonetworks/pan-cortex-data-lake
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+Pre-compiled binaries are available in the [`/target` folder](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-java/tree/master/target) of the GitHub repo. Check `sha512` signature before trusting pre-build binaries.
+
+</TabItem>
+</Tabs>
+
+## Authentication
+
+Perhaps the easiest way to get started is by leveraging a Developer Token provided by the [API Explorer's](https://app.apiexplorer.rocks) token redemption service. See [Developer Tokens](developer_tokens) for details.
+
+### Export environment variables:
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```bash
+export PAN_DEVELOPER_TOKEN=<your_developer_token>
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```bash
+export PAN_DEVELOPER_TOKEN=<your_developer_token>
+export PAN_DEVELOPER_TOKEN_PROVIDER=https://app.apiexplorer.rocks/request_token
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```bash
+export PAN_DEVELOPER_TOKEN=<your_developer_token>
+export PAN_DEVELOPER_TOKEN_PROVIDER=https://app.apiexplorer.rocks/request_token
+```
+
+</TabItem>
+</Tabs>
+
+### Instantiate credentials object
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+from pan_cortex_data_lake import Credentials
+
+
+c = Credentials()
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+const hub = require("@paloaltonetworks/pan-cortex-hub");
+const cred = hub.DevTokenCredentials.factory();
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+import com.paloaltonetworks.cortex.hub.HubCredentialsDevToken
+
+var cred = HubCredentialsDevToken.factory();
+```
+
+</TabItem>
+</Tabs>
+
+### Verify credentials
+
+Next, let's test to make sure the credentials object is working as expected:
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+c.refresh()
+```
+
+Example output:
+
+```console
+>>> c.refresh()
+'eyJ...<your_access_token>'
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+cred.getToken().then(console.log);
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+System.out.println(cred.apply(true));
+```
+
+</TabItem>
+</Tabs>
+
+## Basic usage
+
+Now that your credentials are set, let's make our first API request!
+
+### 1. Import the package:
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+from pan_cortex_data_lake import QueryService
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+const dl = require("@paloaltonetworks/pan-cortex-data-lake");
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+import com.paloaltonetworks.cortex.data_lake.QueryServiceClient
+```
+
+</TabItem>
+</Tabs>
+
+### 2. Construct a Query Service object
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+qs = QueryService(credentials=c)
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+const qsc = dl.QueryServiceClient.factory({ cortexDefCredentials: cred });
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+var qsc = new QueryServiceClient(cred);
+```
+
+</TabItem>
+</Tabs>
+
+### 3. Define a SQL statement
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+SQL = "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5"
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+const sqlCmd = "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5";
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+var sqlCmd = "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5";
+```
+
+</TabItem>
+</Tabs>
+
+### 4. Perform the query
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+q = qs.create_query(query_params={"query": SQL})
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+const iter = qsc.iterator(sqlCmd);
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+var iter = qsc.iterable(sqlCmd);
+```
+
+</TabItem>
+</Tabs>
+
+### 5. Print the output
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+job_id = q.json()["jobId"]
+
+for p in qs.iter_job_results(job_id=job_id):
+    print(p.text)
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+(async () => {
+  for await (const page of iter2) console.log(page);
+})();
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+for (var item : iter) System.out.println(item);
+```
+
+</TabItem>
+</Tabs>
+
+Example output:
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+(output formatted for display purposes)
+
+```json
+{
+  "jobId": "9c276960-d0ef-49e5-8da8-31aaab27ee96",
+  "state": "DONE",
+  "rowsInJob": 5,
+  "rowsInPage": 5,
+  "page": {
+    "pageCursor": null,
+    "result": {
+      "data": [
+        {
+          "source_ip": {
+            "value": "10.154.1.20",
+            "hex": "00000000000000000000ffff0a9a0114"
+          },
+          "dest_ip": {
+            "value": "212.180.157.132",
+            "hex": "00000000000000000000ffffd4b49d84"
+          }
+        },
+        {
+          "source_ip": {
+            "value": "10.154.1.20",
+            "hex": "00000000000000000000ffff0a9a0114"
+          },
+          "dest_ip": {
+            "value": "212.180.157.132",
+            "hex": "00000000000000000000ffffd4b49d84"
+          }
+        },
+        {
+          "source_ip": {
+            "value": "10.154.1.20",
+            "hex": "00000000000000000000ffff0a9a0114"
+          },
+          "dest_ip": {
+            "value": "212.180.157.132",
+            "hex": "00000000000000000000ffffd4b49d84"
+          }
+        },
+        {
+          "source_ip": {
+            "value": "10.154.1.20",
+            "hex": "00000000000000000000ffff0a9a0114"
+          },
+          "dest_ip": {
+            "value": "212.180.157.132",
+            "hex": "00000000000000000000ffffd4b49d84"
+          }
+        },
+        {
+          "source_ip": {
+            "value": "10.154.1.20",
+            "hex": "00000000000000000000ffff0a9a0114"
+          },
+          "dest_ip": {
+            "value": "212.180.157.132",
+            "hex": "00000000000000000000ffffd4b49d84"
+          }
+        }
+      ]
+    }
+  },
+  "resultFormat": "valuesDictionary"
+}
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```console
+2/25/2020, 13:17:28 CORTEX_SDK initial autorization header for default data lake
+2/25/2020, 13:17:29 CORTEX_SDK Created new HTTP2 session to cortex-prd1-api.us.cdl.paloaltonetworks.com
+[
+  {
+    source_ip: {
+      value: '192.168.110.131',
+      hex: '00000000000000000000ffffc0a86e83'
+    },
+    dest_ip: { value: '70.48.1.139', hex: '00000000000000000000ffff4630018b' }
+  },
+  {
+    source_ip: { value: '10.154.1.5', hex: '00000000000000000000ffff0a9a0105' },
+    dest_ip: { value: '124.43.145.45', hex: '00000000000000000000ffff7c2b912d' }
+  },
+  {
+    source_ip: {
+      value: '10.154.246.167',
+      hex: '00000000000000000000ffff0a9af6a7'
+    },
+    dest_ip: { value: '69.63.176.188', hex: '00000000000000000000ffff453fb0bc' }
+  },
+  {
+    source_ip: { value: '10.154.9.40', hex: '00000000000000000000ffff0a9a0928' },
+    dest_ip: {
+      value: '123.193.27.118',
+      hex: '00000000000000000000ffff7bc11b76'
+    }
+  },
+  {
+    source_ip: {
+      value: '10.154.196.169',
+      hex: '00000000000000000000ffff0a9ac4a9'
+    },
+    dest_ip: {
+      value: '121.243.224.142',
+      hex: '00000000000000000000ffff79f3e08e'
+    }
+  }
+]
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```console
+INFO: Updated authentication header for default data lake
+paloaltonetworks.com
+{"source_ip":{"value":"10.154.3.55","hex":"00000000000000000000ffff0a9a0337"},"dest_ip":{"value":"174.137.113.120","hex":"00000000000000000000ffffae897178"}}
+{"source_ip":{"value":"10.154.1.46","hex":"00000000000000000000ffff0a9a012e"},"dest_ip":{"value":"58.19.16.252","hex":"00000000000000000000ffff3a1310fc"}}
+{"source_ip":{"value":"10.154.1.46","hex":"00000000000000000000ffff0a9a012e"},"dest_ip":{"value":"58.19.16.252","hex":"00000000000000000000ffff3a1310fc"}}
+{"source_ip":{"value":"10.154.1.46","hex":"00000000000000000000ffff0a9a012e"},"dest_ip":{"value":"58.19.16.252","hex":"00000000000000000000ffff3a1310fc"}}
+{"source_ip":{"value":"10.154.3.96","hex":"00000000000000000000ffff0a9a0360"},"dest_ip":{"value":"123.138.238.43","hex":"00000000000000000000ffff7b8aee2b"}}
+```
+
+</TabItem>
+</Tabs>
+
+## Complete Example
+
+Previous example code in just one block (the cred variable is supposed to exist)
+
+<Tabs
+defaultValue={typeof window !== 'undefined' && localStorage.getItem('defaultLanguage') ? localStorage.getItem('defaultLanguage') : 'python'}
+values={[
+{ label: 'Python', value: 'python', },
+{ label: 'NodeJS', value: 'nodejs', },
+{ label: 'Java', value: 'java', },
+]
+}>
+<TabItem value="python">
+
+```python
+from pan_cortex_data_lake import Credentials, QueryService
+
+
+c = Credentials()
+qs = QueryService(credentials=c)
+
+SQL = "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5"
+q = qs.create_query(query_params={"query": SQL})
+job_id = q.json()["jobId"]
+
+for p in qs.iter_job_results(job_id=job_id):
+    print(p.text)
+```
+
+</TabItem>
+
+<TabItem value="nodejs">
+
+```javascript
+const dl = require("@paloaltonetworks/pan-cortex-data-lake");
+const hub = require("@paloaltonetworks/pan-cortex-hub");
+const cred = hub.DevTokenCredentials.factory();
+const sqlCmd =
+  "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5";
+
+async function worker(iter) {
+  for await (const page of iter) console.log(page);
+}
+
+const qsc = dl.QueryServiceClient.factory({ cortexDefCredentials: cred });
+worker(qsc.iterator(sqlCmd));
+```
+
+</TabItem>
+
+<TabItem value="java">
+
+```java
+import com.paloaltonetworks.cortex.data_lake.QueryServiceClient
+import com.paloaltonetworks.cortex.hub.HubCredentialsDevToken
+
+var cred = HubCredentialsDevToken.factory();
+var sqlCmd = "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5";
+var qsc = new QueryServiceClient(cred);
+
+for (var item : qsc.iterable(sqlCmd)) System.out.println(item);
+```
+
+</TabItem>
+</Tabs>
