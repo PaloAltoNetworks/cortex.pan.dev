@@ -13,8 +13,10 @@ The following guide will walk you through making your first API request to the C
 :::
 
 export function SetLanguage (lang) {
-  localStorage.setItem('defaultLanguage', lang)
-  window.location.reload()
+  if (typeof window !== 'undefined'){
+    localStorage.setItem('defaultLanguage', lang)
+    window.location.reload()
+  }
 }
 
 ## Choose a Language
@@ -32,7 +34,7 @@ Java
 ## SDK Installation
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -69,7 +71,7 @@ Perhaps the easiest way to get started is by leveraging a Developer Token provid
 ### Export environment variables:
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -106,7 +108,7 @@ export PAN_DEVELOPER_TOKEN_PROVIDER=https://app.apiexplorer.rocks/request_token
 ### Instantiate credentials object
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -149,7 +151,7 @@ var cred = HubCredentialsDevToken.factory();
 Next, let's test to make sure the credentials object is working as expected:
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -195,7 +197,7 @@ Now that your credentials are set, let's make our first API request!
 ### 1. Import the package:
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -230,7 +232,7 @@ import com.paloaltonetworks.cortex.data_lake.QueryServiceClient
 ### 2. Construct a Query Service object
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -265,7 +267,7 @@ var qsc = new QueryServiceClient(cred);
 ### 3. Define a SQL statement
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -300,7 +302,7 @@ var sqlCmd = "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMI
 ### 4. Perform the query
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -335,7 +337,7 @@ var iter = qsc.iterable(sqlCmd);
 ### 5. Print the output
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -375,7 +377,7 @@ for (var item : iter) System.out.println(item);
 Example output:
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
@@ -521,7 +523,7 @@ paloaltonetworks.com
 Previous example code in just one block (the cred variable is supposed to exist)
 
 <Tabs
-defaultValue={localStorage.getItem('defaultLanguage')}
+defaultValue={typeof window !== 'undefined' ? localStorage.getItem('defaultLanguage') : 'python'}
 values={[
 { label: 'Python', value: 'python', },
 { label: 'NodeJS', value: 'nodejs', },
