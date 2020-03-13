@@ -44,6 +44,8 @@ The following guide assumes the existence of an authorized API Explorer instance
 
 ### cURL
 
+The following snippet will return an `access_token` that can be used to send authenticated requests to the Cortex Data Lake API.
+
 ```bash
 export PAN_DEVELOPER_TOKEN=<your_developer_token>
 

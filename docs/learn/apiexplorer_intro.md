@@ -41,7 +41,7 @@ Get Started
 
 ## Sandbox
 
-Each instance of API Explorer comes with a pre-authorized sandbox environment, curated and maintained by the Developer Relations team. In it, you'll find many simulated, sample data across many different log types - more than enough to give you a sense of what's possible!
+Each instance of API Explorer comes with a pre-authorized sandbox environment, curated and maintained by the [Developer Relations](https://medium.com/palo-alto-networks-developer-blog/introducing-developer-relations-at-palo-alto-networks-c9b4a8817c4) team. In it, you'll find simulated, sample data across many different log types - hopefully enough to give you a sense of what's possible!
 
 <a className="button button--outline button--primary" href="/docs/learn/sandbox_data">
 Learn More
@@ -49,7 +49,7 @@ Learn More
 
 ## Developer Tokens
 
-Working on a proof-of-concept or exploring the API? Not quite ready to jump into implementing the full OAuth2 authorization code grant flow? Not to worry - API Explorer is here to help. Offload the OAuth2 stuff to API Explorer and generate a `Developer Token` to ease the process of authenticating to the CDL APIs.
+Working on a proof-of-concept or exploring the API? Not quite ready to jump into implementing the full OAuth2 authorization code grant flow? Not to worry - API Explorer is here to help. Leave the OAuth2 stuff to API Explorer and generate a `Developer Token` to ease the process of authenticating to the CDL APIs.
 
 <a className="button button--outline button--primary" href="/docs/learn/developer_tokens">
 Learn More

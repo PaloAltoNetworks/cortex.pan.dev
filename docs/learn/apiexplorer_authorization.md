@@ -43,6 +43,11 @@ The following assumes the user has gone through the steps of [activating a Corte
 3. Click the **"New Instance Available!"** ⚠️ button in the navigation bar.
 4. Click the `Authorize` button next to your app instance.
 5. After reviewing the selected options, click the `Authorize` button to execute the OAuth2 exchange.
-6. At the **"Request for Approval"** page, click `Allow` if you consent to granting API Explorer access to your CDL. Doing so will complete the authorization flow and redirect your back to API Explorer.
+6. At the **"Request for Approval"** page, click `Allow` if you consent to granting API Explorer access to your CDL. Doing so will complete the authorization flow and redirect you back to API Explorer.
 
 <img alt="Authorize API Explorer" src={useBaseUrl('img/cortex_authorization.gif')} />
+<br></br><br></br>
+
+:::tip
+Now that you've granted API Explorer access to your CDL, use Query Explorer to begin your exploration!
+:::
