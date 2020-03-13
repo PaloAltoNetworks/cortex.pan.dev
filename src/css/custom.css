@@ -28,6 +28,7 @@
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
   --ra-color-tip: var(--ifm-color-primary);
   --ra-color-text-dark: #000;
+  --ifm-color-info: #00c0e8;
 }
 
 /* Dark mode overrides */
@@ -189,6 +190,22 @@ blockquote {
 @media (max-width: 380px) {
   .navbar__logo {
     height: auto !important;
+  }
+}
+
+.hero {
+  border-bottom-left-radius: 100% 100px !important;
+  border-bottom-right-radius: 100% 100px !important;
+  border-bottom: 5px solid var(--ifm-color-primary) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    align-items: center;
+    background-color: var(--ifm-hero-background-color);
+    color: var(--ifm-hero-text-color);
+    display: flex;
+    padding: 1rem .1rem !important;
   }
 }
 

@@ -48,12 +48,6 @@
   background-color: #807d7c !important;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
 .buttons {
   display: flex;
   align-items: center;
@@ -61,7 +55,9 @@
 }
 
 .headerButtons {
-  border-radius: 0;
+  border-radius: 5;
+  margin-bottom: 1rem;
+  color: #fff !important;
 }
 
 .quickstart {
@@ -108,6 +104,7 @@
 .toolsback {
   border-top-left-radius: 100% 100px;
   border-top-right-radius: 100% 100px;
+  border-top: 5px solid var(--ifm-color-primary) !important;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
@@ -139,9 +136,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .hero {
-    padding-left: 20px;
-    padding-right: 20px;
+
+  .heroBanner {
+    padding-top: 2rem !important;
   }
 
   .heroInner {
@@ -369,10 +366,9 @@
 @supports (background-clip: text) {
   .description {
     background-image: linear-gradient(
-      81deg,
-      var(--black),
-      var(--black-light),
-      var(--dusk-blue)
+      0.25turn,
+      var(--ifm-color-primary),
+      #807d7c
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;

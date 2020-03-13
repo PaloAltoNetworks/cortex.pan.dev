@@ -67,7 +67,7 @@ module.exports = {
               label: "Cortex Use Cases"
             }
           ],
-          position: "left"
+          position: "right"
         }
       ]
     },
