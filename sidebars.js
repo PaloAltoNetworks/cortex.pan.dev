@@ -53,6 +53,16 @@ module.exports = {
       type: "category",
       label: "About Cortex",
       items: ["learn"]
+    },
+    {
+      type: "category",
+      label: "API Explorer",
+      items: [
+        "learn/apiexplorer_intro",
+        "learn/apiexplorer_authorization",
+        "learn/sandbox_data",
+        "learn/developer_tokens"
+      ]
     }
   ],
   contrib: [
