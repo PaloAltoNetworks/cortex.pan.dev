@@ -10,18 +10,18 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.43",
-    "@docusaurus/mdx-loader": "^2.0.0-alpha.43",
-    "@docusaurus/plugin-content-blog": "^2.0.0-alpha.43",
-    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.43",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.43",
-    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.43",
-    "@docusaurus/theme-search-algolia": "^2.0.0-alpha.43",
+    "@docusaurus/core": "2.0.0-alpha.48",
+    "@docusaurus/mdx-loader": "2.0.0-alpha.48",
+    "@docusaurus/plugin-content-blog": "2.0.0-alpha.48",
+    "@docusaurus/plugin-content-docs": "2.0.0-alpha.48",
+    "@docusaurus/preset-classic": "2.0.0-alpha.48",
+    "@docusaurus/theme-live-codeblock": "2.0.0-alpha.48",
+    "@docusaurus/theme-search-algolia": "2.0.0-alpha.48",
     "classnames": "^2.2.6",
     "marketo": "^0.0.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-particles-js": "^2.7.0",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
+    "react-particles-js": "^2.7.1",
     "react-scroll-up-button": "^1.6.4"
   },
   "browserslist": {
