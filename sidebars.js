@@ -55,6 +55,10 @@ module.exports = {
       items: ["learn"]
     },
     {
+      type: "doc",
+      id: "learn/oauth2"
+    },
+    {
       type: "category",
       label: "API Explorer",
       items: [
