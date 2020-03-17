@@ -1,7 +1,7 @@
 ---
 id: develop
 title: Cortex
-sidebar_label: Develop
+sidebar_label: Overview
 hide_title: false
 description: Overview of Cortex
 keywords:
@@ -29,13 +29,13 @@ Powerful, low-level SDK for interacting with **Cortex**. [Get Started](/doc/deve
 
 ##### PAN Cortex NodeJS libraries
 
-* **Data Lake**: Provides low-level language bindings as well as high-level *Stream.Readable* and *async Iterator* (ES2018 / NodeJS 10) interfaces to simplify SQL command execution. [Get Started](/doc/develop/pan_cortex_data_lake_nodejs_qs)
-* **Hub**: Provides a collection of classes implementing the `Credentials` interface needed for Cortex authorization [Get Started](/doc/develop/pan_cortex_hub_nodejs_qs)
+- **Data Lake**: Provides low-level language bindings as well as high-level _Stream.Readable_ and _async Iterator_ (ES2018 / NodeJS 10) interfaces to simplify SQL command execution. [Get Started](/doc/develop/pan_cortex_data_lake_nodejs_qs)
+- **Hub**: Provides a collection of classes implementing the `Credentials` interface needed for Cortex authorization [Get Started](/doc/develop/pan_cortex_hub_nodejs_qs)
 
 ##### PAN Cortex JAVA libraries
 
-* **Data Lake**: Provides low-level language bindings as well as high-level *Stream * and *Iterable* interfaces to simplify SQL command execution. [Get Started](/doc/develop/pan_cortex_data_lake_java_qs)
-* **Hub**: Provides a collection of classes implementing the `Credentials` interface needed for Cortex authorization [Get Started](/doc/develop/pan_cortex_hub_java_qs)
+- **Data Lake**: Provides low-level language bindings as well as high-level _Stream _ and _Iterable_ interfaces to simplify SQL command execution. [Get Started](/doc/develop/pan_cortex_data_lake_java_qs)
+- **Hub**: Provides a collection of classes implementing the `Credentials` interface needed for Cortex authorization [Get Started](/doc/develop/pan_cortex_hub_java_qs)
 
 ---
 

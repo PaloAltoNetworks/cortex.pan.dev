@@ -22,10 +22,7 @@ function Docs() {
   const scrollToVerticals = () => scrollToRef(vertificalsRef);
   const scrollToTools = () => scrollToRef(toolsRef);
   return (
-    <Layout
-      title={`${siteConfig.themeConfig.navbar.title}`}
-      description="All things related to automation and development with Demisto"
-    >
+    <Layout>
       <main>
         <section className={styles.doc}>
           <div className="container">
@@ -44,13 +41,24 @@ function Docs() {
                   <div class="card__header">
                     <h3>Learn & Play</h3>
                     <description>
-                      Wants to learn more about Cortex APIs? Ready to play with
-                      the APIs and see the data? This is a great place to start
-                      and build a foundation before you began developing!
+                      Want to learn more about Cortex Data Lake APIs? Ready to
+                      play with the APIs and explore the data? You're in the
+                      right place. Find everything you need here to get started
+                      and build a solid foundation before you begin developing!
                     </description>
                   </div>
                   <div class="card__body">
-                    <Link href={useBaseUrl("docs/learn")}>Start Exploring</Link>
+                    <Link href={useBaseUrl("docs/learn/about_cdl")}>
+                      CDL APIs
+                    </Link>
+                    <br></br>
+                    <Link href={useBaseUrl("docs/learn/oauth2")}>
+                      OAuth 2.0
+                    </Link>
+                    <br></br>
+                    <Link href={useBaseUrl("docs/learn/apiexplorer_intro")}>
+                      Start Exploring
+                    </Link>
                     <br></br>
                   </div>
                   <div class="card__footer">
@@ -61,7 +69,7 @@ function Docs() {
                       )}
                       href={useBaseUrl("/docs/learn")}
                     >
-                      Learn and Play
+                      GO
                     </Link>
                   </div>
                 </div>
@@ -71,14 +79,21 @@ function Docs() {
                   <div class="card__header">
                     <h2>Develop</h2>
                     <description>
-                      Dive straight into buildling your own apps, scripts, and
-                      tools using our APIs and SDKs. Guides ranging from Hello,
-                      World! to real life use cases.
+                      Dive straight into building your own apps, scripts, and
+                      integrations with our APIs and SDKs. Here you'll find
+                      guides ranging from "Hello World!" to more advanced use
+                      cases.
                     </description>
                   </div>
                   <div class="card__body">
-                    <Link href={useBaseUrl("docs/develop/pancloud_python_qs")}>
-                      PAN Cloud Python
+                    <Link href={useBaseUrl("docs/develop/quickstart")}>
+                      Quickstart
+                    </Link>
+                    <br></br>
+                    <Link
+                      href={useBaseUrl("docs/develop/cdl_python_installation")}
+                    >
+                      PAN Cortex Python
                     </Link>
                     <br></br>
                     <Link
@@ -105,7 +120,7 @@ function Docs() {
                       )}
                       href={useBaseUrl("docs/develop")}
                     >
-                      Develop
+                      GO
                     </Link>
                   </div>
                 </div>
