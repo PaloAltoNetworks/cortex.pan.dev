@@ -69,6 +69,24 @@ module.exports = {
           ],
           position: "right"
         }
+      ],
+      sites: [
+        {
+          label: "Products",
+          items: [
+            {
+              href: "https://panos.pan.dev",
+              label: "PAN-OS",
+              logo: "img/strata_favicon.png"
+            },
+            {
+              href: "https://xsoar.pan.dev",
+              label: "Cortex XSOAR",
+              logo: "img/Cortex-XSOAR-product-green.svg"
+            }
+          ],
+          position: "right"
+        }
       ]
     },
     footer: {
@@ -78,13 +96,13 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Cortex APIs",
-              to: "docs/cortex"
+              label: "Cortex for Developers",
+              to: "docs"
             }
           ]
         },
         {
-          title: "About Cortex",
+          title: "Partners",
           items: [
             {
               label: "Why Cortex?",
