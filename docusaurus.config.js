@@ -80,6 +80,11 @@ module.exports = {
               logo: "img/strata_favicon.png"
             },
             {
+              href: "https://cortex.pan.dev",
+              label: "Cortex Data Lake",
+              logo: "img/cortexfavicon.png"
+            },
+            {
               href: "https://xsoar.pan.dev",
               label: "Cortex XSOAR",
               logo: "img/Cortex-XSOAR-product-green.svg"
