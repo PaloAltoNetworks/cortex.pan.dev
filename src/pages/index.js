@@ -198,7 +198,7 @@ function Home() {
                       "button button--primary button--md",
                       styles.quickstart
                     )}
-                    href="/docs/develop/pancloud_python_qs"
+                    href="/docs/develop/cdl_python_installation"
                   >
                     Quickstart
                   </Link>

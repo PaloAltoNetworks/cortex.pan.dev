@@ -17,8 +17,8 @@ module.exports = {
     },
     {
       type: "category",
-      label: "PAN Cloud Python SDK",
-      items: ["develop/pancloud_python_qs"]
+      label: "PAN CDL Python SDK",
+      items: ["develop/cdl_python_installation"]
     },
     {
       type: "category",
@@ -50,9 +50,8 @@ module.exports = {
       id: "learn"
     },
     {
-      type: "category",
-      label: "About Cortex",
-      items: ["learn"]
+      type: "doc",
+      id: "learn/about_cdl"
     },
     {
       type: "doc",
