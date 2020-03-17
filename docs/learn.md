@@ -1,46 +1,52 @@
 ---
 id: learn
-title: Cortex Data Lake
+title: Overview
 sidebar_label: Overview
 hide_title: false
 description: Overview of Cortex
 keywords:
   - cortex
   - data lake
-  - overview
-  - api
-  - sdk
-image: /img/cortexfordevelopers.png
 ---
 
 :::note
-When configuring and managing the Palo Alto Networks Next-Generation firewall for scale and agility, it’s important to have a collection of powerful APIs and tools to automate activities and events. Our APIs and SDKs provide a collection of open, feature-rich automation opportunities for the beginning scripter and advanced developer alike.
+The following presents a high-level overview of the tools, resources and documentation available to anyone interested in learning more about the Cortex Data Lake APIs.
 :::
 
-### XML API
+The Cortex Data Lake API is a collection of cloud-based services intended to support the rapid prototyping and development of security applications, services and integrations.
 
-A powerful low-level API that covers all the firewall's features. Take full control of every aspect of your security and build deep integrations with your systems. Make API calls directly on the firewall or from Panorama. <a href="/docs/apis/xmlapi_qs" target="_self">Get Started</a>
+### APIs
 
-### REST API
+Leverage powerful and capable REST APIs to help turn your next innovative idea into a reality.
 
-The new PAN-OS REST API simplifies access to policy resources on the firewall as top-level URIs. You can use the API to create, change, and delete these resources directly on the firewall or from Panorama. <a href="/docs/apis/restapi_qs" target="_self">Get Started</a>
+<a className="button button--outline button--primary" href="/docs/learn/about_cdl">
+Learn More
+</a>
 
-### SDKs
+### OAuth 2.0
 
-Jumpstart your automation project with SDKs for Python and Go!
+Proven, industry-standard authorization framework for empowering end users to decide what permissions a CDL app should have.
 
-##### PAN Device Framework
+<a className="button button--outline button--primary" href="/docs/learn/oauth2">
+Learn More
+</a>
 
-Object-based interaction with the firewall in these language simplifies interaction with the firewall so you can focus on the automation itself. [Get Started](/docs/apis/pandevice_qs)
+### Libraries and SDKs
 
-##### PAN Python SDK
+Developing your next CDL app or integration in Python? NodeJS? Java? Just looking to get started? The Developer Relations team has you covered.
 
-Powerful, low-level SDK for interacting with **PAN-OS®**, **WildFire**, **AutoFocus** and more. [Get Started](/docs/apis/panpython_qs)
+<a className="button button--outline button--primary" href="/docs/develop/quickstart">
+Learn More
+</a>
 
-##### PAN Go SDK
+### API Explorer
 
-A PAN-OS® GoLang SDK that also serves as the underlying client library for the Palo Alto Networks Terraform provider. [Get Started](/docs/apis/pango_qs)
+- Query Explorer ✅
+- OAuth 2.0 support ✅
+- Sandbox ✅
 
----
+Let API Explorer help jumpstart your exploration or next development project.
 
-_Join the conversation_ on our <a href="https://live.paloaltonetworks.com/t5/Automation-API/ct-p/automation" target="_blank">API and Automation discussion forum</a>.
+<a className="button button--outline button--primary" href="/docs/learn/apiexplorer_intro">
+Learn More
+</a>
