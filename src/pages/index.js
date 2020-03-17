@@ -77,7 +77,7 @@ const features = [
             "button button--primary button--md",
             styles.getStarted
           )}
-          href="/docs/partner/usecases"
+          href="/docs/partner/use"
         >
           Learn More
         </Link>
