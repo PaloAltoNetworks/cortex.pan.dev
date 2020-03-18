@@ -106,9 +106,9 @@ function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   const scrollToRef = ref => ref.current.scrollIntoView({ behavior: "smooth" });
-  const vertificalsRef = useRef(null);
+  const partnersRef = useRef(null);
   const toolsRef = useRef(null);
-  const scrollToVerticals = () => scrollToRef(vertificalsRef);
+  const scrollToPartners = () => scrollToRef(partnersRef);
   const scrollToTools = () => scrollToRef(toolsRef);
   return (
     <Layout
@@ -145,10 +145,10 @@ function Home() {
                     "button button--primary button--lg",
                     styles.headerButtons
                   )}
-                  href="register"
+                  onClick={scrollToPartners}
                   target="_self"
                 >
-                  Register
+                  Partners
                 </Link>
               </div>
             </div>
@@ -164,8 +164,18 @@ function Home() {
       </div>
       <main>
         {features && features.length && (
-          <section className={styles.features} ref={vertificalsRef}>
+          <section className={styles.features} ref={partnersRef}>
             <div className="container">
+              <br></br>
+              <br></br>
+              <h2>Join our community of partners!</h2>
+              <Link
+                className={classnames("button button--warning button--lg")}
+                href="register"
+                target="_self"
+              >
+                Register
+              </Link>
               <div className="row">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
