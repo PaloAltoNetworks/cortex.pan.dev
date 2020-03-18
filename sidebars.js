@@ -59,6 +59,11 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Credentials",
+      items: ["learn/credentials"]
+    },
+    {
+      type: "category",
       label: "API Explorer",
       items: [
         "learn/apiexplorer_intro",

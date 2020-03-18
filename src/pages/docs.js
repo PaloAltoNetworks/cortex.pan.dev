@@ -56,6 +56,10 @@ function Docs() {
                       OAuth 2.0
                     </Link>
                     <br></br>
+                    <Link href={useBaseUrl("docs/learn/credentials")}>
+                      Credentials
+                    </Link>
+                    <br></br>
                     <Link href={useBaseUrl("docs/learn/apiexplorer_intro")}>
                       Start Exploring
                     </Link>
