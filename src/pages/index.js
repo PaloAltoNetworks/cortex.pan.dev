@@ -187,10 +187,8 @@ function Home() {
         <section className={styles.toolsback} ref={toolsRef}>
           <div className="container">
             <div className="row">
-              {/* Placeholder */}
-              <div className={classnames("col col--1", styles.tools)}></div>
-              {/* PAN Cloud Python SDK */}
-              <div className={classnames("col col--3", styles.tools)}>
+              {/* PAN CDL Python SDK */}
+              <div className={classnames("col col--4", styles.tools)}>
                 <div className="text text--center">
                   <img
                     className={styles.toolImage}
@@ -222,10 +220,8 @@ function Home() {
                     <img src="/img/github_logo.png" width="auto" height="19" />
                   </Link>
                 </div>
-                {/* Placeholder */}
-                <div className={classnames("col col--4", styles.tools)}></div>
               </div>
-              {/* PAN Corex NodeJS Libraries */}
+              {/* PAN CDL NodeJS Libraries */}
               <div className={classnames("col col--4", styles.tools)}>
                 <div className="text text--center">
                   <img
@@ -258,11 +254,9 @@ function Home() {
                     <img src="/img/github_logo.png" width="auto" height="19" />
                   </Link>
                 </div>
-                {/* Placeholder */}
-                <div className={classnames("col col--4", styles.tools)}></div>
               </div>
-              {/* PAN Corex JAVA Libraries */}
-              <div className={classnames("col col--3", styles.tools)}>
+              {/* PAN CDL JAVA Libraries */}
+              <div className={classnames("col col--4", styles.tools)}>
                 <div className="text text--center">
                   <img
                     className={styles.toolImage}
@@ -294,9 +288,47 @@ function Home() {
                     <img src="/img/github_logo.png" width="auto" height="19" />
                   </Link>
                 </div>
-                {/* Placeholder */}
-                <div className={classnames("col col--4", styles.tools)}></div>
               </div>
+            </div>
+            <div className="row">
+              {/* placeholder */}
+              <div className={classnames("col col--4", styles.tools)}></div>
+              {/* API Explorer */}
+              <div className={classnames("col col--4", styles.tools)}>
+                <div className="text text--center">
+                  <img
+                    className={styles.toolImage}
+                    src="img/apiex.png"
+                    alt="API Explorer"
+                  />
+                </div>
+                <h4>API Explorer</h4>
+                <p className={styles.text__gray}>
+                  Jumpstart your next CDL app or integration!
+                </p>
+                <div className={styles.buttons}>
+                  <Link
+                    className={classnames(
+                      "button button--primary button--md",
+                      styles.quickstart
+                    )}
+                    href="/docs/learn/apiexplorer_intro"
+                  >
+                    Quickstart
+                  </Link>
+                  <Link
+                    className={classnames(
+                      "button button--secondary button--md",
+                      styles.github
+                    )}
+                    href="https://apps.paloaltonetworks.com/marketplace/apiexplorer"
+                  >
+                    Marketplace
+                  </Link>
+                </div>
+              </div>
+              {/* placeholder */}
+              <div className={classnames("col col--4", styles.tools)}></div>
             </div>
           </div>
         </section>
