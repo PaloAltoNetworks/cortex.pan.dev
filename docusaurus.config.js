@@ -43,16 +43,11 @@ module.exports = {
           href: "https://github.com/PaloAltoNetworks",
           label: "GitHub",
           position: "right"
-        },
-        {
-          to: "/register",
-          label: "Register",
-          position: "right"
         }
       ],
       menus: [
         {
-          label: "Partner",
+          label: "Partners",
           items: [
             {
               to: "docs/partner/why",
@@ -65,6 +60,10 @@ module.exports = {
             {
               to: "docs/partner/use",
               label: "Cortex Use Cases"
+            },
+            {
+              to: "register",
+              label: "Register"
             }
           ],
           position: "right"
