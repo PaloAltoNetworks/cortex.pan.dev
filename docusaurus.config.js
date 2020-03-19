@@ -15,9 +15,8 @@ module.exports = {
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
     algolia: {
-      apiKey: "cbeca27e98d8a51d98d5163f5c46dd8e",
-      appId: "QAP3NZH9FJ",
-      indexName: "cortex.pan.dev",
+      apiKey: process.env.ALGOLIA_APIKEY,
+      indexName: process.env.ALGOLIA_INDEX,
       algoliaOptions: {} // Optional, if provided by Algolia
     },
     sidebarCollapsible: false,
