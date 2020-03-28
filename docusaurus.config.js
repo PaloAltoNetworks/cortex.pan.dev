@@ -19,7 +19,7 @@ module.exports = {
       indexName: process.env.ALGOLIA_INDEX,
       algoliaOptions: {} // Optional, if provided by Algolia
     },
-    sidebarCollapsible: false,
+    sidebarCollapsible: true,
     navbar: {
       title: "",
       logo: {

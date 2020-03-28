@@ -18,7 +18,14 @@ module.exports = {
     {
       type: "category",
       label: "PAN CDL Python SDK",
-      items: ["develop/cdl_python_installation"]
+      items: [
+        "develop/cdl_python_installation",
+        {
+          type: "category",
+          label: "Tutorials",
+          items: ["develop/tutorial_retries_python"]
+        }
+      ]
     },
     {
       type: "category",
