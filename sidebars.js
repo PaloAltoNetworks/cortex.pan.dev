@@ -23,7 +23,11 @@ module.exports = {
         {
           type: "category",
           label: "Tutorials",
-          items: ["develop/tutorial_retries_python"]
+          items: [
+            "develop/tutorial_retries_python",
+            "develop/handling_json_python",
+            "develop/debugging_python"
+          ]
         }
       ]
     },
