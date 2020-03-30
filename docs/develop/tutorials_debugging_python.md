@@ -4,11 +4,9 @@ title: Debugging and Tracing
 sidebar_label: Debugging and Tracing
 ---
 
-:::note
+:::info
 The CDL Python SDK implements logging for the `HTTPClient` and `Credentials` classes. All other logging originates fro the underlying `requests`, `httpclient` and `urllib3` libraries. Additionally, the `HTTPClient` and upstream API gateway include support for cross-application tracing.
 :::
-
-## Overview
 
 ## Library Debugging
 
