@@ -1,8 +1,7 @@
 ---
 id: tutorial_retries_python
-title: CDL Python SDK Retries
+title: Retry Strategies
 sidebar_label: Retry Strategies
-hide_title: true
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
