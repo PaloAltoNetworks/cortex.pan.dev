@@ -117,7 +117,7 @@ qs = QueryService(
 qs._httpclient.session.hooks["response"] = [logging_hook]
 ```
 
-Now, brace yourself for the flood of data coming your way!
+Brace yourself for the flood of data coming your way!
 
 ```console
 < POST /query/v2/jobs HTTP/1.1
@@ -202,7 +202,7 @@ The CDL API implements tracing internally, by default. Although it's possible to
 Ok, let's cut to the chase. Here's how to force tracing using the CDL Python SDK:
 
 ```python
-qs = QueryService(force_trace=False, credentials=c)
+qs = QueryService(force_trace=True, credentials=c)
 ```
 
 That's it, really. Now, you'll notice your response headers all include an `x-request-id`, that can be used to reference a particular call.
