@@ -35,7 +35,7 @@ DEBUG:urllib3.connectionpool:https://api.us.cdl.paloaltonetworks.com:443 "GET /q
 
 ## HTTP Debugging
 
-Add the following to you project to enable HTTP debugging that includes request headers and payloads:
+Add the following to your project to enable HTTP debugging that includes request headers and payloads:
 
 ```python
 import http
