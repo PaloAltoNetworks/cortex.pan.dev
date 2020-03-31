@@ -14,6 +14,10 @@ module.exports = {
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
+    prism: {
+      theme: require("prism-react-renderer/themes/github"),
+      darkTheme: require("prism-react-renderer/themes/oceanicNext")
+    },
     algolia: {
       apiKey: process.env.ALGOLIA_APIKEY,
       indexName: process.env.ALGOLIA_INDEX,
