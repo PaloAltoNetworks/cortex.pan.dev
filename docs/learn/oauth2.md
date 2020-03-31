@@ -148,14 +148,75 @@ The callback query arguments will include:
 - `access_token` – Used to authenticate to and access the Cortex Data Lake API. This token expires every hour (3,600 seconds)
 - `refresh_token` – Used to refresh the `access_token` when it expires. Refresh tokens expire or "roll" every six months.
 
-:::note
+:::info
 It's important to note the differences between a "rolling" `refresh_token` and an expired OAuth 2.0 grant.
 
 - **Refresh tokens** are configured to "roll" every 6 months, meaning a new `refresh_token` is issued on the first refresh attempt following the 6-month period. Technically, the old `refresh_token` is expired, but a full reauthorization is **not required**. You simply need to be ready to record/store the new `refresh_token` when it comes back in the token refresh response.
-- **Under normal circumstances**, if properly handled, neither the user nor the app owner should notice when the `refresh_token` rolls. It should be seamless.
+- **If properly handled** neither the user nor the app owner should notice when the `refresh_token` rolls. It should be seamless.
 
 :::
 
 6. The application securely stores the `refresh_token` and `access_token` until the end user needs them to perform authenticated API requests.
 
 <img alt="Authorization" src={useBaseUrl('img/cortex_authorization.gif')} />
+
+## Authentication
+
+The following is a brief recap/overview of how we got here:
+
+- DevRel registered your app manifest file.
+- You received a `client_id` and `client_secret`.
+- A user performed the OAuth 2.0 authorization code flow, thereby granting your app access to their CDL tenant. - Your app received a `refresh_token` and initial `access_token` for that tenant/instance.
+
+(phew! so much for brief)
+
+So, now what? Well, you have everything you need to perform authenticated API requests, on behalf of that tenant/instance!
+
+:::info
+The terms `tenant` and `instance` will sometimes be used interchangeably but there are some key differences to note:
+
+- An `instance` is an activated instance of a Cortex hub app. Ideally, they are distinguished by a unique `instance_id`.
+- A `tenant` is the footprint that `instance` occupies in a multitenant Cortex hub app (it can also refer to a CDL tenant).
+
+:::
+
+### Authorization Header
+
+To successfully make an API request, you must provide a valid `access token`. You do this using the
+Authorization HTTP request header. For the header's value, use the keyword `Bearer` (followed by a
+space) followed by the `access_token` value.
+
+Example:
+
+```console
+POST /query/v2/jobs HTTP/1.1
+Host: api.us.cdl.paloaltonetworks.com
+Content-Length: <integer>
+Accept: application/json
+Authorization: Bearer <access token>
+```
+
+If your API request returns a `401 (Unauthorized) HTTP response`, then either your request failed to provide an
+`access_token` or your token has expired. In the latter case, you must refresh your `access_token`.
+
+### Refresh your Access Token
+
+Access tokens expire every hour (3,600 seconds), at which point you must use your `refresh_token`, `client_id` and `client_secret` to request a new one.
+
+Use the following API endpoint to refresh your `access_token`:
+
+```bash
+https://api.paloaltonetworks.com/api/oauth2/RequestToken
+```
+
+To perform the refresh, you must issue an HTTP `POST` request. In the body/payload of the request, you must provide an `application/x-www-form-urlencoded` form. This form should include the following fields:
+
+- `refresh_token` - Your refresh token. You were issued this when you completed your OAuth 2.0 workflow.
+- `client_id` - The `app_id` that you specified when you registered your app manifest.
+- `client_secret` - The secret value that you were given by DevRel following your app manifest registration.
+- `grant_type` - Must be set to "refresh_token".
+
+A successful response will return a JSON object that includes:
+
+- `access_token` - Your newly minted, refreshed `access_token`!
+- `refresh_token` (maybe) - A new `refresh_token`, if the token is ready to "roll" following a 6-month period.
