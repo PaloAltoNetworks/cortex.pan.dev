@@ -2,6 +2,13 @@
 id: pan_cortex_hub_java_qs
 title: Hub Quickstart
 sidebar_label: Hub Quickstart
+description: Getting started with the Jsvs CortexHub library
+keywords:
+  - cortex data lake
+  - cortex
+  - api
+  - hub
+  - java
 ---
 
 [![GitHub page](https://img.shields.io/badge/GitHub-Repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/PaloAltoNetworks/pan-cortex-hub-java) ![JAVA](https://img.shields.io/badge/lang-JAVA-ff69b4?style=for-the-badge)
@@ -12,9 +19,11 @@ the Cortex Data Lake API [See Data Lake Quickstart](/docs/develop/pan_cortex_dat
 It also provides the `HubHelper` class for quick prototyping SaaS Components to interface with Cortex hub.
 
 ## `Credentials` collection
+
 Quick overview of available classes
 
 ### `StaticCredentials`
+
 The most basic of them all. It just wraps a static `access_token` value
 
 ```java
@@ -31,7 +40,7 @@ import com.paloaltonetworks.cortex.data_lake.QueryServiceClient;
 public class Example {
     final static String ACCESS_TOKEN = "eyJh....65wg";
     final static String SQL_CMD = "SELECT * from `<instance-id>.firewall.traffic` LIMIT 20";
-    
+
     public static void main(String[] args) throws HubException, KeyManagementException, NoSuchAlgorithmException {
         Function<Boolean, Map.Entry<String, String>> cred = new HubCredentialsStatic(Constants.USFQDN, ACCESS_TOKEN);
         var qsc = new QueryServiceClient(cred);
@@ -42,6 +51,7 @@ public class Example {
 ```
 
 ### `SimpleCredentialsProvider`
+
 A credentials object that provides a refreshed `access_token` from a known
 OAuth2 `refresh_token` (plus `client_id` and `client_secret`)
 
@@ -109,6 +119,7 @@ public class Example {
 ```
 
 ### `DevTokenCredentials`
+
 Leverages a Token Redemption service (i.e. API Explorer)
 
 Best practise is to provide the developer token using an environmental variable:
@@ -178,27 +189,27 @@ This is the moment when you can leverage the `HubCredentialProvider` abstract
 class. This class provides methods to cover the full life-cycle of a OAuth2
 secret:
 
-* `addWithRefreshToken()`: To register a new data lake instance
-* `addWithCode()`: To register a new data lake instance using the OAuth2 code
+- `addWithRefreshToken()`: To register a new data lake instance
+- `addWithCode()`: To register a new data lake instance using the OAuth2 code
   (from the code grant flow)
-* `revokeDatalake()`: To revoke already issued refresh token
-* `getCredentialsObject(datalakeId)`: Retrieves a `Credentials` object bound to
+- `revokeDatalake()`: To revoke already issued refresh token
+- `getCredentialsObject(datalakeId)`: Retrieves a `Credentials` object bound to
   the data lake identifier.
 
 `HubCredentialProvider` is meant to be subclassed. Developer doing so must
 implement the following storage methods that will be triggered when needed.
 
-* `upsertStoreItem(dlid, item)`: to store `item` as the valuer for data lake
+- `upsertStoreItem(dlid, item)`: to store `item` as the valuer for data lake
   instance `dlid`
-* `deleteStoreItem(dlid)`: remove the item for the data lake instance `dlid`
-* `getStoreItem(dlid)`: retrieve the item for the data lake instance `dlid`
-* `loadDb()`: perform initial database load
+- `deleteStoreItem(dlid)`: remove the item for the data lake instance `dlid`
+- `getStoreItem(dlid)`: retrieve the item for the data lake instance `dlid`
+- `loadDb()`: perform initial database load
 
 Subclass must call `super(opts)` with an object with configuration options. The
 only two mandatory options are:
 
-* `clientId`: OAuth2 application client_id value
-* `clientSecret`: OAuth2 application client_secret value
+- `clientId`: OAuth2 application client_id value
+- `clientSecret`: OAuth2 application client_secret value
 
 ### `FsCredProvider`
 
@@ -206,6 +217,7 @@ The library provides a `HubCredentialProvider` implementation that stores the
 secrets in a local file using AES encryption of sensitive values. You can leverage this class for initial prototyping.
 
 Secrets must me provided as environmental variables:
+
 ```bash
 PAN_CLIENT_ID=<OAuth2 client_id> \
 PAN_CLIENT_SECRET=<OAuth2 client_secret> \
@@ -334,13 +346,15 @@ public class Example {
 ```
 
 ## HubHelper
+
 `HubHelper` is a class that provides two main features:
-* Hooks to help onboard customers that are consuming applications through the
+
+- Hooks to help onboard customers that are consuming applications through the
   Cortex hub:
-    * Initial `params` parsing
-    * Generation of the IDP Authentication Request URL
-    * Completing the OAuth2 code grant flow
-* Multi-tenancy: It automates a `HubCredentialProvider` leveraging its
+  - Initial `params` parsing
+  - Generation of the IDP Authentication Request URL
+  - Completing the OAuth2 code grant flow
+- Multi-tenancy: It automates a `HubCredentialProvider` leveraging its
   metadada capability to organize data lakes into tenants.
 
 See code examples in the [`/examples`](https://github.com/PaloAltoNetworks/pan-cortex-hub-java/tree/master/examples) folder

@@ -2,6 +2,13 @@
 id: pan_cortex_data_lake_java_qs
 title: Data Lake Quickstart
 sidebar_label: Data Lake Quickstart
+description: Getting started with the Java CDL library
+keywords:
+  - cortex data lake
+  - cortex
+  - api
+  - hub
+  - java
 ---
 
 [![GitHub page](https://img.shields.io/badge/GitHub-Repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-java) ![JAVA](https://img.shields.io/badge/lang-JAVA-ff69b4?style=for-the-badge)
@@ -21,8 +28,9 @@ Pre-compiled binaries are available in the [`/target` folder](https://github.com
 The classes in the package `com.paloaltonetworks.cortex.data_lake` require an object that implements the `Function<Boolean, Map.Entry<String, String>>` functional interface.
 
 The `Entry` returned is expected to behave as:
-* `getKey()`: Expected to return the Cortex Data Lake API end point (region)
-* `getValue()`: Expected to return a valid OAuth2 authorization access_token value.
+
+- `getKey()`: Expected to return the Cortex Data Lake API end point (region)
+- `getValue()`: Expected to return a valid OAuth2 authorization access_token value.
 
 The functional method (`apply(Boolean force)`) can return `null` instead of an `Entry` object only if `force` is either `null` or `false`. In such a case a `null` response can be interpreted by the caller as a signal that the latest `Entry` returned is still valid.
 
@@ -110,4 +118,4 @@ var sqlCmd = "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMI
 var qsc = new QueryServiceClient(cred);
 
 for (var item : qsc.iterable(sqlCmd)) System.out.println(item);
-``` 
+```

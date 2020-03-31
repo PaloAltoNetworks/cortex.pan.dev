@@ -6,6 +6,8 @@ sidebar_label: CDL API
 description: Overview of Cortex Data Lake
 keywords:
   - cortex data lake
+  - cortex
+  - api
 ---
 
 import Tabs from '@theme/Tabs';

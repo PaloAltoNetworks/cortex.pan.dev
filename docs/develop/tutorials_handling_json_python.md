@@ -2,6 +2,15 @@
 id: handling_json_python
 title: Handling JSON
 sidebar_label: Handling JSON
+description: Handling JSON with the CDL Python SDK
+keywords:
+  - cortex data lake
+  - cortex
+  - api
+  - python
+  - cdl python sdk
+  - sdk
+  - pan-cortex-data-lake-python
 ---
 
 :::info

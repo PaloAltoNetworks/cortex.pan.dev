@@ -2,6 +2,17 @@
 id: debugging_python
 title: Debugging and Tracing
 sidebar_label: Debugging and Tracing
+description: How to enable debugging and tracing using the CDL Python SDK
+keywords:
+  - cortex data lake
+  - cortex
+  - api
+  - python
+  - cdl python sdk
+  - sdk
+  - pan-cortex-data-lake-python
+  - debugging
+  - tracing
 ---
 
 :::info

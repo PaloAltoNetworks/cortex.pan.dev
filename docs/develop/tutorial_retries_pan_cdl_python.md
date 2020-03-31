@@ -2,6 +2,18 @@
 id: tutorial_retries_python
 title: Retry Strategies
 sidebar_label: Retry Strategies
+description: Implementing retry strategies using the CDL Python SDK
+keywords:
+  - cortex data lake
+  - cortex
+  - api
+  - python
+  - cdl python sdk
+  - sdk
+  - pan-cortex-data-lake-python
+  - retry
+  - retry strategies
+  - rate limiting
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
