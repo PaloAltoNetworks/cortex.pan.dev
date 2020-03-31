@@ -120,7 +120,7 @@ The parameters will include:
 
 - `response_type` – This should typically be "code"
 - `client_id` – The app `client_id` assigned by Palo Alto Networks when app is registered
-- `scope` – The permissions requested by the user/app
+- `scope` – The permissions requested by the user/app, e.g. `logging-service:read`
 - `redirect_uri` – The callback URL the browser should redirect to after the user consents
 - `instance_id` – The app instance ID
 - `state` – An opaque value used by the client to help detect/prevent cross-site request forgery
@@ -145,8 +145,16 @@ The callback query arguments will include:
 
 **`RequestToken` API returns:**
 
-- `access_token` – Used to access the Cortex Data Lake API
-- `refresh_token` – Used to refresh the `access_token`
+- `access_token` – Used to authenticate to and access the Cortex Data Lake API. This token expires every hour (3,600 seconds)
+- `refresh_token` – Used to refresh the `access_token` when it expires. Refresh tokens expire or "roll" every six months.
+
+:::note
+It's important to note the differences between a "rolling" `refresh_token` and an expired OAuth 2.0 grant.
+
+- **Refresh tokens** are configured to "roll" every 6 months, meaning a new `refresh_token` is issued on the first refresh attempt following the 6-month period. Technically, the old `refresh_token` is expired, but a full reauthorization is **not required**. You simply need to be ready to record/store the new `refresh_token` when it comes back in the token refresh response.
+- **Under normal circumstances**, if properly handled, neither the user nor the app owner should notice when the `refresh_token` rolls. It should be seamless.
+
+:::
 
 6. The application securely stores the `refresh_token` and `access_token` until the end user needs them to perform authenticated API requests.
 
