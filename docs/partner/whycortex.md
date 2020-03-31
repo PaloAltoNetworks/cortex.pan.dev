@@ -2,6 +2,12 @@
 id: why
 title: Why Cortex
 sidebar_label: Why Cortex
+description: Why Cortex
+keywords:
+  - cortex data lake
+  - data lake
+  - why cortex
+  - partners
 ---
 
 ## Fail Faster, Succeed Sooner

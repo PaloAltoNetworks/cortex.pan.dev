@@ -3,7 +3,7 @@ id: sandbox_data
 title: Sandbox
 hide_title: true
 sidebar_label: Sandbox
-description: Available data in sandbox
+description: Available data in CDL sandbox
 keywords:
   - sandbox
   - apiexplorer

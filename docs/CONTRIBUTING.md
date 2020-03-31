@@ -2,6 +2,9 @@
 id: contributing
 title: Contributing Guidelines
 sidebar_label: Contributing Guidelines
+description: Contributing guidelines
+keywords:
+  - contributing guidelines
 ---
 
 # Contributing Guidelines

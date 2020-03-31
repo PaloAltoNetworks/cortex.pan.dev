@@ -2,6 +2,12 @@
 id: what
 title: What is Cortex
 sidebar_label: What is Cortex
+description: What is Cortex
+keywords:
+  - cortex data lake
+  - data lake
+  - what is cortex
+  - partners
 ---
 
 ## The Platform

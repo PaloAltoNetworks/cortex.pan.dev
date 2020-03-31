@@ -2,6 +2,14 @@
 id: cdl_python_installation
 title: Installation
 sidebar_label: Installation
+description: Installing the CDL Python SDK
+keywords:
+  - cortex data lake
+  - cortex
+  - api
+  - hub
+  - python
+  - installation
 ---
 
 [![GitHub page](https://img.shields.io/badge/GitHub-Repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python) [![GitHub stars](https://img.shields.io/github/stars/PaloAltoNetworks/pan-cortex-data-lake-python?style=for-the-badge)](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python)
