@@ -2,6 +2,13 @@
 id: pan_cortex_data_lake_nodejs_qs
 title: Data Lake Quickstart
 sidebar_label: Data Lake Quickstart
+description: Getting started with the NodeJS CDL library
+keywords:
+  - cortex data lake
+  - cortex
+  - api
+  - hub
+  - nodejs
 ---
 
 [![GitHub page](https://img.shields.io/badge/GitHub-Repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-nodejs) ![TypeScript](https://img.shields.io/badge/lang-TypeScript-blue?style=for-the-badge) ![JavaScript](https://img.shields.io/badge/lang-JavaScript-orange?style=for-the-badge)
@@ -29,14 +36,14 @@ definition files which means you can leverage strongly type and code
 auto-complete features.
 
 ```ts
-import * as cortex from '@paloaltonetworks/pan-cortex-data-lake'
+import * as cortex from "@paloaltonetworks/pan-cortex-data-lake";
 ```
 
 ## Cortex Data Lake API Authorization
 
 The classes in the package `@paloaltonetworks/pan-cortex-data-lake` require an object that implements the [Credentials Interface](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-nodejs/blob/master/doc/interfaces/credentials.md).
 
-A collection of objects implementing the interface is available in the package  `@paloaltonetworks/pan-cortex-hub` [See Hub Quickstart](/docs/develop/pan_cortex_hub_nodejs_qs)
+A collection of objects implementing the interface is available in the package `@paloaltonetworks/pan-cortex-hub` [See Hub Quickstart](/docs/develop/pan_cortex_hub_nodejs_qs)
 
 #### Getting started with a Developer Token
 
@@ -50,7 +57,7 @@ export PAN_DEVELOPER_TOKEN_PROVIDER=https://app.apiexplorer.rocks/request_token
 ...and then instantiate an object of the [`DevTokenCredentials`](https://github.com/PaloAltoNetworks/pan-cortex-hub-nodejs/blob/master/doc/classes/devtokencredentials.md) class.
 
 ```javascript
-const hub = require('@paloaltonetworks/pan-cortex-hub');
+const hub = require("@paloaltonetworks/pan-cortex-hub");
 const cred = hub.DevTokenCredentials.factory();
 ```
 
@@ -69,19 +76,20 @@ cred.getToken().then(console.log);
 1. Begin by importing the package `@paloaltonetworks/pan-cortex-data-lake`:
 
 ```javascript
-const dl = require('@paloaltonetworks/pan-cortex-data-lake');
+const dl = require("@paloaltonetworks/pan-cortex-data-lake");
 ```
 
 2. Next, let's construct a [`QueryServiceClient`](https://github.com/PaloAltoNetworks/pan-cortex-data-lake-nodejs/blob/master/doc/classes/queryserviceclient.md) instance:
 
 ```javascript
-const qsc = dl.QueryServiceClient.factory({cortexDefCredentials: cred});
+const qsc = dl.QueryServiceClient.factory({ cortexDefCredentials: cred });
 ```
 
 3. Now, let's define the SQL sentence we want to execute:
 
 ```javascript
-const sqlCmd = 'SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5';
+const sqlCmd =
+  "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5";
 ```
 
 4. Pass the SQL sentence to the `QueryServiceClient` object to receive an iterator object:
@@ -93,7 +101,9 @@ const iter = qsc.iterator(sqlCmd);
 5. Now, let's print the execution results (notice the ES2018 `for await` syntax executed inside an async lambda expression)
 
 ```javascript
-(async () => { for await (const page of iter2) console.log(page); })();
+(async () => {
+  for await (const page of iter2) console.log(page);
+})();
 ```
 
 Example output:
@@ -145,14 +155,14 @@ Example output:
 Previous example code in just one block (the cred variable is supposed to exist)
 
 ```javascript
-const dl = require('@paloaltonetworks/pan-cortex-data-lake');
-const sqlCmd = 'SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5';
+const dl = require("@paloaltonetworks/pan-cortex-data-lake");
+const sqlCmd =
+  "SELECT source_ip, dest_ip from `<tenant_id>.firewall.traffic` LIMIT 5";
 
 async function worker(iter) {
-  for await (const page of iter)
-      console.log(page);
-};
+  for await (const page of iter) console.log(page);
+}
 
-const qsc = dl.QueryServiceClient.factory({cortexDefCredentials: cred});
+const qsc = dl.QueryServiceClient.factory({ cortexDefCredentials: cred });
 worker(qsc.iterator(sqlCmd));
-``` 
+```
