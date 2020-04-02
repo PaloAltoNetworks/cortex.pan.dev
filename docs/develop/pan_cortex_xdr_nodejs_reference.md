@@ -1,5 +1,5 @@
 ---
-id: pan_cortex_xdr_nodejs_ref
+id: pan_cortex_xdr_nodejs_reference
 title: XdrApi object reference
 sidebar_label: XdrApi object reference
 description: Quick reference to the XdrApi object
