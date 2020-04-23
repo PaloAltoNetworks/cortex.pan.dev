@@ -19,7 +19,7 @@ Please consult the official [Cortex Data Lake Getting Started Guide](https://dri
 
 ## Overview
 
-The Cortex Data Lake API is a REST API with services and endpoints capable of accepting and returning `JSON` payloads/responses. The first of these services, `Query Service`, can be used to store and query logging service data. See the [CDL Schema Reference](#) guide for detailed descriptions of available log types.
+The Cortex Data Lake API is a REST API with services and endpoints capable of accepting and returning `JSON` payloads/responses. The first of these services, `Query Service`, can be used to store and query logging service data.
 
 **Example endpoint**: `/query/v2/jobs`
 
