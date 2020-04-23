@@ -36,7 +36,9 @@ module.exports = {
       label: "PAN Cortex NodeJS libs",
       items: [
         "develop/pan_cortex_data_lake_nodejs_qs",
-        "develop/pan_cortex_hub_nodejs_qs"
+        "develop/pan_cortex_hub_nodejs_qs",
+        "develop/pan_cortex_xdr_nodejs_qs",
+        "develop/pan_cortex_xdr_nodejs_reference"
       ]
     },
     {
