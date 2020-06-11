@@ -14,7 +14,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 :::note
-Please consult the official [Cortex Data Lake Getting Started Guide](https://drive.google.com/drive/u/0/folders/1dGCi69qYOTDPwr4pqd8slaMs3vINfao_) for additional background, details and explanations.
+Please consult the official [Cortex Data Lake Getting Started Guide](#) for additional background, details and explanations.
 :::
 
 ## Overview
