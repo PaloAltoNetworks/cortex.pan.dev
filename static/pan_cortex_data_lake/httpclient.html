@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>pan_cortex_data_lake.httpclient API documentation</title>
+<meta name="description" content="HTTP client wrapper for the **excellent** ``requests`` library." />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>pan_cortex_data_lake.httpclient</code></h1>
+</header>
+<section id="section-intro">
+<p>HTTP client wrapper for the <strong>excellent</strong> <code>requests</code> library.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+
+&#34;&#34;&#34;HTTP client wrapper for the **excellent** ``requests`` library.&#34;&#34;&#34;
+
+from __future__ import absolute_import
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+import requests
+from requests.adapters import HTTPAdapter
+
+# support ujson in place of standard json library
+try:
+    import ujson
+
+    requests.models.complexjson = ujson
+    logger.debug(&#34;Monkey patched requests with ujson&#34;)
+except ImportError:
+    pass
+
+from .exceptions import (
+    UnexpectedKwargsError,
+    RequiredKwargsError,
+    HTTPError,
+    CortexError,
+)
+from . import __version__
+from .utils import ApiStats
+
+
+class HTTPClient(object):
+    &#34;&#34;&#34;HTTP client for the Cortex™ REST API&#34;&#34;&#34;
+
+    def __init__(self, **kwargs):
+        &#34;&#34;&#34;Persist Session() attributes and implement connection-pooling.
+
+        Built on top of the ``Requests`` library, ``HTTPClient`` is an
+        abstraction layer for preparing and sending HTTP `requests` to the
+        Application Framework REST APIs and handling `responses`. All
+        ``Requests`` are prepared as ``Session`` objects, with the option
+        to persist certain attributes such as ``cert``, ``headers``,
+        ``proxies``, etc. ``HTTPAdapter`` is implemented to enable more
+        granular performance and reliability tuning.
+
+        Parameters:
+            auto_refresh (bool): Perform token refresh prior to request if ``access_token`` is ``None`` or expired. Defaults to ``True``.
+            auto_retry (bool): Retry last failed HTTP request following a token refresh. Defaults to ``True``.
+            credentials (Credentials): :class:`~pan_cortex_data_lake.credentials.Credentials` object. Defaults to ``None``.
+            enforce_json (bool): Require properly-formatted JSON or raise :exc:`~pan_cortex_data_lake.exceptions.CortecError`. Defaults to ``False``.
+            force_trace (bool): If ``True``, forces trace and forces ``x-request-id`` to be returned in the response headers. Defaults to ``False``.
+            port (int): TCP port to append to URL. Defaults to ``443``.
+            raise_for_status (bool): If ``True``, raises :exc:`~pan_cortex_data_lake.exceptions.HTTPError` if status_code not in 2XX. Defaults to ``False``.
+            url (str): URL to send API requests to - gets combined with ``port`` and :meth:`~request` ``path`` parameter. Defaults to ``None``.
+
+        Args:
+            **kwargs: Supported :class:`~requests.Session` and :class:`~requests.adapters.HTTPAdapter` parameters.
+
+        &#34;&#34;&#34;
+        self.kwargs = kwargs.copy()  # used for __repr__
+        with requests.Session() as self.session:
+            self._default_headers()  # apply default headers
+            self.session.auth = kwargs.pop(&#34;auth&#34;, self.session.auth)
+            self.session.cert = kwargs.pop(&#34;cert&#34;, self.session.cert)
+            self.session.cookies = kwargs.pop(&#34;cookies&#34;, self.session.cookies)
+            self.session.headers.update(kwargs.pop(&#34;headers&#34;, {}))
+            self.session.params = kwargs.pop(&#34;params&#34;, self.session.params)
+            self.session.proxies = kwargs.pop(&#34;proxies&#34;, self.session.proxies)
+            self.session.stream = kwargs.pop(&#34;stream&#34;, self.session.stream)
+            self.session.trust_env = kwargs.pop(&#34;trust_env&#34;, self.session.trust_env)
+            self.session.verify = kwargs.pop(&#34;verify&#34;, self.session.verify)
+
+            # HTTPAdapter key-word arguments
+            _kwargs = {}
+            for x in [&#34;pool_connections&#34;, &#34;pool_maxsize&#34;, &#34;pool_block&#34;, &#34;max_retries&#34;]:
+                if x in kwargs:
+                    _kwargs[x] = kwargs.pop(x)
+            self.adapter = HTTPAdapter(**_kwargs)
+            self.session.mount(&#34;https://&#34;, self.adapter)
+            self.session.mount(&#34;http://&#34;, self.adapter)
+
+            # Non-Requests key-word arguments
+            self.auto_refresh = kwargs.pop(&#34;auto_refresh&#34;, True)
+            self.credentials = kwargs.pop(&#34;credentials&#34;, None)
+            self.enforce_json = kwargs.pop(&#34;enforce_json&#34;, False)
+            self.force_trace = kwargs.pop(&#34;force_trace&#34;, False)
+            if self.force_trace is True:
+                self.session.headers.update({&#34;x-envoy-force-trace&#34;: &#34;&#34;})
+            self.port = kwargs.pop(&#34;port&#34;, 443)
+            self.raise_for_status = kwargs.pop(&#34;raise_for_status&#34;, False)
+            self.url = kwargs.pop(&#34;url&#34;, &#34;https://api.us.cdl.paloaltonetworks.com&#34;)
+
+            if len(kwargs) &gt; 0:  # Handle invalid kwargs
+                raise UnexpectedKwargsError(kwargs)
+
+            self.stats = ApiStats({&#34;transactions&#34;: 0})
+
+    def __repr__(self):
+        for k in self.kwargs.get(&#34;headers&#34;, {}):
+            if k.lower() == &#34;authorization&#34;:
+                x = dict(self.kwargs[&#34;headers&#34;].items())
+                x[k] = &#34;*&#34; * 6  # starrify token
+                return &#34;{}({}, {})&#34;.format(
+                    self.__class__.__name__,
+                    &#34;, &#34;.join(
+                        &#34;%s=%r&#34; % (x, _)
+                        for x, _ in self.kwargs.items()
+                        if x != &#34;headers&#34;
+                    ),
+                    &#34;headers=%r&#34; % x,
+                )
+        return &#34;{}({})&#34;.format(
+            self.__class__.__name__, &#34;, &#34;.join(&#34;%s=%r&#34; % x for x in self.kwargs.items())
+        )
+
+    @staticmethod
+    def _apply_credentials(auto_refresh=True, credentials=None, headers=None):
+        &#34;&#34;&#34;Update Authorization header.
+
+        Update request headers with latest `access_token`. Perform token
+        `refresh` if token is ``None``.
+
+        Args:
+            auto_refresh (bool): Perform token refresh if access_token is ``None`` or expired. Defaults to ``True``.
+            credentials (class): Read-only credentials.
+            headers (class): Requests `CaseInsensitiveDict`.
+
+        &#34;&#34;&#34;
+        token = credentials.get_credentials().access_token
+        if auto_refresh is True:
+            if token is None:
+                token = credentials.refresh(access_token=None, timeout=10)
+                logger.debug(&#34;Token refreshed due to &#39;None&#39; condition&#34;)
+            elif credentials.jwt_is_expired(token):
+                token = credentials.refresh(timeout=10)
+                logger.debug(&#34;Token refreshed due to &#39;expired&#39; condition&#34;)
+        headers.update({&#34;Authorization&#34;: &#34;Bearer {}&#34;.format(token)})
+        logger.debug(&#34;Credentials applied to authorization header&#34;)
+
+    def _default_headers(self):
+        &#34;&#34;&#34;Update default headers.
+
+        The requests library default headers are set in the `utils.py`
+        `default_headers()` function.
+
+        &#34;&#34;&#34;
+        self.session.headers.update(
+            {
+                &#34;Accept&#34;: &#34;application/json&#34;,
+                &#34;User-Agent&#34;: &#34;%s/%s&#34; % (&#34;cortex-data-lake-python&#34;, __version__),
+            }
+        )
+        logger.debug(&#34;Default headers applied: %r&#34; % self.session.headers)
+
+    def _send_request(self, enforce_json, method, raise_for_status, url, **kwargs):
+        &#34;&#34;&#34;Send HTTP request.
+
+        Args:
+             enforce_json (bool): Require properly-formatted JSON or raise :exc:`~pan_cortex_data_lake.exceptions.CortecError`. Defaults to ``False``.
+             method (str): HTTP method.
+             raise_for_status (bool): If ``True``, raises :exc:`~pan_cortex_data_lake.exceptions.HTTPError` if status_code not in 2XX. Defaults to ``False``.
+             url (str): Request URL.
+             **kwargs (dict): Re-packed key-word arguments.
+
+         Returns:
+            requests.Response: Requests Response() object
+
+        &#34;&#34;&#34;
+        r = self.session.request(method, url, **kwargs)
+        if raise_for_status:
+            r.raise_for_status()
+        if enforce_json:
+            if &#34;application/json&#34; in self.session.headers.get(&#34;Accept&#34;, &#34;&#34;):
+                try:
+                    r.json()
+                except ValueError as e:
+                    raise CortexError(&#34;Invalid JSON: {}&#34;.format(e))
+        self.stats.transactions += 1
+        return r
+
+    def request(self, **kwargs):
+        &#34;&#34;&#34;Generate HTTP request using given parameters.
+
+        The request method prepares HTTP requests using class or
+        method-level attributes/variables. Class-level attributes may be
+        overridden by method-level variables offering greater
+        flexibility and efficiency.
+
+        Parameters:
+            enforce_json (bool): Require properly-formatted JSON or raise :exc:`~pan_cortex_data_lake.exceptions.HTTPError`. Defaults to ``False``.
+            path (str): URI path to append to URL. Defaults to ``empty``.
+            raise_for_status (bool): If ``True``, raises :exc:`~pan_cortex_data_lake.exceptions.HTTPError` if status_code not in 2XX. Defaults to ``False``.
+
+        Args:
+            **kwargs: Supported :class:`~requests.Session` and :class:`~requests.adapters.HTTPAdapter` parameters.
+
+        Returns:
+            requests.Response: Requests Response() object
+
+        &#34;&#34;&#34;
+        url = kwargs.pop(&#34;url&#34;, self.url)
+
+        # Session() overrides
+        auth = kwargs.pop(&#34;auth&#34;, self.session.auth)
+        cert = kwargs.pop(&#34;cert&#34;, self.session.cert)
+        cookies = kwargs.pop(&#34;cookies&#34;, self.session.cookies)
+        headers = kwargs.pop(&#34;headers&#34;, self.session.headers.copy())
+        params = kwargs.pop(&#34;params&#34;, self.session.params)
+        proxies = kwargs.pop(&#34;proxies&#34;, self.session.proxies)
+        stream = kwargs.pop(&#34;stream&#34;, self.session.stream)
+        verify = kwargs.pop(&#34;verify&#34;, self.session.verify)
+
+        # Non-Requests key-word arguments
+        auto_refresh = kwargs.pop(&#34;auto_refresh&#34;, self.auto_refresh)
+        credentials = kwargs.pop(&#34;credentials&#34;, self.credentials)
+        endpoint = kwargs.pop(&#34;endpoint&#34;, &#34;&#34;)  # default to empty endpoint
+        enforce_json = kwargs.pop(&#34;enforce_json&#34;, self.enforce_json)
+        raise_for_status = kwargs.pop(&#34;raise_for_status&#34;, self.raise_for_status)
+        url = &#34;{}:{}{}&#34;.format(url, self.port, endpoint)
+
+        if credentials:
+            logger.debug(&#34;Applying method-level credentials&#34;)
+            self._apply_credentials(
+                auto_refresh=auto_refresh, credentials=credentials, headers=headers
+            )
+
+        k = {  # Re-pack kwargs to dictionary
+            &#34;params&#34;: params,
+            &#34;headers&#34;: headers,
+            &#34;cookies&#34;: cookies,
+            &#34;auth&#34;: auth,
+            &#34;proxies&#34;: proxies,
+            &#34;verify&#34;: verify,
+            &#34;stream&#34;: stream,
+            &#34;cert&#34;: cert,
+        }
+
+        # Request() overrides
+        for x in [&#34;allow_redirects&#34;, &#34;data&#34;, &#34;json&#34;, &#34;method&#34;, &#34;timeout&#34;]:
+            if x in kwargs:
+                k[x] = kwargs.pop(x)
+
+        # Handle invalid kwargs
+        if len(kwargs) &gt; 0:
+            raise UnexpectedKwargsError(kwargs)
+
+        try:
+            method = k.pop(&#34;method&#34;)
+        except KeyError:
+            raise RequiredKwargsError(&#34;method&#34;)
+
+        # Prepare and send the Request() and return Response()
+        try:
+            r = self._send_request(enforce_json, method, raise_for_status, url, **k)
+            return r
+        except requests.RequestException as e:
+            raise HTTPError(e)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="pan_cortex_data_lake.httpclient.HTTPClient"><code class="flex name class">
+<span>class <span class="ident">HTTPClient</span></span>
+<span>(</span><span>**kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>HTTP client for the Cortex™ REST API</p>
+<p>Persist Session() attributes and implement connection-pooling.</p>
+<p>Built on top of the <code>Requests</code> library, <code><a title="pan_cortex_data_lake.httpclient.HTTPClient" href="#pan_cortex_data_lake.httpclient.HTTPClient">HTTPClient</a></code> is an
+abstraction layer for preparing and sending HTTP <code>requests</code> to the
+Application Framework REST APIs and handling <code>responses</code>. All
+<code>Requests</code> are prepared as <code>Session</code> objects, with the option
+to persist certain attributes such as <code>cert</code>, <code>headers</code>,
+<code>proxies</code>, etc. <code>HTTPAdapter</code> is implemented to enable more
+granular performance and reliability tuning.</p>
+<h2 id="parameters">Parameters</h2>
+<p>auto_refresh (bool): Perform token refresh prior to request if <code>access_token</code> is <code>None</code> or expired. Defaults to <code>True</code>.
+auto_retry (bool): Retry last failed HTTP request following a token refresh. Defaults to <code>True</code>.
+credentials (Credentials): :class:<code>~pan_cortex_data_lake.credentials.Credentials</code> object. Defaults to <code>None</code>.
+enforce_json (bool): Require properly-formatted JSON or raise :exc:<code>~pan_cortex_data_lake.exceptions.CortecError</code>. Defaults to <code>False</code>.
+force_trace (bool): If <code>True</code>, forces trace and forces <code>x-request-id</code> to be returned in the response headers. Defaults to <code>False</code>.
+port (int): TCP port to append to URL. Defaults to <code>443</code>.
+raise_for_status (bool): If <code>True</code>, raises :exc:<code>~pan_cortex_data_lake.exceptions.HTTPError</code> if status_code not in 2XX. Defaults to <code>False</code>.
+url (str): URL to send API requests to - gets combined with <code>port</code> and :meth:<code>~request</code> <code>path</code> parameter. Defaults to <code>None</code>.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**kwargs</code></strong></dt>
+<dd>Supported :class:<code>~requests.Session</code> and :class:<code>~requests.adapters.HTTPAdapter</code> parameters.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class HTTPClient(object):
+    &#34;&#34;&#34;HTTP client for the Cortex™ REST API&#34;&#34;&#34;
+
+    def __init__(self, **kwargs):
+        &#34;&#34;&#34;Persist Session() attributes and implement connection-pooling.
+
+        Built on top of the ``Requests`` library, ``HTTPClient`` is an
+        abstraction layer for preparing and sending HTTP `requests` to the
+        Application Framework REST APIs and handling `responses`. All
+        ``Requests`` are prepared as ``Session`` objects, with the option
+        to persist certain attributes such as ``cert``, ``headers``,
+        ``proxies``, etc. ``HTTPAdapter`` is implemented to enable more
+        granular performance and reliability tuning.
+
+        Parameters:
+            auto_refresh (bool): Perform token refresh prior to request if ``access_token`` is ``None`` or expired. Defaults to ``True``.
+            auto_retry (bool): Retry last failed HTTP request following a token refresh. Defaults to ``True``.
+            credentials (Credentials): :class:`~pan_cortex_data_lake.credentials.Credentials` object. Defaults to ``None``.
+            enforce_json (bool): Require properly-formatted JSON or raise :exc:`~pan_cortex_data_lake.exceptions.CortecError`. Defaults to ``False``.
+            force_trace (bool): If ``True``, forces trace and forces ``x-request-id`` to be returned in the response headers. Defaults to ``False``.
+            port (int): TCP port to append to URL. Defaults to ``443``.
+            raise_for_status (bool): If ``True``, raises :exc:`~pan_cortex_data_lake.exceptions.HTTPError` if status_code not in 2XX. Defaults to ``False``.
+            url (str): URL to send API requests to - gets combined with ``port`` and :meth:`~request` ``path`` parameter. Defaults to ``None``.
+
+        Args:
+            **kwargs: Supported :class:`~requests.Session` and :class:`~requests.adapters.HTTPAdapter` parameters.
+
+        &#34;&#34;&#34;
+        self.kwargs = kwargs.copy()  # used for __repr__
+        with requests.Session() as self.session:
+            self._default_headers()  # apply default headers
+            self.session.auth = kwargs.pop(&#34;auth&#34;, self.session.auth)
+            self.session.cert = kwargs.pop(&#34;cert&#34;, self.session.cert)
+            self.session.cookies = kwargs.pop(&#34;cookies&#34;, self.session.cookies)
+            self.session.headers.update(kwargs.pop(&#34;headers&#34;, {}))
+            self.session.params = kwargs.pop(&#34;params&#34;, self.session.params)
+            self.session.proxies = kwargs.pop(&#34;proxies&#34;, self.session.proxies)
+            self.session.stream = kwargs.pop(&#34;stream&#34;, self.session.stream)
+            self.session.trust_env = kwargs.pop(&#34;trust_env&#34;, self.session.trust_env)
+            self.session.verify = kwargs.pop(&#34;verify&#34;, self.session.verify)
+
+            # HTTPAdapter key-word arguments
+            _kwargs = {}
+            for x in [&#34;pool_connections&#34;, &#34;pool_maxsize&#34;, &#34;pool_block&#34;, &#34;max_retries&#34;]:
+                if x in kwargs:
+                    _kwargs[x] = kwargs.pop(x)
+            self.adapter = HTTPAdapter(**_kwargs)
+            self.session.mount(&#34;https://&#34;, self.adapter)
+            self.session.mount(&#34;http://&#34;, self.adapter)
+
+            # Non-Requests key-word arguments
+            self.auto_refresh = kwargs.pop(&#34;auto_refresh&#34;, True)
+            self.credentials = kwargs.pop(&#34;credentials&#34;, None)
+            self.enforce_json = kwargs.pop(&#34;enforce_json&#34;, False)
+            self.force_trace = kwargs.pop(&#34;force_trace&#34;, False)
+            if self.force_trace is True:
+                self.session.headers.update({&#34;x-envoy-force-trace&#34;: &#34;&#34;})
+            self.port = kwargs.pop(&#34;port&#34;, 443)
+            self.raise_for_status = kwargs.pop(&#34;raise_for_status&#34;, False)
+            self.url = kwargs.pop(&#34;url&#34;, &#34;https://api.us.cdl.paloaltonetworks.com&#34;)
+
+            if len(kwargs) &gt; 0:  # Handle invalid kwargs
+                raise UnexpectedKwargsError(kwargs)
+
+            self.stats = ApiStats({&#34;transactions&#34;: 0})
+
+    def __repr__(self):
+        for k in self.kwargs.get(&#34;headers&#34;, {}):
+            if k.lower() == &#34;authorization&#34;:
+                x = dict(self.kwargs[&#34;headers&#34;].items())
+                x[k] = &#34;*&#34; * 6  # starrify token
+                return &#34;{}({}, {})&#34;.format(
+                    self.__class__.__name__,
+                    &#34;, &#34;.join(
+                        &#34;%s=%r&#34; % (x, _)
+                        for x, _ in self.kwargs.items()
+                        if x != &#34;headers&#34;
+                    ),
+                    &#34;headers=%r&#34; % x,
+                )
+        return &#34;{}({})&#34;.format(
+            self.__class__.__name__, &#34;, &#34;.join(&#34;%s=%r&#34; % x for x in self.kwargs.items())
+        )
+
+    @staticmethod
+    def _apply_credentials(auto_refresh=True, credentials=None, headers=None):
+        &#34;&#34;&#34;Update Authorization header.
+
+        Update request headers with latest `access_token`. Perform token
+        `refresh` if token is ``None``.
+
+        Args:
+            auto_refresh (bool): Perform token refresh if access_token is ``None`` or expired. Defaults to ``True``.
+            credentials (class): Read-only credentials.
+            headers (class): Requests `CaseInsensitiveDict`.
+
+        &#34;&#34;&#34;
+        token = credentials.get_credentials().access_token
+        if auto_refresh is True:
+            if token is None:
+                token = credentials.refresh(access_token=None, timeout=10)
+                logger.debug(&#34;Token refreshed due to &#39;None&#39; condition&#34;)
+            elif credentials.jwt_is_expired(token):
+                token = credentials.refresh(timeout=10)
+                logger.debug(&#34;Token refreshed due to &#39;expired&#39; condition&#34;)
+        headers.update({&#34;Authorization&#34;: &#34;Bearer {}&#34;.format(token)})
+        logger.debug(&#34;Credentials applied to authorization header&#34;)
+
+    def _default_headers(self):
+        &#34;&#34;&#34;Update default headers.
+
+        The requests library default headers are set in the `utils.py`
+        `default_headers()` function.
+
+        &#34;&#34;&#34;
+        self.session.headers.update(
+            {
+                &#34;Accept&#34;: &#34;application/json&#34;,
+                &#34;User-Agent&#34;: &#34;%s/%s&#34; % (&#34;cortex-data-lake-python&#34;, __version__),
+            }
+        )
+        logger.debug(&#34;Default headers applied: %r&#34; % self.session.headers)
+
+    def _send_request(self, enforce_json, method, raise_for_status, url, **kwargs):
+        &#34;&#34;&#34;Send HTTP request.
+
+        Args:
+             enforce_json (bool): Require properly-formatted JSON or raise :exc:`~pan_cortex_data_lake.exceptions.CortecError`. Defaults to ``False``.
+             method (str): HTTP method.
+             raise_for_status (bool): If ``True``, raises :exc:`~pan_cortex_data_lake.exceptions.HTTPError` if status_code not in 2XX. Defaults to ``False``.
+             url (str): Request URL.
+             **kwargs (dict): Re-packed key-word arguments.
+
+         Returns:
+            requests.Response: Requests Response() object
+
+        &#34;&#34;&#34;
+        r = self.session.request(method, url, **kwargs)
+        if raise_for_status:
+            r.raise_for_status()
+        if enforce_json:
+            if &#34;application/json&#34; in self.session.headers.get(&#34;Accept&#34;, &#34;&#34;):
+                try:
+                    r.json()
+                except ValueError as e:
+                    raise CortexError(&#34;Invalid JSON: {}&#34;.format(e))
+        self.stats.transactions += 1
+        return r
+
+    def request(self, **kwargs):
+        &#34;&#34;&#34;Generate HTTP request using given parameters.
+
+        The request method prepares HTTP requests using class or
+        method-level attributes/variables. Class-level attributes may be
+        overridden by method-level variables offering greater
+        flexibility and efficiency.
+
+        Parameters:
+            enforce_json (bool): Require properly-formatted JSON or raise :exc:`~pan_cortex_data_lake.exceptions.HTTPError`. Defaults to ``False``.
+            path (str): URI path to append to URL. Defaults to ``empty``.
+            raise_for_status (bool): If ``True``, raises :exc:`~pan_cortex_data_lake.exceptions.HTTPError` if status_code not in 2XX. Defaults to ``False``.
+
+        Args:
+            **kwargs: Supported :class:`~requests.Session` and :class:`~requests.adapters.HTTPAdapter` parameters.
+
+        Returns:
+            requests.Response: Requests Response() object
+
+        &#34;&#34;&#34;
+        url = kwargs.pop(&#34;url&#34;, self.url)
+
+        # Session() overrides
+        auth = kwargs.pop(&#34;auth&#34;, self.session.auth)
+        cert = kwargs.pop(&#34;cert&#34;, self.session.cert)
+        cookies = kwargs.pop(&#34;cookies&#34;, self.session.cookies)
+        headers = kwargs.pop(&#34;headers&#34;, self.session.headers.copy())
+        params = kwargs.pop(&#34;params&#34;, self.session.params)
+        proxies = kwargs.pop(&#34;proxies&#34;, self.session.proxies)
+        stream = kwargs.pop(&#34;stream&#34;, self.session.stream)
+        verify = kwargs.pop(&#34;verify&#34;, self.session.verify)
+
+        # Non-Requests key-word arguments
+        auto_refresh = kwargs.pop(&#34;auto_refresh&#34;, self.auto_refresh)
+        credentials = kwargs.pop(&#34;credentials&#34;, self.credentials)
+        endpoint = kwargs.pop(&#34;endpoint&#34;, &#34;&#34;)  # default to empty endpoint
+        enforce_json = kwargs.pop(&#34;enforce_json&#34;, self.enforce_json)
+        raise_for_status = kwargs.pop(&#34;raise_for_status&#34;, self.raise_for_status)
+        url = &#34;{}:{}{}&#34;.format(url, self.port, endpoint)
+
+        if credentials:
+            logger.debug(&#34;Applying method-level credentials&#34;)
+            self._apply_credentials(
+                auto_refresh=auto_refresh, credentials=credentials, headers=headers
+            )
+
+        k = {  # Re-pack kwargs to dictionary
+            &#34;params&#34;: params,
+            &#34;headers&#34;: headers,
+            &#34;cookies&#34;: cookies,
+            &#34;auth&#34;: auth,
+            &#34;proxies&#34;: proxies,
+            &#34;verify&#34;: verify,
+            &#34;stream&#34;: stream,
+            &#34;cert&#34;: cert,
+        }
+
+        # Request() overrides
+        for x in [&#34;allow_redirects&#34;, &#34;data&#34;, &#34;json&#34;, &#34;method&#34;, &#34;timeout&#34;]:
+            if x in kwargs:
+                k[x] = kwargs.pop(x)
+
+        # Handle invalid kwargs
+        if len(kwargs) &gt; 0:
+            raise UnexpectedKwargsError(kwargs)
+
+        try:
+            method = k.pop(&#34;method&#34;)
+        except KeyError:
+            raise RequiredKwargsError(&#34;method&#34;)
+
+        # Prepare and send the Request() and return Response()
+        try:
+            r = self._send_request(enforce_json, method, raise_for_status, url, **k)
+            return r
+        except requests.RequestException as e:
+            raise HTTPError(e)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="pan_cortex_data_lake.httpclient.HTTPClient.request"><code class="name flex">
+<span>def <span class="ident">request</span></span>(<span>self, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generate HTTP request using given parameters.</p>
+<p>The request method prepares HTTP requests using class or
+method-level attributes/variables. Class-level attributes may be
+overridden by method-level variables offering greater
+flexibility and efficiency.</p>
+<h2 id="parameters">Parameters</h2>
+<p>enforce_json (bool): Require properly-formatted JSON or raise :exc:<code>~pan_cortex_data_lake.exceptions.HTTPError</code>. Defaults to <code>False</code>.
+path (str): URI path to append to URL. Defaults to <code>empty</code>.
+raise_for_status (bool): If <code>True</code>, raises :exc:<code>~pan_cortex_data_lake.exceptions.HTTPError</code> if status_code not in 2XX. Defaults to <code>False</code>.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>**kwargs</code></strong></dt>
+<dd>Supported :class:<code>~requests.Session</code> and :class:<code>~requests.adapters.HTTPAdapter</code> parameters.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>requests.Response</code></dt>
+<dd>Requests Response() object</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def request(self, **kwargs):
+    &#34;&#34;&#34;Generate HTTP request using given parameters.
+
+    The request method prepares HTTP requests using class or
+    method-level attributes/variables. Class-level attributes may be
+    overridden by method-level variables offering greater
+    flexibility and efficiency.
+
+    Parameters:
+        enforce_json (bool): Require properly-formatted JSON or raise :exc:`~pan_cortex_data_lake.exceptions.HTTPError`. Defaults to ``False``.
+        path (str): URI path to append to URL. Defaults to ``empty``.
+        raise_for_status (bool): If ``True``, raises :exc:`~pan_cortex_data_lake.exceptions.HTTPError` if status_code not in 2XX. Defaults to ``False``.
+
+    Args:
+        **kwargs: Supported :class:`~requests.Session` and :class:`~requests.adapters.HTTPAdapter` parameters.
+
+    Returns:
+        requests.Response: Requests Response() object
+
+    &#34;&#34;&#34;
+    url = kwargs.pop(&#34;url&#34;, self.url)
+
+    # Session() overrides
+    auth = kwargs.pop(&#34;auth&#34;, self.session.auth)
+    cert = kwargs.pop(&#34;cert&#34;, self.session.cert)
+    cookies = kwargs.pop(&#34;cookies&#34;, self.session.cookies)
+    headers = kwargs.pop(&#34;headers&#34;, self.session.headers.copy())
+    params = kwargs.pop(&#34;params&#34;, self.session.params)
+    proxies = kwargs.pop(&#34;proxies&#34;, self.session.proxies)
+    stream = kwargs.pop(&#34;stream&#34;, self.session.stream)
+    verify = kwargs.pop(&#34;verify&#34;, self.session.verify)
+
+    # Non-Requests key-word arguments
+    auto_refresh = kwargs.pop(&#34;auto_refresh&#34;, self.auto_refresh)
+    credentials = kwargs.pop(&#34;credentials&#34;, self.credentials)
+    endpoint = kwargs.pop(&#34;endpoint&#34;, &#34;&#34;)  # default to empty endpoint
+    enforce_json = kwargs.pop(&#34;enforce_json&#34;, self.enforce_json)
+    raise_for_status = kwargs.pop(&#34;raise_for_status&#34;, self.raise_for_status)
+    url = &#34;{}:{}{}&#34;.format(url, self.port, endpoint)
+
+    if credentials:
+        logger.debug(&#34;Applying method-level credentials&#34;)
+        self._apply_credentials(
+            auto_refresh=auto_refresh, credentials=credentials, headers=headers
+        )
+
+    k = {  # Re-pack kwargs to dictionary
+        &#34;params&#34;: params,
+        &#34;headers&#34;: headers,
+        &#34;cookies&#34;: cookies,
+        &#34;auth&#34;: auth,
+        &#34;proxies&#34;: proxies,
+        &#34;verify&#34;: verify,
+        &#34;stream&#34;: stream,
+        &#34;cert&#34;: cert,
+    }
+
+    # Request() overrides
+    for x in [&#34;allow_redirects&#34;, &#34;data&#34;, &#34;json&#34;, &#34;method&#34;, &#34;timeout&#34;]:
+        if x in kwargs:
+            k[x] = kwargs.pop(x)
+
+    # Handle invalid kwargs
+    if len(kwargs) &gt; 0:
+        raise UnexpectedKwargsError(kwargs)
+
+    try:
+        method = k.pop(&#34;method&#34;)
+    except KeyError:
+        raise RequiredKwargsError(&#34;method&#34;)
+
+    # Prepare and send the Request() and return Response()
+    try:
+        r = self._send_request(enforce_json, method, raise_for_status, url, **k)
+        return r
+    except requests.RequestException as e:
+        raise HTTPError(e)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="pan_cortex_data_lake" href="index.html">pan_cortex_data_lake</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="pan_cortex_data_lake.httpclient.HTTPClient" href="#pan_cortex_data_lake.httpclient.HTTPClient">HTTPClient</a></code></h4>
+<ul class="">
+<li><code><a title="pan_cortex_data_lake.httpclient.HTTPClient.request" href="#pan_cortex_data_lake.httpclient.HTTPClient.request">request</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
