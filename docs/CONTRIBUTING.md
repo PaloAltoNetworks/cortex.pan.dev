@@ -1,6 +1,7 @@
 ---
 id: contributing
 title: Contributing Guidelines
+hide_title: true
 sidebar_label: Contributing Guidelines
 description: Contributing guidelines
 keywords:
@@ -250,9 +251,9 @@ module.exports = {
     {
       type: "category",
       label: "Tutorials", // Category label
-      items: ["apis/my_awesome_tutorial"] // Document ID (including relative path)
-    }
-  ]
+      items: ["apis/my_awesome_tutorial"], // Document ID (including relative path)
+    },
+  ],
 };
 ```
 

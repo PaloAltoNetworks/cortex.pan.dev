@@ -16,12 +16,12 @@ module.exports = {
   themeConfig: {
     prism: {
       theme: require("prism-react-renderer/themes/github"),
-      darkTheme: require("prism-react-renderer/themes/oceanicNext")
+      darkTheme: require("prism-react-renderer/themes/oceanicNext"),
     },
     algolia: {
-      apiKey: process.env.ALGOLIA_APIKEY,
-      indexName: process.env.ALGOLIA_INDEX,
-      algoliaOptions: {} // Optional, if provided by Algolia
+      apiKey: "db858a08864c153ecd30398595881683",
+      indexName: "pan_cortex",
+      algoliaOptions: { typoTolerance: false }, // Optional, if provided by Algolia
     },
     sidebarCollapsible: true,
     navbar: {
@@ -29,24 +29,25 @@ module.exports = {
       logo: {
         alt: "Cortex for Developers",
         src: "img/Cortex_Tagline_Logo_RGB_K.png",
-        srcDark: "img/Cortex_Tagline_Logo_RGB_KO.png"
+        srcDark: "img/Cortex_Tagline_Logo_RGB_KO.png",
       },
       links: [
         {
           to: "/docs",
           label: "Docs",
-          position: "left"
+          position: "left",
         },
         {
           href: "https://medium.com/palo-alto-networks-developer-blog",
           label: "Blog",
-          position: "right"
+          position: "right",
         },
         {
           href: "https://github.com/PaloAltoNetworks",
-          label: "GitHub",
-          position: "right"
-        }
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
+        },
       ],
       menus: [
         {
@@ -54,23 +55,23 @@ module.exports = {
           items: [
             {
               to: "docs/partner/why",
-              label: "Why Cortex"
+              label: "Why Cortex",
             },
             {
               to: "docs/partner/what",
-              label: "What is Cortex"
+              label: "What is Cortex",
             },
             {
               to: "docs/partner/use",
-              label: "Cortex Use Cases"
+              label: "Cortex Use Cases",
             },
             {
               to: "register",
-              label: "Register"
-            }
+              label: "Register",
+            },
           ],
-          position: "right"
-        }
+          position: "right",
+        },
       ],
       sites: [
         {
@@ -79,22 +80,22 @@ module.exports = {
             {
               href: "https://panos.pan.dev",
               label: "PAN-OS",
-              logo: "/img/strata_favicon.png"
+              logo: "/img/strata_favicon.png",
             },
             {
               href: "https://cortex.pan.dev",
               label: "Cortex",
-              logo: "/img/cortexfavicon.png"
+              logo: "/img/cortexfavicon.png",
             },
             {
               href: "https://xsoar.pan.dev",
               label: "Cortex XSOAR",
-              logo: "/img/Cortex-XSOAR-product-green.svg"
-            }
+              logo: "/img/Cortex-XSOAR-product-green.svg",
+            },
           ],
-          position: "right"
-        }
-      ]
+          position: "products",
+        },
+      ],
     },
     footer: {
       style: "dark",
@@ -104,44 +105,44 @@ module.exports = {
           items: [
             {
               label: "Cortex for Developers",
-              to: "docs"
-            }
-          ]
+              to: "docs",
+            },
+          ],
         },
         {
           title: "Partners",
           items: [
             {
               label: "Why Cortex?",
-              to: "docs/partner/why"
+              to: "docs/partner/why",
             },
             {
               label: "What is Cortex?",
-              to: "docs/partner/what"
+              to: "docs/partner/what",
             },
             {
               label: "Cortex Use Cases",
-              to: "docs/partner/use"
-            }
-          ]
+              to: "docs/partner/use",
+            },
+          ],
         },
         {
           title: "Social",
           items: [
             {
               label: "Blog",
-              href: "https://medium.com/palo-alto-networks-developer-blog"
-            }
-          ]
-        }
+              href: "https://medium.com/palo-alto-networks-developer-blog",
+            },
+          ],
+        },
       ],
       logo: {
         alt: "Palo Alto Networks for Developers",
         src: "img/pandev.png",
-        href: "https://pan.dev"
+        href: "https://pan.dev",
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Palo Alto Networks, Inc.`
-    }
+      copyright: `Copyright © ${new Date().getFullYear()} Palo Alto Networks, Inc.`,
+    },
   },
   themes: ["@docusaurus/theme-live-codeblock"],
   presets: [
@@ -149,6 +150,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          homePageId: "_index",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
             "https://github.com/PaloAltoNetworks/cortex.pan.dev/tree/master",
@@ -159,44 +161,44 @@ module.exports = {
           remarkPlugins: [],
           rehypePlugins: [],
           showLastUpdateAuthor: true,
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
-        }
-      }
-    ]
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
   ],
   plugins: [
     "@docusaurus/plugin-sitemap",
     {
       cacheTime: 600 * 1000, // 600 sec - cache purge period
       changefreq: "weekly",
-      priority: 0.5
-    }
+      priority: 0.5,
+    },
   ],
   scripts: [
     {
       src: "https://app-ab28.marketo.com/js/forms2/js/forms2.min.js",
-      async: true
-    }
+      async: true,
+    },
   ],
   customFields: {
     docbar: {
       options: [
         {
           label: "Docs Home",
-          to: "docs"
+          to: "docs",
         },
         {
           label: "Learn & Play",
-          to: "docs/learn"
+          to: "docs/learn",
         },
         {
           label: "Develop",
-          to: "docs/develop"
-        }
-      ]
-    }
-  }
+          to: "docs/develop",
+        },
+      ],
+    },
+  },
 };
