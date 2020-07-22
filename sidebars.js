@@ -9,11 +9,11 @@ module.exports = {
   develop: [
     {
       type: "doc",
-      id: "develop"
+      id: "develop",
     },
     {
       type: "doc",
-      id: "develop/quickstart"
+      id: "develop/quickstart",
     },
     {
       type: "category",
@@ -26,10 +26,10 @@ module.exports = {
           items: [
             "develop/tutorial_retries_python",
             "develop/handling_json_python",
-            "develop/debugging_python"
-          ]
-        }
-      ]
+            "develop/debugging_python",
+          ],
+        },
+      ],
     },
     {
       type: "category",
@@ -38,42 +38,42 @@ module.exports = {
         "develop/pan_cortex_data_lake_nodejs_qs",
         "develop/pan_cortex_hub_nodejs_qs",
         "develop/pan_cortex_xdr_nodejs_qs",
-        "develop/pan_cortex_xdr_nodejs_reference"
-      ]
+        "develop/pan_cortex_xdr_nodejs_reference",
+      ],
     },
     {
       type: "category",
       label: "PAN Cortex JAVA libs",
       items: [
         "develop/pan_cortex_data_lake_java_qs",
-        "develop/pan_cortex_hub_java_qs"
-      ]
-    }
+        "develop/pan_cortex_hub_java_qs",
+      ],
+    },
   ],
   partner: [
     {
       type: "category",
       label: "Partner",
-      items: ["partner/why", "partner/what", "partner/use"]
-    }
+      items: ["partner/why", "partner/what", "partner/use"],
+    },
   ],
   learn: [
     {
       type: "doc",
-      id: "learn"
+      id: "learn",
     },
     {
       type: "doc",
-      id: "learn/about_cdl"
+      id: "learn/about_cdl",
     },
     {
       type: "doc",
-      id: "learn/oauth2"
+      id: "learn/oauth2",
     },
     {
       type: "category",
       label: "Credentials",
-      items: ["learn/credentials"]
+      items: ["learn/credentials"],
     },
     {
       type: "category",
@@ -82,14 +82,18 @@ module.exports = {
         "learn/apiexplorer_intro",
         "learn/apiexplorer_authorization",
         "learn/sandbox_data",
-        "learn/developer_tokens"
-      ]
-    }
+        "learn/developer_tokens",
+      ],
+    },
   ],
-  contrib: [
+  docs: [
     {
       type: "doc",
-      id: "contributing"
-    }
-  ]
+      id: "_index",
+    },
+    {
+      type: "doc",
+      id: "contributing",
+    },
+  ],
 };
