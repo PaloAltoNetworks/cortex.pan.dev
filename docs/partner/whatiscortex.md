@@ -51,9 +51,3 @@ Partner apps are not hosted by Palo Alto Networks; they can run in the cloud or 
 Check out Cortex hub to see a list of generally available apps for Cortex. Your application could be there!
 
 ---
-
-Interested in becoming a partner?
-
-<a className="button button--warning button--lg" href="/register" target="_self">
-Register Today
-</a>

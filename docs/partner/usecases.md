@@ -37,9 +37,3 @@ Securing industrial, medical and IoT devices is a complex challenge that is gene
 By accessing both the fresh and historical information available in Cortex Data Lake, threat hunters can search for specific events, such as connections to specific IP addresses or malicious URLs. Combining these searches with other Palo Alto Networks offerings, such as AutoFocus, which provides its own set of APIs, allows threat intel platforms to increase the amount of information they can provide to threat hunters in order to track down attackers and extract indicators of Compromise (IOCs) that can be blocked across organizations.
 
 ---
-
-Interested in becoming a partner?
-
-<a className="button button--warning button--lg" href="/register" target="_self">
-Register Today
-</a>
