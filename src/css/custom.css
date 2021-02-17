@@ -325,17 +325,6 @@ html[data-theme="dark"] .header-github-link:before {
   display: none !important;
 }
 
-/* Medium Header Link */
-.header-medium-link:hover {
-  opacity: 0.6;
-}
-
-.header-medium-link:before {
-  content: "\f23a";
-  font-family: "Font Awesome 5 Brands";
-  font-size: x-large;
-}
-
 /* Show outlinks are leaving site */
 /* Need to fix selector to not add icon after img tags */
 /* .markdown a[target="_blank"][href]::after,

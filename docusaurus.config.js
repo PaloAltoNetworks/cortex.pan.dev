@@ -28,8 +28,8 @@ module.exports = {
       title: "",
       logo: {
         alt: "Cortex for Developers",
-        src: "img/Cortex_Tagline_Logo_RGB_K.png",
-        srcDark: "img/Cortex_Tagline_Logo_RGB_KO.png",
+        src: "img/Cortex_Tagline_Logo_RGB.svg",
+        srcDark: "img/Cortex_Tagline_Logo_RGB_KO.svg",
       },
       items: [
         {
