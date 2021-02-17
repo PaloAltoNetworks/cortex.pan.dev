@@ -19,9 +19,12 @@ module.exports = {
       darkTheme: require("prism-react-renderer/themes/oceanicNext"),
     },
     algolia: {
-      apiKey: "db858a08864c153ecd30398595881683",
-      indexName: "pan_cortex",
-      searchOptions: { typoTolerance: false }, // Optional, if provided by Algolia
+      apiKey: "cc0f2da5c80d2fb8dedb7ef9b56b52f2",
+      indexName: "pan",
+      searchParameters: {
+        typoTolerance: false,
+        'facetFilters': ["tags:cortex"]
+      }, // Optional, if provided by Algolia
     },
     sidebarCollapsible: true,
     navbar: {
