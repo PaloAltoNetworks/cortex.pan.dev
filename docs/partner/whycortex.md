@@ -41,9 +41,3 @@ Whether you’re part of a small or large organization, integrating with Cortex 
 Building an app for Cortex allows organizations to enable your customers’ security teams to focus on what really matters to them. Instead of spending their cycles managing and troubleshooting too many network devices and agents, they will be able to focus on enabling additional features and deliver better value as a result. Products that leverage Cortex become strongly integrated with the customer’s environment, as they provide more value as part of an ecosystem rather than as stand-alone offerings. Integrating the information and leveraging the insights Palo Alto Networks provides can improve the level of security joint clients achieve, which is, ultimately, the goal of all cybersecurity companies.
 
 ---
-
-Interested in becoming a partner?
-
-<a className="button button--warning button--lg" href="/register" target="_self">
-Register Today
-</a>

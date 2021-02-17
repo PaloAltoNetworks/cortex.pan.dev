@@ -114,6 +114,7 @@ function Home() {
     <Layout
       title={`${siteConfig.themeConfig.navbar.title}`}
       description="All things related to automation and development with Cortex"
+      wrapperClassName="homepage"
     >
       <ScrollUpButton />
       <div className="hero">
@@ -132,23 +133,13 @@ function Home() {
               <div>
                 <Link
                   className={classnames(
-                    "button button--info button--lg",
-                    styles.headerButtons
+                    "button button--primary button--lg",
+                    styles.getStarted
                   )}
                   onClick={scrollToTools}
                   style={{ marginRight: 4 }}
                 >
                   Explore Tools
-                </Link>
-                <Link
-                  className={classnames(
-                    "button button--primary button--lg",
-                    styles.headerButtons
-                  )}
-                  onClick={scrollToPartners}
-                  target="_self"
-                >
-                  Partners
                 </Link>
               </div>
             </div>
@@ -168,14 +159,6 @@ function Home() {
             <div className="container">
               <br></br>
               <br></br>
-              <h2>Join our community of partners!</h2>
-              <Link
-                className={classnames("button button--warning button--lg")}
-                href="register"
-                target="_self"
-              >
-                Register
-              </Link>
               <div className="row">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />

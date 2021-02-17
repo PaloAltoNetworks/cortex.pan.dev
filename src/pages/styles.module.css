@@ -112,7 +112,7 @@
   color: white;
   text-align: center;
   justify-content: center;
-  background-color: #bdc3c7;
+  background-color: var(--ifm-color-gray-600);
 }
 
 .tools {
