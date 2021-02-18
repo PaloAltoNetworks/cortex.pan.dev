@@ -104,11 +104,8 @@ module.exports = {
           title: "Social",
           items: [
             {
-              html: `
-                <a href="https://medium.com/palo-alto-networks-developer-blog" target="_blank" rel="noreferrer noopener" aria-label="Palo Alto Networks Developer Blog">
-                  <i class="fab fa-medium fa-2x"></i>
-                </a>
-              `,
+              label: "Blog",
+              href: "https://medium.com/palo-alto-networks-developer-blog"
             },
           ],
         },
