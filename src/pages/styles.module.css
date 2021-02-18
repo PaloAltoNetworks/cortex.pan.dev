@@ -91,14 +91,16 @@
 }
 
 .features {
+  color: var(--ifm-feature-color);
   align-items: center;
-  padding: 2rem 0;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  border-bottom-left-radius: 100% 600px;
-  border-bottom-right-radius: 100% 600px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.featureImage {
+  max-width: 60%;
+  max-height: 128px;
+  margin: 2rem auto;
 }
 
 .toolsback {
@@ -112,17 +114,13 @@
   color: white;
   text-align: center;
   justify-content: center;
-  background-color: #bdc3c7;
+  background-color: var(--ifm-color-gray-600);
 }
 
 .tools {
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
-  display: flex;
   color: white;
-  text-align: center;
-  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
 }
 
 .heroLogo {

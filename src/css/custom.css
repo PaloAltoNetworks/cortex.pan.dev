@@ -24,6 +24,7 @@
   --ifm-hero-background-color: #f9f9f9 !important;
   --ifm-link-color: #00cc66;
   --ifm-background-color: #fff;
+  
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
   --ifm-heading-font-weight: 700;
@@ -37,7 +38,14 @@
   /* not sure if below is needed */
   --ra-color-tip: var(--ifm-color-primary);
   --ra-color-text-dark: #000;
-  --ifm-color-info: #00c0e8;
+  --ifm-color-info: var(--ifm-color-primary);
+
+  --ifm-font-family-base: 'Montserrat', sans-serif, 'Font Awesome 5 Free';
+  --ifm-font-family-monospace: 'Roboto Mono', monospace;
+  /* Links */
+  --ifm-link-color: var(--ifm-color-primary-dark);
+  --ifm-link-hover-color: var(--ifm-color-primary-darker);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary-dark);
 }
 
 /* Dark mode overrides */
@@ -67,6 +75,46 @@ html[data-theme="dark"] {
   /* Code background and color */
   /* --ifm-code-background: #282d33; */
   --ifm-code-color: #000;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary-dark) !important;
+  --ifm-menu-link-sublist-icon-filter: none !important;
+}
+
+/* Center all columns in main wrapper */ 
+.main-wrapper {
+  max-width: 1400px;
+  width: 1400px;
+  align-self: center;
+}
+
+.main-wrapper h1[class^="docTitle"] {
+  font-size: 2.8rem;
+}
+
+@media (max-width: 1416px) {
+  .main-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1320px) and (min-width: 997px) {
+  .container {
+    max-width: calc(
+      var(--ifm-container-width) - 125px - var(--ifm-spacing-horizontal) * 2
+    );
+  }
+}
+
+/* Center navbar items */ 
+.navbar__inner {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* Force homepage to full width */
+.homepage {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Docs overrides */
@@ -277,6 +325,13 @@ html[data-theme="dark"] .header-github-link:before {
   display: none !important;
 }
 
-.menu__link--sublist:after {
-  display: none !important;
-}
+/* Show outlinks are leaving site */
+/* Need to fix selector to not add icon after img tags */
+/* .markdown a[target="_blank"][href]::after,
+.menu--responsive a[target="_blank"][href]::after {
+  margin: 0 4px 0 4px;
+  font-family: "Font Awesome 5 Free";
+  content: '\f35d';
+  font-size: x-small;
+  font-weight: 900;
+} */ 
