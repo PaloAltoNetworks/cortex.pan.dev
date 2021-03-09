@@ -404,7 +404,7 @@ following code as a basic example
 func main() {
 	var parser AlertParser = NewAlertParser() // To be provided by the developer
 	client := NewClient("<apikey>", "<apikey-id>", "fqdn")
-	pipe := NewPipe(client.SendMulti)
+	pipe := NewPipe(client.Send)
 	handler := NewHandler(pipe, parser)
 	http.HandleFunc("/in", handler) // accept third party alerts sent to the /in end point
 	http.ListenAndServe(":8080", nil)
