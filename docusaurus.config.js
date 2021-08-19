@@ -23,16 +23,15 @@ module.exports = {
       indexName: "pan",
       searchParameters: {
         typoTolerance: false,
-        'facetFilters': ["tags:cortex"]
+        facetFilters: ["tags:cortex"],
       }, // Optional, if provided by Algolia
     },
-    sidebarCollapsible: true,
     navbar: {
       title: "",
       logo: {
         alt: "Cortex for Developers",
-        src: "img/Cortex_Tagline_Logo_RGB.svg",
-        srcDark: "img/Cortex_Tagline_Logo_RGB_KO.svg",
+        src: "img/PAN_Cortex_Light.svg",
+        srcDark: "img/PAN_Cortex_Dark.svg",
       },
       items: [
         {
@@ -41,9 +40,33 @@ module.exports = {
           position: "left",
         },
         {
+          label: "Products",
+          items: [
+            {
+              href: "https://xsoar.pan.dev",
+              label: "Cortex XSOAR",
+              className: "xsoarItem",
+              target: "_self",
+            },
+            {
+              href: "https://prisma.pan.dev",
+              label: "Prisma",
+              className: "prismaItem",
+              target: "_self",
+            },
+            {
+              href: "https://strata.pan.dev",
+              label: "Strata",
+              className: "panosItem",
+              target: "_self",
+            },
+          ],
+          position: "right",
+        },
+        {
           href: "https://medium.com/palo-alto-networks-developer-blog",
           position: "right",
-          label: "Blog"
+          label: "Blog",
         },
         {
           href: "https://github.com/PaloAltoNetworks",
@@ -105,7 +128,7 @@ module.exports = {
           items: [
             {
               label: "Blog",
-              href: "https://medium.com/palo-alto-networks-developer-blog"
+              href: "https://medium.com/palo-alto-networks-developer-blog",
             },
           ],
         },
@@ -136,6 +159,7 @@ module.exports = {
           rehypePlugins: [],
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          sidebarCollapsible: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -148,49 +172,19 @@ module.exports = {
       "@docusaurus/plugin-sitemap",
       {
         id: "cortex-sitemap",
-        cacheTime: 600 * 1000, // 600 sec - cache purge period
         changefreq: "weekly",
         priority: 0.5,
       },
     ],
   ],
-  customFields: {
-    sites: [
-      {
-        label: "Products",
-        items: [
-          {
-            href: "https://cortex.pan.dev",
-            label: "Cortex",
-            logo: "/img/cortexfavicon.png",
-          },
-          {
-            href: "https://xsoar.pan.dev",
-            label: "Cortex XSOAR",
-            logo: "/img/Cortex-XSOAR-product-green.svg",
-          },
-          {
-            href: "https://panos.pan.dev",
-            label: "PAN-OS",
-            logo: "/img/strata_favicon.png",
-          },
-          {
-            href: "https://prisma.pan.dev",
-            label: "Prisma",
-            logo: "/img/prismafavicon.png",
-          },
-        ],
-        position: "products",
-      },
-    ],
-    onBrokenLinks: "warn",
-    onDuplicateRoutes: "warn",
-    stylesheets: [
-      {
-        href: "https://use.fontawesome.com/releases/v5.15.0/css/all.css",
-        type: "text/css",
-        rel: "stylesheet",
-      },
-    ],
-  }
+  onBrokenLinks: "warn",
+  onDuplicateRoutes: "warn",
+  stylesheets: [
+    {
+      href: "https://use.fontawesome.com/releases/v5.15.0/css/all.css",
+      type: "text/css",
+      rel: "stylesheet",
+    },
+  ],
+  themes: [require.resolve("./docusaurus-plugin-webpack/src/index.cjs")],
 };

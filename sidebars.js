@@ -9,7 +9,7 @@ module.exports = {
   docs: [
     {
       type: "doc",
-      id: "_index",
+      id: "home",
     },
     {
       type: "category",
