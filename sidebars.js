@@ -14,7 +14,7 @@ module.exports = {
     {
       type: "category",
       label: "Develop",
-      items:[
+      items: [
         {
           type: "doc",
           id: "develop",
@@ -56,6 +56,11 @@ module.exports = {
             "develop/pan_cortex_data_lake_java_qs",
             "develop/pan_cortex_hub_java_qs",
           ],
+        },
+        {
+          type: "category",
+          label: "PAN CDL Python SDK",
+          items: ["tutorials/xdr_alert_ingestion"],
         },
       ],
     },
