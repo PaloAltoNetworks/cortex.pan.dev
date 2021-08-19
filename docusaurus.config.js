@@ -147,7 +147,6 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          homePageId: "_index",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
             "https://github.com/PaloAltoNetworks/cortex.pan.dev/tree/master",
