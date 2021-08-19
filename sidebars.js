@@ -9,7 +9,7 @@ module.exports = {
   docs: [
     {
       type: "doc",
-      id: "_index",
+      id: "home",
     },
     {
       type: "category",
@@ -59,10 +59,8 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Tutorials",
-          items: [
-            "tutorials/xdr_alert_ingestion",
-          ],
+          label: "PAN CDL Python SDK",
+          items: ["tutorials/xdr_alert_ingestion"],
         },
       ],
     },
