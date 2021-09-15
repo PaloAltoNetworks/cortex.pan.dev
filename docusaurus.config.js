@@ -14,6 +14,9 @@ module.exports = {
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
+    gtag: {
+      trackingId: "GTM-WF39F3P",
+    },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/oceanicNext"),
