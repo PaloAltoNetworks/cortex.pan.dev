@@ -16,11 +16,6 @@ module.exports = {
   themeConfig: {
     gtag: {
       trackingID: "GTM-WF39F3P",
-      anonymizeIP: true,
-    },
-    googleAnalytics: {
-      trackingID: "UA-149228723-3",
-      anonymizeIP: true,
     },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
