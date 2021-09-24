@@ -15,7 +15,7 @@ module.exports = {
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
     gtag: {
-      trackingID: "GTM-WF39F3P",
+      trackingID: "UA-149228723-3",
     },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
