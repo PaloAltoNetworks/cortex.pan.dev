@@ -14,14 +14,6 @@ module.exports = {
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
-    gtag: {
-      trackingID: "GTM-WF39F3P",
-      anonymizeIP: true,
-    },
-    googleAnalytics: {
-      trackingID: "UA-149228723-3",
-      anonymizeIP: true,
-    },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/oceanicNext"),
@@ -181,6 +173,12 @@ module.exports = {
         id: "cortex-sitemap",
         changefreq: "weekly",
         priority: 0.5,
+      },
+    ],
+    [
+      require.resolve("./docusaurus-plugin-gtm/index.js"),
+      {
+        gtm: "GTM-WF39F3P", //GTM-XXXXXX
       },
     ],
   ],
