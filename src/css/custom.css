@@ -25,6 +25,12 @@
   --ifm-link-color: #00cc66;
   --ifm-background-color: #fff;
 
+  /* Status Colors */
+  --ifm-color-info: #00c0e8;
+  --ifm-color-success: #00cc66;
+  --ifm-color-warning: #ffcb06;
+  --ifm-color-danger: #fa582d;
+
   --ifm-navbar-search-input-color: var(--ifm-color-gray-900);
   --ifm-navbar-search-placeholder-color: var(--ifm-color-gray-900);
   --ifm-heading-font-weight: 700;
@@ -35,10 +41,6 @@
   --ifm-line-height-base: 1.5;
   --ifm-leading-desktop: 1.5;
   --ifm-list-margin: var(--ifm-leading);
-  /* not sure if below is needed */
-  --ra-color-tip: var(--ifm-color-primary);
-  --ra-color-text-dark: #000;
-  --ifm-color-info: var(--ifm-color-primary);
 
   --ifm-font-family-base: "Montserrat", sans-serif, "Font Awesome 5 Free";
   --ifm-font-family-monospace: "Roboto Mono", monospace;
