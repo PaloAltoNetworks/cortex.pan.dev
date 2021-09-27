@@ -224,6 +224,17 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(197, 189, 189, 0.3);
 }
 
+/* Medium Header Link */
+.header-medium-link:hover {
+  opacity: 0.6;
+}
+
+.header-medium-link:before {
+  content: "\f23a";
+  font-family: "Font Awesome 5 Brands";
+  font-size: x-large;
+}
+
 /* GitHub Header Link */
 .header-github-link:hover {
   opacity: 0.6;

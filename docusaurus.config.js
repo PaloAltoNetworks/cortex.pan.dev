@@ -66,7 +66,8 @@ module.exports = {
         {
           href: "https://medium.com/palo-alto-networks-developer-blog",
           position: "right",
-          label: "Blog",
+          className: "header-medium-link",
+          "aria-label": "Palo Alto Networks Developer Blog",
         },
         {
           href: "https://github.com/PaloAltoNetworks",
