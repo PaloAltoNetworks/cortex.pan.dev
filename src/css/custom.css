@@ -225,10 +225,6 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 /* Medium Header Link */
-.header-medium-link:hover {
-  opacity: 0.6;
-}
-
 .header-medium-link:before {
   content: "\f23a";
   font-family: "Font Awesome 5 Brands";
