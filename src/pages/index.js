@@ -31,12 +31,12 @@ const features = [
             "button button--primary button--md",
             styles.getStarted
           )}
-          href="/docs/partner/what"
+          href="/docs/data_lake/partner/what"
         >
           Learn More
         </Link>
       </div>
-    )
+    ),
   },
   {
     title: <>Why Cortex?</>,
@@ -54,12 +54,12 @@ const features = [
             "button button--primary button--md",
             styles.getStarted
           )}
-          href="/docs/partner/why"
+          href="/docs/data_lake/partner/why"
         >
           Learn More
         </Link>
       </div>
-    )
+    ),
   },
   {
     title: <>Use Cases</>,
@@ -77,13 +77,13 @@ const features = [
             "button button--primary button--md",
             styles.getStarted
           )}
-          href="/docs/partner/use"
+          href="/docs/data_lake/partner/use"
         >
           Learn More
         </Link>
       </div>
-    )
-  }
+    ),
+  },
 ];
 
 function Feature({ imageUrl, title, description, button }) {
@@ -105,7 +105,8 @@ function Feature({ imageUrl, title, description, button }) {
 function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
-  const scrollToRef = ref => ref.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToRef = (ref) =>
+    ref.current.scrollIntoView({ behavior: "smooth" });
   const partnersRef = useRef(null);
   const toolsRef = useRef(null);
   const scrollToPartners = () => scrollToRef(partnersRef);
@@ -189,7 +190,7 @@ function Home() {
                       "button button--primary button--md",
                       styles.quickstart
                     )}
-                    href="/docs/develop/cdl_python_installation"
+                    href="/docs/data_lake/develop/cdl_python_installation"
                   >
                     Quickstart
                   </Link>
@@ -223,7 +224,7 @@ function Home() {
                       "button button--primary button--md",
                       styles.quickstart
                     )}
-                    href="/docs/develop/pan_cortex_data_lake_nodejs_qs"
+                    href="/docs/data_lake/develop/pan_cortex_data_lake_nodejs_qs"
                   >
                     Quickstart
                   </Link>
@@ -257,7 +258,7 @@ function Home() {
                       "button button--primary button--md",
                       styles.quickstart
                     )}
-                    href="/docs/develop/pan_cortex_data_lake_java_qs"
+                    href="/docs/data_lake/develop/pan_cortex_data_lake_java_qs"
                   >
                     Quickstart
                   </Link>
@@ -295,7 +296,7 @@ function Home() {
                       "button button--primary button--md",
                       styles.quickstart
                     )}
-                    href="/docs/learn/apiexplorer_intro"
+                    href="/docs/data_lake/learn/apiexplorer_intro"
                   >
                     Quickstart
                   </Link>

@@ -35,7 +35,7 @@ API Explorer ships with full OAuth2 support, allowing you to delegate access to 
 
 Ready to start exploring your CDL? Click the button below to learn how to get started.
 
-<a className="button button--outline button--primary" href="/docs/learn/apiexplorer_authorization">
+<a className="button button--outline button--primary" href="/docs/data_lake/learn/apiexplorer_authorization">
 Get Started
 </a>
 
@@ -43,7 +43,7 @@ Get Started
 
 Each instance of API Explorer comes with a pre-authorized sandbox environment, curated and maintained by the [Developer Relations](https://medium.com/palo-alto-networks-developer-blog/introducing-developer-relations-at-palo-alto-networks-c9b4a8817c4) team. In it, you'll find simulated, sample data across many different log types - hopefully enough to give you a sense of what's possible!
 
-<a className="button button--outline button--primary" href="/docs/learn/sandbox_data">
+<a className="button button--outline button--primary" href="/docs/data_lake/learn/sandbox_data">
 Learn More
 </a>
 
@@ -51,6 +51,6 @@ Learn More
 
 Working on a proof-of-concept or exploring the API? Not quite ready to jump into implementing the full OAuth2 authorization code grant flow? Not to worry - API Explorer is here to help. Leave the OAuth2 stuff to API Explorer and generate a `Developer Token` to ease the process of authenticating to the CDL APIs.
 
-<a className="button button--outline button--primary" href="/docs/learn/developer_tokens">
+<a className="button button--outline button--primary" href="/docs/data_lake/learn/developer_tokens">
 Learn More
 </a>

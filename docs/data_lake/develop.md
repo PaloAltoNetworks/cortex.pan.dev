@@ -19,6 +19,6 @@ The Developer Relations team has felt this pain before and wishes for no one els
 
 From "Hello 🌎" to "Hello 💰", and everything in between.
 
-<a className="button button--outline button--primary" href="/docs/develop/quickstart">
+<a className="button button--outline button--primary" href="/docs/data_lake/develop/quickstart">
 Get Started
 </a>

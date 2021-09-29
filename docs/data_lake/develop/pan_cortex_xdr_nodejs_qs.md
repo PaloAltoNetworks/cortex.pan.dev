@@ -55,7 +55,7 @@ The main component of the `@paloaltonetworks/pan-cortex-xdr` library is the `Xdr
 * **AuditsApi**: to retrieve audit reports
 * **DistributionsApi**: to manage endpoint package distributions
 
-A quick reference to functions is each namespace is availabe in the [XdrApi Object Reference document](/docs/develop/pan_cortex_xdr_nodejs_reference)
+A quick reference to functions is each namespace is availabe in the [XdrApi Object Reference document](/docs/data_lake/develop/pan_cortex_xdr_nodejs_reference)
 
 ## Geting Started
 Just obtain a XdrApi object by calling the top level `createXdrApi()` function

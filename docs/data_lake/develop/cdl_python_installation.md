@@ -64,4 +64,4 @@ Create and work within a `venv` to keep your system and project dependencies sep
 
 ## Basic usage
 
-Now that you've successfully installed the Cortex Data Lake Python SDK, visit the [Quickstart](/docs/develop/quickstart) for a step-by-step tutorial on making your first API request.
+Now that you've successfully installed the Cortex Data Lake Python SDK, visit the [Quickstart](/docs/data_lake/develop/quickstart) for a step-by-step tutorial on making your first API request.

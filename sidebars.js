@@ -9,7 +9,7 @@ module.exports = {
   docs: [
     {
       type: "doc",
-      id: "home",
+      id: "data_lake/home",
     },
     {
       type: "category",
@@ -17,24 +17,24 @@ module.exports = {
       items: [
         {
           type: "doc",
-          id: "develop",
+          id: "data_lake/develop",
         },
         {
           type: "doc",
-          id: "develop/quickstart",
+          id: "data_lake/develop/quickstart",
         },
         {
           type: "category",
           label: "PAN CDL Python SDK",
           items: [
-            "develop/cdl_python_installation",
+            "data_lake/develop/cdl_python_installation",
             {
               type: "category",
               label: "Tutorials",
               items: [
-                "develop/tutorial_retries_python",
-                "develop/handling_json_python",
-                "develop/debugging_python",
+                "data_lake/develop/tutorial_retries_python",
+                "data_lake/develop/handling_json_python",
+                "data_lake/develop/debugging_python",
               ],
             },
           ],
@@ -43,24 +43,24 @@ module.exports = {
           type: "category",
           label: "PAN Cortex NodeJS libs",
           items: [
-            "develop/pan_cortex_data_lake_nodejs_qs",
-            "develop/pan_cortex_hub_nodejs_qs",
-            "develop/pan_cortex_xdr_nodejs_qs",
-            "develop/pan_cortex_xdr_nodejs_reference",
+            "data_lake/develop/pan_cortex_data_lake_nodejs_qs",
+            "data_lake/develop/pan_cortex_hub_nodejs_qs",
+            "data_lake/develop/pan_cortex_xdr_nodejs_qs",
+            "data_lake/develop/pan_cortex_xdr_nodejs_reference",
           ],
         },
         {
           type: "category",
           label: "PAN Cortex JAVA libs",
           items: [
-            "develop/pan_cortex_data_lake_java_qs",
-            "develop/pan_cortex_hub_java_qs",
+            "data_lake/develop/pan_cortex_data_lake_java_qs",
+            "data_lake/develop/pan_cortex_hub_java_qs",
           ],
         },
         {
           type: "category",
           label: "PAN CDL Python SDK",
-          items: ["tutorials/xdr_alert_ingestion"],
+          items: ["data_lake/tutorials/xdr_alert_ingestion"],
         },
       ],
     },
@@ -70,29 +70,29 @@ module.exports = {
       items: [
         {
           type: "doc",
-          id: "learn",
+          id: "data_lake/learn",
         },
         {
           type: "doc",
-          id: "learn/about_cdl",
+          id: "data_lake/learn/about_cdl",
         },
         {
           type: "doc",
-          id: "learn/oauth2",
+          id: "data_lake/learn/oauth2",
         },
         {
           type: "category",
           label: "Credentials",
-          items: ["learn/credentials"],
+          items: ["data_lake/learn/credentials"],
         },
         {
           type: "category",
           label: "API Explorer",
           items: [
-            "learn/apiexplorer_intro",
-            "learn/apiexplorer_authorization",
-            "learn/sandbox_data",
-            "learn/developer_tokens",
+            "data_lake/learn/apiexplorer_intro",
+            "data_lake/learn/apiexplorer_authorization",
+            "data_lake/learn/sandbox_data",
+            "data_lake/learn/developer_tokens",
           ],
         },
       ],
@@ -102,7 +102,11 @@ module.exports = {
     {
       type: "category",
       label: "Partner",
-      items: ["partner/why", "partner/what", "partner/use"],
+      items: [
+        "data_lake/partner/why",
+        "data_lake/partner/what",
+        "data_lake/partner/use",
+      ],
     },
   ],
   doc: [

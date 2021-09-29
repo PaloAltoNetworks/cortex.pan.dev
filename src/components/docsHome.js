@@ -59,7 +59,7 @@ function Docs() {
                       "button button--primary stretch",
                       styles.docs
                     )}
-                    href={useBaseUrl("/docs/learn")}
+                    href={useBaseUrl("/docs/data_lake/learn")}
                   >
                     GO
                   </Link>
