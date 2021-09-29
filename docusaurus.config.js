@@ -8,8 +8,12 @@
 module.exports = {
   title: "Develop security",
   tagline: "using the most advanced cybersecurity data platform",
-  url: "https://cortex.pan.dev",
-  baseUrl: "/",
+  url: process.env.CI_PAGES_URL
+    ? process.env.CI_PAGES_URL
+    : "https://cortex.pan.dev",
+  baseUrl: process.env.CI_MERGE_REQUEST_IID
+    ? `/-/${process.env.CI_PROJECT_NAME}/-/jobs/${process.env.CI_JOB_ID}/artifacts/public/`
+    : "/",
   favicon: "img/cortexfavicon.png",
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
@@ -37,6 +41,16 @@ module.exports = {
         {
           to: "/docs",
           label: "Docs",
+          position: "left",
+        },
+        {
+          label: "API Reference",
+          items: [
+            {
+              to: "/api/expander",
+              label: "Expander",
+            },
+          ],
           position: "left",
         },
         {
@@ -74,24 +88,6 @@ module.exports = {
           position: "right",
           className: "header-github-link",
           "aria-label": "Palo Alto Networks Github Org",
-        },
-        {
-          label: "About",
-          items: [
-            {
-              to: "docs/partner/why",
-              label: "Why Cortex",
-            },
-            {
-              to: "docs/partner/what",
-              label: "What is Cortex",
-            },
-            {
-              to: "docs/partner/use",
-              label: "Cortex Use Cases",
-            },
-          ],
-          position: "left",
         },
       ],
     },
@@ -180,6 +176,24 @@ module.exports = {
       require.resolve("./docusaurus-plugin-gtm/index.js"),
       {
         gtm: "GTM-WF39F3P", //GTM-XXXXXX
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "api",
+        sidebarPath: require.resolve("./api.sidebars.js"),
+        editUrl:
+          "https://github.com/PaloAltoNetworks/cortex.pan.dev/tree/master/",
+        routeBasePath: "api",
+        include: ["**/*.md", "**/*.mdx"], // Extensions to include.
+        docLayoutComponent: "@theme/DocPage",
+        docItemComponent: "@theme/APIDocItem",
+        remarkPlugins: [],
+        rehypePlugins: [],
+        path: "api",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
   ],

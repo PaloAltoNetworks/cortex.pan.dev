@@ -25,7 +25,7 @@ const DOCUSAURUS = {
   fontSize: "var(--ifm-font-size-base)",
   dark: {
     primaryText: "#f5f6f7", // var(--ifm-font-color-base)
-    secondaryText: "#212121", // var(--ifm-font-color-secondary)
+    secondaryText: "#c9c9c9", // var(--ifm-font-color-secondary)
     backgroundColor: "#121212",
   }
 };
@@ -54,7 +54,7 @@ let LIGHT_THEME_OPTIONS = {
 let DARK_THEME_OPTIONS = {
   colors: {
     text: {
-      primary: "#c9c9c9",
+      primary: DOCUSAURUS.dark.primaryText,
       secondary: DOCUSAURUS.dark.secondaryText,
     },
   },
