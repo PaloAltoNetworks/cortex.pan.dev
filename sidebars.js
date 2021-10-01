@@ -37,6 +37,7 @@ module.exports = {
                 "develop/debugging_python",
               ],
             },
+            require("./docs/develop/reference/sidebar.json"),
           ],
         },
         {
