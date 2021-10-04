@@ -2,6 +2,11 @@
   "items": [
     {
       "items": [
+        "develop/reference/pan_cortex_data_lake/query",
+        "develop/reference/pan_cortex_data_lake/credentials",
+        "develop/reference/pan_cortex_data_lake/httpclient",
+        "develop/reference/pan_cortex_data_lake/exceptions",
+        "develop/reference/pan_cortex_data_lake/utils",
         {
           "items": [
             "develop/reference/pan_cortex_data_lake/adapters/adapter",
@@ -9,12 +14,7 @@
           ],
           "label": "pan_cortex_data_lake.adapters",
           "type": "category"
-        },
-        "develop/reference/pan_cortex_data_lake/credentials",
-        "develop/reference/pan_cortex_data_lake/exceptions",
-        "develop/reference/pan_cortex_data_lake/httpclient",
-        "develop/reference/pan_cortex_data_lake/query",
-        "develop/reference/pan_cortex_data_lake/utils"
+        }
       ],
       "label": "pan_cortex_data_lake",
       "type": "category"
