@@ -2,6 +2,7 @@
 sidebar_label: query
 title: pan_cortex_data_lake.query
 hide_title: true
+custom_edit_url: https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python/blob/master/pan_cortex_data_lake/query.py
 ---
 :::info
 The Query Service is a Palo Alto Networks cloud service which allows

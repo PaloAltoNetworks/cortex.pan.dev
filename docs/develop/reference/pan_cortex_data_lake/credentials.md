@@ -2,6 +2,7 @@
 sidebar_label: credentials
 title: pan_cortex_data_lake.credentials
 hide_title: true
+custom_edit_url: https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python/blob/master/pan_cortex_data_lake/credentials.py
 ---
 :::info
 The Credentials object can be used to access, store and refresh credentials.
