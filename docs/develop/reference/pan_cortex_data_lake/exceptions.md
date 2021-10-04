@@ -2,6 +2,7 @@
 sidebar_label: exceptions
 title: pan_cortex_data_lake.exceptions
 hide_title: true
+custom_edit_url: https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python/blob/master/pan_cortex_data_lake/exceptions.py
 ---
 :::info
 This module provides base classes for all errors raised by the PAN Cloud

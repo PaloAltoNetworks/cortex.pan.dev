@@ -2,6 +2,7 @@
 sidebar_label: tinydb_adapter
 title: pan_cortex_data_lake.adapters.tinydb_adapter
 hide_title: true
+custom_edit_url: https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python/blob/master/pan_cortex_data_lake/adapters/tinydb_adapter.py
 ---
 :::info
 TinyDB storage adapter.

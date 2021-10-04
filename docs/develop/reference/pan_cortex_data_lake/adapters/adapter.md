@@ -2,6 +2,7 @@
 sidebar_label: adapter
 title: pan_cortex_data_lake.adapters.adapter
 hide_title: true
+custom_edit_url: https://github.com/PaloAltoNetworks/pan-cortex-data-lake-python/blob/master/pan_cortex_data_lake/adapters/adapter.py
 ---
 :::info
 Base adapter class.
