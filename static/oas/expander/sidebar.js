@@ -21,9 +21,6 @@ function genEndpoints() {
     const data = yaml.load(specContents);
     const categoryLabel = data.info.title;
     const docId = categoryLabel
-      .replace("Expander ", "")
-      .replace(" API", "")
-      .replace("API ", "")
       .replace(/([a-z])([A-Z])/g, "$1-$2")
       .replace(/[\s_]+/g, "-")
       .replace("--", "")
