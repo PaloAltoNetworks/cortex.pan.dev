@@ -27,7 +27,8 @@ module.exports = {
           type: "category",
           label: "PAN CDL Python SDK",
           items: [
-            "data_lake/develop/cdl_python_installation",
+            "develop/cdl_python_installation",
+            require("./docs/develop/reference/sidebar.json"),
             {
               type: "category",
               label: "Tutorials",
