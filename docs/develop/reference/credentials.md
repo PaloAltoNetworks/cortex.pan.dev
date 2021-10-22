@@ -58,23 +58,28 @@ in the following order:
 **Examples**:
 
   
-  ```python
-  from pan_cortex_data_lake import Credentials
-  
-  
-  # Load credentials from envars or ~/.config/pan_cortex_data_lake/credentials.json
-  c = Credentials()
-  
-  # Load credentials with static access_token
-  access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlRyYXNoIFBBTkRBIiwiaWF0IjoxNTE2MjM5MDIyfQ"
-  c = Credentials(access_token=access_token)
-  
-  # Load full credentials
-  client_id = "trash"
-  client_secret = "panda"
-  refresh_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlRyYXNoIFBBTkRBIiwiaWF0IjoxNTE2MjM5MDIyfQ"
-  c = Credentials(client_id=client_id, client_secret=client_secret, refresh_token=refresh_token)
-  ```
+```python
+from pan_cortex_data_lake import Credentials
+
+
+# Load credentials from envars or ~/.config/pan_cortex_data_lake/credentials.json
+c = Credentials()
+
+# Load credentials with static access_token
+access_token = "eyJ..."
+c = Credentials(access_token=access_token)
+
+# Load full credentials
+client_id = "trash"
+client_secret = "panda"
+refresh_token = "eyJ..."
+
+c = Credentials(
+    client_id=client_id,
+    client_secret=client_secret,
+    refresh_token=refresh_token
+)
+```
 
 ### access\_token
 
