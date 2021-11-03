@@ -104,23 +104,6 @@ module.exports = {
           ],
         },
         {
-          title: "Partners",
-          items: [
-            {
-              label: "Why Cortex?",
-              to: "docs/partner/why",
-            },
-            {
-              label: "What is Cortex?",
-              to: "docs/partner/what",
-            },
-            {
-              label: "Cortex Use Cases",
-              to: "docs/partner/use",
-            },
-          ],
-        },
-        {
           title: "Social",
           items: [
             {
