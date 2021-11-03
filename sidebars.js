@@ -9,7 +9,7 @@ module.exports = {
   docs: [
     {
       type: "doc",
-      id: "data_lake/home",
+      id: "home",
     },
     {
       type: "category",

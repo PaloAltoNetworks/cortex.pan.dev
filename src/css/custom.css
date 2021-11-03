@@ -107,6 +107,19 @@ html[data-theme="dark"] {
   }
 }
 
+.hero.hero--primary{
+  background-color: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  background: radial-gradient(100vw 100% at 50% 100%, #00cc66, var(--ifm-background-color) 100%);
+}
+
+.blur {
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(8px);
+  height: 100vh;
+	width: 50%;
+}
+
 /* Center navbar items */
 .navbar__inner {
   max-width: 1360px;
@@ -190,22 +203,6 @@ blockquote {
 @media (max-width: 380px) {
   .navbar__logo {
     width: auto !important;
-  }
-}
-
-.hero {
-  border-bottom-left-radius: 100% 100px !important;
-  border-bottom-right-radius: 100% 100px !important;
-  border-bottom: 5px solid var(--ifm-color-primary) !important;
-}
-
-@media only screen and (max-width: 768px) {
-  .hero {
-    align-items: center;
-    background-color: var(--ifm-hero-background-color);
-    color: var(--ifm-hero-text-color);
-    display: flex;
-    padding: 1rem 0.1rem !important;
   }
 }
 
@@ -530,7 +527,7 @@ html[data-theme="dark"] .featuredContainer {
 
 /* Algolia Search */
 .DocSearch-Button-Placeholder:after {
-  content: " Prisma Docs" !important;
+  content: " Cortex Docs" !important;
 }
 
 .menu--responsive .menu__button {

@@ -48,7 +48,7 @@ module.exports = {
           items: [
             {
               to: "/api/expander",
-              label: "Expander",
+              label: "Expander API",
             },
           ],
           position: "left",
@@ -100,23 +100,6 @@ module.exports = {
             {
               label: "Cortex for Developers",
               to: "docs",
-            },
-          ],
-        },
-        {
-          title: "Partners",
-          items: [
-            {
-              label: "Why Cortex?",
-              to: "docs/partner/why",
-            },
-            {
-              label: "What is Cortex?",
-              to: "docs/partner/what",
-            },
-            {
-              label: "Cortex Use Cases",
-              to: "docs/partner/use",
             },
           ],
         },
