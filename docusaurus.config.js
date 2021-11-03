@@ -48,7 +48,7 @@ module.exports = {
           items: [
             {
               to: "/api/expander",
-              label: "Expander",
+              label: "Expander API",
             },
           ],
           position: "left",
