@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f73eff08-3be7-4f77-b6d1-84e03c7ba83c/deploy-status)](https://app.netlify.com/sites/silly-shannon-6360a4/deploys)
+[![Deploy Live](https://github.com/PaloAltoNetworks/cortex.pan.dev/actions/workflows/deploy-live.yml/badge.svg)](https://github.com/PaloAltoNetworks/cortex.pan.dev/actions/workflows/deploy-live.yml)
 
 # Cortex for Developers
 
