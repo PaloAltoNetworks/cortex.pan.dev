@@ -3,11 +3,11 @@ openapi: 3.0.1
 info:
   title: Annotations API
   description: API for interacting with Expander annotations
-  termsOfService: https://www.expanse.co/master-service-agreement/
+  termsOfService: https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/legal/palo-alto-networks-end-user-license-agreement-eula.pdf
   contact:
     name: API Support
-    url: https://expander-support.expanse.co
-    email: expander-support@expanseinc.com
+    url: https://docs.paloaltonetworks.com/cortex/cortex-xpanse/cortex-xpanse-user-guide/apis-and-integrations-main/expander-apis-and-integrations/expander-apis.html#expander-apis
+    email: expanse-support@paloaltonetworks.com
   version: 3.0.0
 servers:
 - url: https://expander.expanse.co
@@ -244,7 +244,7 @@ components:
     Bearer:
       type: apiKey
       description: |-
-        Provide a valid Expanse-provided refresh token to access `/api/v1/idToken/`.
+        Provide a valid Xpanse-provided refresh token to access `/api/v1/idToken/`.
         This route will generate a JWT token that can be used with the other api
         endpoints.
 

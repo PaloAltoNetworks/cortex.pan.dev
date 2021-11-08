@@ -2,11 +2,11 @@ openapi: 3.0.1
 info:
   title: Targeted IPs API
   description: An API to get all targeted IPs.
-  termsOfService: https://www.expanse.co/master-service-agreement/
+  termsOfService: https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/legal/palo-alto-networks-end-user-license-agreement-eula.pdf
   contact:
     name: API Support
-    url: https://expander-support.expanse.co
-    email: expander-support@expanseinc.com
+    url: https://docs.paloaltonetworks.com/cortex/cortex-xpanse/cortex-xpanse-user-guide/apis-and-integrations-main/expander-apis-and-integrations/expander-apis.html#expander-apis
+    email: expanse-support@paloaltonetworks.com
   version: 2.0.0
 servers:
 - url: https://expander.expanse.co
