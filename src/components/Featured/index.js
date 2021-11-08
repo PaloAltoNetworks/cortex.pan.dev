@@ -38,7 +38,7 @@ const features = [
   {
     title: <>Cortex Xpanse</>,
     imageUrl: "/img/Cortex-Xpanse-green.svg",
-    toPage: "/api/expander/",
+    toPage: "/api/expander/annotations-api",
     description: (
       <>
         Browse through interactive API Documentation for Cortex Xpanse's
