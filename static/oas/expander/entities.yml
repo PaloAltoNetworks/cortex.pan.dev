@@ -48,7 +48,7 @@ paths:
   /Entity/:
     get:
       summary: List Business Units
-      description: Returns the list of Business Units to which the authenticated user has access. Fetching IP Ranges from this endpoint is now deprecated and may return incorrect data.
+      description: Returns the list of Business Units to which the authenticated user has access.
       parameters:
         - name: name
           in: query
@@ -60,7 +60,7 @@ paths:
           required: false
           type: string
           format: uuid
-          description: Find business units with the given parent Entity
+          description: Find business units with the given parent business unit ID
         - name: has_parent
           in: query
           required: false
@@ -79,7 +79,7 @@ paths:
   /Entity/{entityId}/:
     get:
       summary: Business Unit Details
-      description: Returns the details for a given business unit. Fetching IP Ranges from this endpoint is now deprecated and may return incorrect data.
+      description: Returns the details for a given business unit.
       parameters:
         - name: entityId
           in: path
