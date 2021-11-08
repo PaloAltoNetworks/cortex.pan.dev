@@ -2,7 +2,9 @@ const globby = require("globby");
 const yaml = require("js-yaml");
 const fs = require("fs");
 // Use the following to frontload docs
-var docs = ["expander/expander"];
+// Uncomment the following line when we have an intro doc
+// var docs = ["expander/expander"];
+var docs = [];
 
 // Change these variables to match your doc path
 const relativePath = "expander";

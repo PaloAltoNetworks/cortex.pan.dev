@@ -47,7 +47,7 @@ module.exports = {
           label: "API Reference",
           items: [
             {
-              to: "/api/expander",
+              to: "/api/expander/annotations-api",
               label: "Expander API",
             },
           ],
