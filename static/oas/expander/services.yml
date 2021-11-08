@@ -20,7 +20,7 @@ paths:
       - Tokens
       summary: Get ID token
       description: |-
-        This route can be accessed with an Expanse-provided refresh
+        This route can be accessed with an Xpanse-provided refresh
         token to generate a valid JWT Token to be used with the other api
         endpoints.
 
@@ -2854,7 +2854,7 @@ components:
     Bearer:
       type: apiKey
       description: |-
-        Provide a valid Expanse-provided refresh token to access `/api/v1/idToken/`.
+        Provide a valid Xpanse-provided refresh token to access `/api/v1/idToken/`.
         This route will generate a JWT token that can be used with the other api
         endpoints.
 

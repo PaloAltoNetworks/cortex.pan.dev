@@ -32,7 +32,7 @@ paths:
       parameters:
         - name: Authorization
           in: header
-          description: 'Expanse-provided refresh token to be passed in Authentication header. Value must be prefixed with `Bearer`. Example: `Authorization: Bearer {your refresh token}`'
+          description: 'Xpanse-provided refresh token to be passed in Authentication header. Value must be prefixed with `Bearer`. Example: `Authorization: Bearer {your refresh token}`'
           required: true
           type: string
       responses:
