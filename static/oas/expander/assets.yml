@@ -20,7 +20,7 @@ paths:
       - Tokens
       summary: Get ID token
       description: |-
-        This route can be accessed with an Expanse-provided refresh
+        This route can be accessed with an Xpanse-provided refresh
         token to generate a valid JWT Token to be used with the other api
         endpoints.
 
@@ -2386,7 +2386,7 @@ paths:
       summary: Creates an IP Range
       description: Creates a new custom IP Range. A validation error will be returned
         if the start and end addresses of the custom range do not fit within a top
-        level range defined by Expanse.
+        level range defined by Xpanse.
       operationId: createIpRangeAsset
       parameters:
       - name: include
@@ -3116,7 +3116,7 @@ paths:
       summary: Creates an IP Range
       description: Creates a new custom IP Range. A validation error will be returned
         if the start and end addresses of the custom range do not fit within a top
-        level range defined by Expanse.
+        level range defined by Xpanse.
       operationId: createIpRangeAsset_1
       parameters:
       - name: include
@@ -6075,7 +6075,7 @@ components:
     Bearer:
       type: apiKey
       description: |-
-        Provide a valid Expanse-provided refresh token to access `/api/v1/idToken/`.
+        Provide a valid Xpanse-provided refresh token to access `/api/v1/idToken/`.
         This route will generate a JWT token that can be used with the other api
         endpoints.
 
