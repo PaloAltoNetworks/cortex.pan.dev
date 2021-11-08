@@ -8,7 +8,7 @@ produces:
 security:
   - JWT: []
 info:
-  description: An API for interacting with data from Xpnase's Expander product.
+  description: An API for interacting with data from Xpanse's Expander product.
   title: Expander API - Entities
   version: 1.0.0
   termsOfService: https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/legal/palo-alto-networks-end-user-license-agreement-eula.pdf
