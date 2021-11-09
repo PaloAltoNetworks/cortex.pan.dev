@@ -14,7 +14,7 @@ keywords:
 [![GitHub page](https://img.shields.io/badge/GitHub-Repo-brightgreen?style=for-the-badge&logo=github)](https://github.com/PaloAltoNetworks/pan-cortex-hub-java) ![JAVA](https://img.shields.io/badge/lang-JAVA-ff69b4?style=for-the-badge)
 
 Collection of `Credentials` objects to be used alongside applications leveraging
-the Cortex Data Lake API [See Data Lake Quickstart](/docs/develop/pan_cortex_data_lake_java_qs)
+the Cortex Data Lake API [See Data Lake Quickstart](/docs/data_lake/develop/pan_cortex_data_lake_java_qs)
 
 It also provides the `HubHelper` class for quick prototyping SaaS Components to interface with Cortex hub.
 

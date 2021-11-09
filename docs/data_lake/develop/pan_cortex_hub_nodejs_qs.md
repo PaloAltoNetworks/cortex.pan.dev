@@ -15,7 +15,7 @@ keywords:
 
 Collection of `Credentials` objects to be used alongside applications leveraging
 the Cortex Data Lake API [See
-Data Lake Quickstart](/docs/develop/pan_cortex_data_lake_nodejs_qs)
+Data Lake Quickstart](/docs/data_lake/develop/pan_cortex_data_lake_nodejs_qs)
 
 It also provides the `CortexHubHelper` for quick prototyping SaaS Components to interface with Cortex hub.
 

@@ -28,4 +28,4 @@ Build previews will be automatically generated for pull requests. Build previews
 
 ### Contributing
 
-Contributing guidelines can be found [here](https://cortex.pan.dev/docs/contributing).
+Contributing guidelines can be found [here](https://cortex.pan.dev/docs/data_lake/contributing).

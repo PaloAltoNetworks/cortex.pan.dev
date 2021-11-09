@@ -83,7 +83,7 @@ import ujson
 requests.models.json = ujson
 ```
 
-If you have [debug logging](/docs/develop/debugging_python) enabled then you'll see the following message logged to your console:
+If you have [debug logging](/docs/data_lake/develop/debugging_python) enabled then you'll see the following message logged to your console:
 
 ```console
 DEBUG:pan_cortex_data_lake.httpclient:Monkey patched requests with ujson

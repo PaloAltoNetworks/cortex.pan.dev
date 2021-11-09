@@ -52,4 +52,4 @@ export PAN_DEVELOPER_TOKEN=<your_developer_token>
 curl -H "Authorization: Bearer $PAN_DEVELOPER_TOKEN" -X POST https://app.apiexplorer.rocks/request_token
 ```
 
-For examples on how to programmatically use a `Developer Token` see the [Cortex Data Lake Quickstart](/docs/develop/quickstart) guide.
+For examples on how to programmatically use a `Developer Token` see the [Cortex Data Lake Quickstart](/docs/data_lake/develop/quickstart) guide.

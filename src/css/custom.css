@@ -107,6 +107,19 @@ html[data-theme="dark"] {
   }
 }
 
+.hero.hero--primary{
+  background-color: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  background: radial-gradient(100vw 100% at 50% 100%, #00cc66, var(--ifm-background-color) 100%);
+}
+
+.blur {
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(8px);
+  height: 100vh;
+	width: 50%;
+}
+
 /* Center navbar items */
 .navbar__inner {
   max-width: 1360px;
@@ -190,22 +203,6 @@ blockquote {
 @media (max-width: 380px) {
   .navbar__logo {
     width: auto !important;
-  }
-}
-
-.hero {
-  border-bottom-left-radius: 100% 100px !important;
-  border-bottom-right-radius: 100% 100px !important;
-  border-bottom: 5px solid var(--ifm-color-primary) !important;
-}
-
-@media only screen and (max-width: 768px) {
-  .hero {
-    align-items: center;
-    background-color: var(--ifm-hero-background-color);
-    color: var(--ifm-hero-text-color);
-    display: flex;
-    padding: 1rem 0.1rem !important;
   }
 }
 
@@ -405,7 +402,7 @@ h4 {
 /* ------- Right Panel Overrides ------- */
 
 .redocusaurus code {
-  color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-200) !important;
   padding: 0px;
   /* Fix weird overlay on curly braces */
   background-color: transparent;
@@ -495,7 +492,48 @@ table td {
   color: var(--ifm-font-color-base);
 }
 
-/* Badges for APIs */
+.menu > .menu__list > .menu__list-item > .menu__link {
+  font-weight: bolder;
+}
+
+/* Homepage features */
+.featuredContainer {
+  width: 100%;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex: 1;
+  background-color: #fff;
+}
+
+html[data-theme="dark"] .featuredContainer {
+  background-color: #303846;
+}
+
+/* Homepage tools */
+.toolsContainer {
+  background-color: #303846;
+  width: 100%;
+  height: 200%;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex: 1;
+}
+
+.centRow {
+  justify-content: center;
+}
+
+/* Algolia Search */
+.DocSearch-Button-Placeholder:after {
+  content: " Cortex Docs" !important;
+}
+
+.menu--responsive .menu__button {
+  bottom: 0 !important;
+}
+
 .menu__link.get:after {
   content: "get";
   display: inline-block;
@@ -505,13 +543,12 @@ table td {
   padding: 3px 6px;
   border: 1px solid var(--ifm-color-primary);
   border-radius: 3px;
-  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
   text-transform: uppercase;
   font-size: 10px;
   line-height: 10px;
   height: 10px;
   font-weight: 600;
-  color: #212121;
 }
 
 .menu__link.post:after {
@@ -523,13 +560,12 @@ table td {
   padding: 3px 6px;
   border: 1px solid var(--ifm-color-warning);
   border-radius: 3px;
-  background-color: var(--ifm-color-warning);
+  color: var(--ifm-color-warning);
   text-transform: uppercase;
   font-size: 10px;
   line-height: 10px;
   height: 10px;
   font-weight: 600;
-  color: #212121;
 }
 
 .menu__link.delete:after {
@@ -541,13 +577,12 @@ table td {
   padding: 3px 6px;
   border: 1px solid var(--ifm-color-danger);
   border-radius: 3px;
-  background-color: var(--ifm-color-danger);
+  color: var(--ifm-color-danger);
   text-transform: uppercase;
   font-size: 10px;
   line-height: 10px;
   height: 10px;
   font-weight: 600;
-  color: #212121;
 }
 
 .menu__link.patch:after {
@@ -559,13 +594,12 @@ table td {
   padding: 3px 6px;
   border: 1px solid var(--ifm-color-warning);
   border-radius: 3px;
-  background-color: var(--ifm-color-warning);
+  color: var(--ifm-color-warning);
   text-transform: uppercase;
   font-size: 10px;
   line-height: 10px;
   height: 10px;
   font-weight: 600;
-  color: #212121;
 }
 
 .menu__link.put:after {
@@ -577,13 +611,12 @@ table td {
   padding: 3px 6px;
   border: 1px solid var(--ifm-color-warning);
   border-radius: 3px;
-  background-color: var(--ifm-color-warning);
+  color: var(--ifm-color-warning);
   text-transform: uppercase;
   font-size: 10px;
   line-height: 10px;
   height: 10px;
   font-weight: 600;
-  color: #212121;
 }
 
 /* Add logos to the products menus */

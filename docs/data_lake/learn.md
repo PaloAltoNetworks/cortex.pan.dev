@@ -19,7 +19,7 @@ The Cortex Data Lake API is a collection of cloud-based services intended to sup
 
 Leverage powerful and capable REST APIs to help turn your next innovative idea into a reality.
 
-<a className="button button--outline button--primary" href="/docs/learn/about_cdl">
+<a className="button button--outline button--primary" href="/docs/data_lake/learn/about_cdl">
 Learn More
 </a>
 
@@ -27,7 +27,7 @@ Learn More
 
 Proven, industry-standard authorization framework for empowering end users to decide what permissions a CDL app should have.
 
-<a className="button button--outline button--primary" href="/docs/learn/oauth2">
+<a className="button button--outline button--primary" href="/docs/data_lake/learn/oauth2">
 Learn More
 </a>
 
@@ -35,7 +35,7 @@ Learn More
 
 Developing your next CDL app or integration in Python? NodeJS? Java? Just looking to get started? The Developer Relations team has you covered.
 
-<a className="button button--outline button--primary" href="/docs/develop/quickstart">
+<a className="button button--outline button--primary" href="/docs/data_lake/develop/quickstart">
 Learn More
 </a>
 
@@ -47,6 +47,6 @@ Learn More
 
 Let API Explorer help jumpstart your exploration or next development project.
 
-<a className="button button--outline button--primary" href="/docs/learn/apiexplorer_intro">
+<a className="button button--outline button--primary" href="/docs/data_lake/learn/apiexplorer_intro">
 Learn More
 </a>
