@@ -4,7 +4,13 @@ const fs = require("fs");
 // Use the following to frontload docs
 // Uncomment the following line when we have an intro doc
 // var docs = ["expander/expander"];
-var docs = [];
+var docs = [
+  {
+    type: "link",
+    label: "Expander API",
+    href: "/api/expander/annotations-api",
+  },
+];
 
 // Change these variables to match your doc path
 const relativePath = "expander";
