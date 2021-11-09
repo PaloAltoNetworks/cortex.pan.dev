@@ -22,6 +22,7 @@ function Docs() {
           <center>
             <h2>Cortex Data Lake</h2>
           </center>
+          <br />
           <div class="row minheight">
             <div class="col col--6">
               <div class={styles.docCard}>
@@ -131,10 +132,12 @@ function Docs() {
           </div>
         </div>
       </section>
+      <br />
       <section>
         <center>
           <h2>Cortex Xpanse</h2>
         </center>
+        <br />
         <div class="row minheight">
           <div class="col col--6">
             <div class={styles.docCard}>
@@ -146,7 +149,9 @@ function Docs() {
                   </description>
                 </div>
                 <div class="card__body">
-                  <Link href={useBaseUrl("api/expander")}>Expander API</Link>
+                  <Link href={useBaseUrl("api/expander/annotations-api")}>
+                    Expander API
+                  </Link>
                   <br></br>
                   <Link href="https://cortex-xpanse-python-sdk.readthedocs.io/en/latest/">
                     {" "}
@@ -169,6 +174,7 @@ function Docs() {
           </div>
         </div>
       </section>
+      <br />
       <section>
         <div class="container">
           <div class="row"></div>
