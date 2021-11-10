@@ -133,41 +133,43 @@ function Docs() {
         </div>
       </section>
       <br />
-      <section>
-        <center>
-          <h2>Cortex Xpanse</h2>
-        </center>
-        <br />
-        <div class="row minheight">
-          <div class="col col--6">
-            <div class={styles.docCard}>
-              <div class="card shadow--md">
-                <div class="card__header">
-                  <h3>Xpanse APIs</h3>
-                  <description>
-                    Getting up and running with Cortex® Xpanse™ APIs
-                  </description>
-                </div>
-                <div class="card__body">
-                  <Link href={useBaseUrl("api/expander/annotations-api")}>
-                    Expander API
-                  </Link>
-                  <br></br>
-                  <Link href="https://cortex-xpanse-python-sdk.readthedocs.io/en/latest/">
-                    {" "}
-                    Xpanse Python SDK{" "}
-                  </Link>
-                </div>
-                <div class="card__footer">
-                  <Link
-                    className={classnames(
-                      "button button--primary stretch",
-                      styles.docs
-                    )}
-                    href={useBaseUrl("/docs/data_lake/learn")}
-                  >
-                    GO
-                  </Link>
+      <section class={styles.doc}>
+        <div class="container">
+          <center>
+            <h2>Cortex Xpanse</h2>
+          </center>
+          <br />
+          <div class="row minheight">
+            <div class="col col--6">
+              <div class={styles.docCard}>
+                <div class="card shadow--md">
+                  <div class="card__header">
+                    <h3>Xpanse APIs</h3>
+                    <description>
+                      Getting up and running with Cortex® Xpanse™ APIs
+                    </description>
+                  </div>
+                  <div class="card__body">
+                    <Link href={useBaseUrl("api/expander/annotations-api")}>
+                      Expander API
+                    </Link>
+                    <br></br>
+                    <Link href="https://cortex-xpanse-python-sdk.readthedocs.io/en/latest/">
+                      {" "}
+                      Xpanse Python SDK{" "}
+                    </Link>
+                  </div>
+                  <div class="card__footer">
+                    <Link
+                      className={classnames(
+                        "button button--primary stretch",
+                        styles.docs
+                      )}
+                      href={useBaseUrl("/docs/data_lake/learn")}
+                    >
+                      GO
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
