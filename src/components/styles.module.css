@@ -61,7 +61,7 @@
   color: white;
   text-align: center;
   justify-content: center;
-  background-color: #807C7B;
+  background-color: #807c7b;
 }
 
 .headerImage {
@@ -85,7 +85,6 @@
 .heroProjectKeywords {
   color: var(--ifm-color-black);
 }
-
 
 .toolImage {
   height: 80px;
@@ -129,7 +128,7 @@
 }
 
 .text__blue {
-  color: #00C0E8 !important;
+  color: #00c0e8 !important;
 }
 
 .docs {
@@ -146,9 +145,8 @@
   border-radius: 0 1em 1em 0 !important;
 }
 
-.docCard{
-  width: 100%;
+.docCard {
   height: 100% !important;
   margin-bottom: 0px;
-  display: flex;
+  display: flex-box;
 }
