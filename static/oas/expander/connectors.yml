@@ -418,7 +418,7 @@ components:
       description: |-
         Xpanse APIs continue to support this JWT retrieval method alongside the preferred client credentials flow. There will be significant customer communications and a lengthy migration period before refresh token support is removed in favor of the client credentials flow.
 
-        Provide a valid Xpanse-provided refresh token to access `/api/v1/idToken/` This route will generate a JWT token that can be used with the other api endpoints.
+        Provide a valid Xpanse-provided refresh token to access `/api/v1/idToken/`. This route will generate a JWT token that can be used with the other api endpoints.
 
         Example: `Authorization: Bearer <refreshToken>`
       name: Authorization
