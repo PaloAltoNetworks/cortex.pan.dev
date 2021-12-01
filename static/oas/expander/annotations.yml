@@ -10,15 +10,65 @@ info:
     email: expanse-support@paloaltonetworks.com
   version: 3.0.0
 servers:
-- url: https://expander.expanse.co
+  - url: https://expander.expanse.co
 security:
-- JWT: []
+  - Bearer: []
 paths:
+  /api/oauth2/RequestToken:
+    post:
+      tags:
+        - Tokens
+      summary: Get Access Token from Client Credentials
+      description: "This route can be accessed with a `client_id` and `client_secret`\
+          \ to generate a valid `access_token` to be used with the other Xpanse api\
+          \ endpoints. For more information on how to retrieve client credentials, visit\
+          \ the Xpanse [TechDocs](https://docs.paloaltonetworks.com/cortex/cortex-xpanse/cortex-xpanse-user-guide/apis-and-integrations-main/expander-apis-and-integrations/expander-apis.html#expander-apis).\
+          \  \n\nExample: `Authorization: Bearer access_token`"
+      operationId: getAccessToken
+      requestBody:
+        description: scope should be `scope-xpanse`, grant_type should be `client_credentials`
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                client_id:
+                  type: string
+                client_secret:
+                  type: string
+                scope:
+                  type: string
+                  example: scope-xpanse
+                grant_type:
+                  type: string
+                  example: client_credentials
+      responses:
+        "200":
+          description: |-
+            Response field `access_token` can be used as the Bearer token in future requests to other Xpanse endpoints.
+
+            Example: `Authorization: Bearer access_token`
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  token_type:
+                    type: string
+                  expires_in:
+                    type: integer
+                    example: 3599
+      security:
+        - ClientCredentials: []
+      servers:
+        - url: https://api.paloaltonetworks.com
   /api/v1/idToken/:
     get:
       tags:
-      - Tokens
-      summary: Get ID token
+        - Tokens
+      summary: Get ID token from refresh token (Deprecated)
       description: |-
         This route can be accessed with an Xpanse-provided refresh
         token to generate a valid JWT Token to be used with the other api
@@ -27,7 +77,7 @@ paths:
         Example: `Authorization: Bearer refreshtoken`
       operationId: getIdToken
       responses:
-        200:
+        "200":
           description: |-
             Response token can be used as JWT in future requests to other endpoints
 
@@ -40,56 +90,56 @@ paths:
                   token:
                     type: string
       security:
-      - Bearer: []
+        - RefreshToken-Deprecated: []
   /api/v3/annotations/tags:
     get:
       tags:
-      - Tags
+        - Tags
       summary: List all tags.
       description: List all tags.
       operationId: getTags
       parameters:
-      - name: limit
-        in: query
-        description: Maximum page size limit.
-        required: false
-        schema:
-          type: integer
-          format: int32
-          default: 100
-      - name: pageToken
-        in: query
-        description: Page token used for pagination.
-        required: false
-        schema:
-          type: string
-      - name: id
-        in: query
-        description: Comma-separated string; Returns any assets with a tagId in the
-          provided set.
-        required: false
-        schema:
-          uniqueItems: true
-          type: array
-          items:
+        - name: limit
+          in: query
+          description: Maximum page size limit.
+          required: false
+          schema:
+            type: integer
+            format: int32
+            default: 100
+        - name: pageToken
+          in: query
+          description: Page token used for pagination.
+          required: false
+          schema:
             type: string
-            format: uuid
-      - name: name
-        in: query
-        description: Comma-separated string; Returns any assets with a tagName in
-          the provided set.
-        required: false
-        schema:
-          uniqueItems: true
-          type: array
-          items:
-            type: string
-      - name: disabled
-        in: query
-        description: Boolean representing if the tag is currently disabled.
-        required: false
-        schema:
-          type: boolean
+        - name: id
+          in: query
+          description: Comma-separated string; Returns any assets with a tagId in the
+            provided set.
+          required: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              type: string
+              format: uuid
+        - name: name
+          in: query
+          description: Comma-separated string; Returns any assets with a tagName in
+            the provided set.
+          required: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              type: string
+        - name: disabled
+          in: query
+          description: Boolean representing if the tag is currently disabled.
+          required: false
+          schema:
+            type: boolean
       responses:
         200:
           description: OK
@@ -99,7 +149,7 @@ paths:
                 $ref: '#/components/schemas/PageTag'
     post:
       tags:
-      - Tags
+        - Tags
       summary: Create a tag.
       description: Create a new tag. Tag names must be less than 128 characters and
         descriptions must be less than 512 characters. Attempting to create a tag
@@ -129,18 +179,18 @@ paths:
   /api/v3/annotations/tags/{tagId}:
     get:
       tags:
-      - Tags
+        - Tags
       summary: Get one tag by id.
       description: Get one tag by id.
       operationId: getTagById
       parameters:
-      - name: tagId
-        in: path
-        description: Tag id.
-        required: true
-        schema:
-          type: string
-          format: uuid
+        - name: tagId
+          in: path
+          description: Tag id.
+          required: true
+          schema:
+            type: string
+            format: uuid
       responses:
         200:
           description: OK
@@ -150,19 +200,19 @@ paths:
                 $ref: '#/components/schemas/Tag'
     put:
       tags:
-      - Tags
+        - Tags
       summary: Update tag by id.
       description: Update a tag by id. You can only update description and disabled
         fields. All other fields will be ignored.
       operationId: updateTagById
       parameters:
-      - name: tagId
-        in: path
-        description: Tag id.
-        required: true
-        schema:
-          type: string
-          format: uuid
+        - name: tagId
+          in: path
+          description: Tag id.
+          required: true
+          schema:
+            type: string
+            format: uuid
       requestBody:
         content:
           application/json:
@@ -229,25 +279,36 @@ components:
         prev:
           type: string
   securitySchemes:
-    JWT:
-      type: apiKey
+    ClientCredentials:
+      type: oauth2
       description: |-
-        To access the API a valid JWT token must be included in every request
-        in the ''Authorization'' header. A valid JWT token is generated by the
-        API and returned via the `/api/v1/idToken/` route. The value for this header
-        should be `JWT <token>`, where the token is the base64-encoded JSON Web
-        Token.
+        For more information on how to retrieve client credentials, visit the Xpanse [TechDocs](https://docs.paloaltonetworks.com/cortex/cortex-xpanse/cortex-xpanse-user-guide/apis-and-integrations-main/expander-apis-and-integrations/expander-apis.html#expander-apis). This is the preferred method for retrieving a JWT for Xpanse APIs. There will be significant customer communications and a lengthy migration period before refresh token support is removed in favor of the client credentials flow.
 
-        Example: `Authorization: JWT <token>`
-      name: Authorization
-      in: header
-    Bearer:
+        Exchange a `client_id` and `client_secret` for an `access_token` (JWT) that can be passed to all Xpanse APIs. See [Get Access Token from Client Credentials](#operation/getAccessToken) for more info.
+      flows:
+        clientCredentials:
+          tokenUrl: /api/oauth2/RequestToken
+          scopes:
+            scope-xpanse: access Xpanse APIs
+    RefreshToken-Deprecated:
       type: apiKey
       description: |-
-        Provide a valid Xpanse-provided refresh token to access `/api/v1/idToken/`.
-        This route will generate a JWT token that can be used with the other api
-        endpoints.
+        Xpanse APIs continue to support this JWT retrieval method alongside the preferred client credentials flow. There will be significant customer communications and a lengthy migration period before refresh token support is removed in favor of the client credentials flow.
+
+        Provide a valid Xpanse-provided refresh token to access `/api/v1/idToken/`. This route will generate a JWT token that can be used with the other api endpoints.
 
         Example: `Authorization: Bearer <refreshToken>`
       name: Authorization
       in: header
+    Bearer:
+      type: http
+      description: |-
+        To access Xpanse APIs, a valid access token (JWT) must be included in every request
+        in the `Authorization` header, which is retrieved by going through the client credentials flow (preferred method of JWT retrieval).
+
+        The value for this header should be `Bearer <access_token>`, where the token is the base64-encoded JSON Web Token returned as the `access_token` field in the client credentials flow.
+      name: Authorization
+      in: header
+      scheme: bearer
+      bearerFormat: JWT
+
