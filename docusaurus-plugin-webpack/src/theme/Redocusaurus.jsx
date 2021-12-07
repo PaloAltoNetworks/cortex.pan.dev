@@ -153,7 +153,7 @@ function Redocusaurus(props) {
         specUrl={props.spec}
         options={{
           theme,
-          hideDownloadButton: true,
+          hideDownloadButton: false,
           nativeScrollbars: true,
           disableSearch: true,
           hideSchemaPattern: false,
