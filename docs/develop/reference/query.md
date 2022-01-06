@@ -56,9 +56,6 @@ Cancel a query job.
 - `requests.Response` - Requests [Response()](https://docs.python-requests.org/en/latest/api/#requests.Response) object.
   
 
-**Raises**:
-
-
 ### create\_query
 
 ```python
