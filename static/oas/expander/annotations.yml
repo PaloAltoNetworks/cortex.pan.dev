@@ -19,7 +19,8 @@ paths:
       tags:
         - Tokens
       summary: Get Access Token from Client Credentials
-      description: "This route can be accessed with a `client_id` and `client_secret`\
+      description: "<b> NOTE: </b>This endpoint uses the server `https://api.paloaltonetworks.com` instead of `https://expander.expanse.co`.\n\
+          \ This route can be accessed with a `client_id` and `client_secret`\
           \ to generate a valid `access_token` to be used with the other Xpanse api\
           \ endpoints. For more information on how to retrieve client credentials, visit\
           \ the Xpanse [TechDocs](https://docs.paloaltonetworks.com/cortex/cortex-xpanse/cortex-xpanse-user-guide/apis-and-integrations-main/expander-apis-and-integrations/expander-apis.html#expander-apis).\
