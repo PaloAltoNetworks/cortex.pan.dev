@@ -24,6 +24,11 @@
         "source": "/docs/learn/apiexplorer_authorization",
         "destination": "/docs/data_lake/learn/apiexplorer_authorization",
         "type": 301
+      },
+      {
+        "source": "/docs/learn/apiexplorer_intro",
+        "destination": "/docs/data_lake/learn/apiexplorer_intro",
+        "type": 301
       }
     ],
     "trailingSlash": false
