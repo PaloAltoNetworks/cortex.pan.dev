@@ -25,6 +25,7 @@
         "destination": "/docs/data_lake/learn/apiexplorer_authorization",
         "type": 301
       }
-    ]
+    ],
+    "trailingSlash": false
   }
 }
