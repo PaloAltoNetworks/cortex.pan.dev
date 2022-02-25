@@ -13,6 +13,19 @@
     ],
     "target": "cortex.pan.dev",
     "public": "build",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/docs/learn/developer_tokens",
+        "destination": "/docs/data_lake/learn/developer_tokens",
+        "type": 301
+      },
+      {
+        "source": "/docs/learn/apiexplorer_authorization",
+        "destination": "/docs/data_lake/learn/apiexplorer_authorization",
+        "type": 301
+      }
+    ],
+    "trailingSlash": false
   }
 }
