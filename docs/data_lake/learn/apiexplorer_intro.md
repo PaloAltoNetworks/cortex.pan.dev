@@ -10,6 +10,10 @@ keywords:
   - explorer
 ---
 
+:::note
+API Explorer is currently only available to select partners and customers and will not appear under the Cortex hub unless explicit access is granted.
+:::
+
 :::info
 API Explorer is a simple, yet powerful, Cortex Data Lake application created to empower developers at any stage of their journey.
 
