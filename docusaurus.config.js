@@ -20,7 +20,7 @@ module.exports = {
   themeConfig: {
     prism: {
       theme: require("prism-react-renderer/themes/github"),
-      darkTheme: require("prism-react-renderer/themes/oceanicNext"),
+      darkTheme: require("prism-react-renderer/themes/dracula")
     },
     algolia: {
       apiKey: "6869800b232f5f8362e83901d79110ee",
@@ -28,31 +28,31 @@ module.exports = {
       indexName: "pan",
       searchParameters: {
         typoTolerance: false,
-        facetFilters: ["tags:cortex"],
-      }, // Optional, if provided by Algolia
+        facetFilters: ["tags:cortex"]
+      } // Optional, if provided by Algolia
     },
     navbar: {
       title: "",
       logo: {
         alt: "Cortex for Developers",
         src: "img/PAN_Cortex_Light.svg",
-        srcDark: "img/PAN_Cortex_Dark.svg",
+        srcDark: "img/PAN_Cortex_Dark.svg"
       },
       items: [
         {
           to: "/docs",
           label: "Docs",
-          position: "left",
+          position: "left"
         },
         {
           label: "API Reference",
           items: [
             {
-              to: "/api/expander/annotations-api",
-              label: "Expander API",
-            },
+              to: "/api/category/expander-api",
+              label: "Expander API"
+            }
           ],
-          position: "left",
+          position: "left"
         },
         {
           label: "Products",
@@ -61,36 +61,36 @@ module.exports = {
               href: "https://xsoar.pan.dev",
               label: "Cortex XSOAR",
               className: "xsoarItem",
-              target: "_self",
+              target: "_self"
             },
             {
               href: "https://prisma.pan.dev",
               label: "Prisma",
               className: "prismaItem",
-              target: "_self",
+              target: "_self"
             },
             {
               href: "https://strata.pan.dev",
               label: "Strata",
               className: "panosItem",
-              target: "_self",
-            },
+              target: "_self"
+            }
           ],
-          position: "right",
+          position: "right"
         },
         {
           href: "https://medium.com/palo-alto-networks-developer-blog",
           position: "right",
           className: "header-medium-link",
-          "aria-label": "Palo Alto Networks Developer Blog",
+          "aria-label": "Palo Alto Networks Developer Blog"
         },
         {
           href: "https://github.com/PaloAltoNetworks",
           position: "right",
           className: "header-github-link",
-          "aria-label": "Palo Alto Networks Github Org",
-        },
-      ],
+          "aria-label": "Palo Alto Networks Github Org"
+        }
+      ]
     },
     footer: {
       style: "dark",
@@ -100,27 +100,27 @@ module.exports = {
           items: [
             {
               label: "Cortex for Developers",
-              to: "docs",
-            },
-          ],
+              to: "docs"
+            }
+          ]
         },
         {
           title: "Social",
           items: [
             {
               label: "Blog",
-              href: "https://medium.com/palo-alto-networks-developer-blog",
-            },
-          ],
-        },
+              href: "https://medium.com/palo-alto-networks-developer-blog"
+            }
+          ]
+        }
       ],
       logo: {
         alt: "Palo Alto Networks for Developers",
         src: "img/pandev.png",
-        href: "https://pan.dev",
+        href: "https://pan.dev"
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Palo Alto Networks, Inc.`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} Palo Alto Networks, Inc.`
+    }
   },
   themes: ["@docusaurus/theme-live-codeblock"],
   presets: [
@@ -139,13 +139,13 @@ module.exports = {
           rehypePlugins: [],
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          sidebarCollapsible: true,
+          sidebarCollapsible: true
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-      },
-    ],
+          customCss: require.resolve("./src/css/custom.css")
+        }
+      }
+    ]
   ],
   plugins: [
     [
@@ -153,14 +153,14 @@ module.exports = {
       {
         id: "cortex-sitemap",
         changefreq: "weekly",
-        priority: 0.5,
-      },
+        priority: 0.5
+      }
     ],
     [
       require.resolve("./docusaurus-plugin-gtm/index.js"),
       {
-        gtm: "GTM-WF39F3P", //GTM-XXXXXX
-      },
+        gtm: "GTM-WF39F3P" //GTM-XXXXXX
+      }
     ],
     [
       "@docusaurus/plugin-content-docs",
@@ -172,14 +172,46 @@ module.exports = {
         routeBasePath: "api",
         include: ["**/*.md", "**/*.mdx"], // Extensions to include.
         docLayoutComponent: "@theme/DocPage",
-        docItemComponent: "@theme/APIDocItem",
+        docItemComponent: "@theme/ApiItem",
         remarkPlugins: [],
         rehypePlugins: [],
         path: "api",
         showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
+        showLastUpdateTime: true
+      }
     ],
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "apiDocs",
+        config: {
+          annotations: {
+            specPath: "static/oas/expander/annotations.yml",
+            outputDir: "api/expander/annotations"
+          },
+          assets: {
+            specPath: "static/oas/expander/assets.yml",
+            outputDir: "api/expander/assets"
+          },
+          connectors: {
+            specPath: "static/oas/expander/connectors.yml",
+            outputDir: "api/expander/connectors"
+          },
+          entities: {
+            specPath: "static/oas/expander/entities.yml",
+            outputDir: "api/expander/entities"
+          },
+          issues: {
+            specPath: "static/oas/expander/issues.yml",
+            outputDir: "api/expander/issues"
+          },
+          services: {
+            specPath: "static/oas/expander/services.yml",
+            outputDir: "api/expander/services"
+          }
+        }
+      }
+    ]
   ],
   onBrokenLinks: "warn",
   onDuplicateRoutes: "warn",
@@ -187,8 +219,8 @@ module.exports = {
     {
       href: "https://use.fontawesome.com/releases/v5.15.0/css/all.css",
       type: "text/css",
-      rel: "stylesheet",
-    },
+      rel: "stylesheet"
+    }
   ],
-  themes: [require.resolve("./docusaurus-plugin-webpack/src/index.cjs")],
+  themes: ["docusaurus-theme-openapi-docs"]
 };
