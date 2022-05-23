@@ -4230,10 +4230,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-openapi-docs@0.0.0-350:
-  version "0.0.0-350"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-openapi-docs/-/docusaurus-plugin-openapi-docs-0.0.0-350.tgz#e376d11399839cacc041cbccc052e9c30187b706"
-  integrity sha512-A0iaRSABn2ZhgassfnTdTbLFUlRx2keGynoy2Ct7gIOanGqJO18TzXQXLVRQkNDAB0GBZMwF30LTP191BwNjuw==
+docusaurus-plugin-openapi-docs@0.0.0-355:
+  version "0.0.0-355"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-openapi-docs/-/docusaurus-plugin-openapi-docs-0.0.0-355.tgz#5d4867f6c9e34e310b4192a453accbd03d97149f"
+  integrity sha512-PUmtKD3XfxGLhga/alHEvBW23moigF0WMIMpcZKFXJVq8CfQyedbsKfjslvf7Y9en5SX4MvykjKVrfnEyzZi3A==
   dependencies:
     "@docusaurus/mdx-loader" "2.0.0-beta.18"
     "@docusaurus/plugin-content-docs" "2.0.0-beta.18"
@@ -4253,10 +4253,10 @@ docusaurus-plugin-openapi-docs@0.0.0-350:
     mustache "^4.2.0"
     webpack "^5.61.0"
 
-docusaurus-theme-openapi-docs@0.0.0-350:
-  version "0.0.0-350"
-  resolved "https://registry.yarnpkg.com/docusaurus-theme-openapi-docs/-/docusaurus-theme-openapi-docs-0.0.0-350.tgz#f9ec2c25f0a1de9ca3a1395e1e5beb26f8d33f5c"
-  integrity sha512-A0+IsioIsxp19AWkqTEJPB+HCBMol3/b0SC1wLtD6ORuIVgAMSFc5LZG7fnuHad8WKqUFnvpLxLBn6BbmJX/KQ==
+docusaurus-theme-openapi-docs@0.0.0-355:
+  version "0.0.0-355"
+  resolved "https://registry.yarnpkg.com/docusaurus-theme-openapi-docs/-/docusaurus-theme-openapi-docs-0.0.0-355.tgz#cfb809ba360cbb292796c83e0402171e4877ac93"
+  integrity sha512-jtUD7MiDg2UjerKa+qALdv8mNFzkAPZk4qxEnuH0YG5dv/KqTbIipQ0NdDDcoMtkli0OlMW+b6yW5XIWS90niA==
   dependencies:
     "@docusaurus/theme-common" "2.0.0-beta.18"
     "@mdx-js/react" "^1.6.21"
@@ -4267,7 +4267,7 @@ docusaurus-theme-openapi-docs@0.0.0-350:
     buffer "^6.0.3"
     clsx "^1.1.1"
     crypto-js "^4.1.1"
-    docusaurus-plugin-openapi-docs "0.0.0-350"
+    docusaurus-plugin-openapi-docs "0.0.0-355"
     immer "^9.0.7"
     lodash "^4.17.20"
     monaco-editor "^0.31.1"
