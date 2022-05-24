@@ -4230,10 +4230,10 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-docusaurus-plugin-openapi-docs@0.0.0-355:
-  version "0.0.0-355"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-openapi-docs/-/docusaurus-plugin-openapi-docs-0.0.0-355.tgz#5d4867f6c9e34e310b4192a453accbd03d97149f"
-  integrity sha512-PUmtKD3XfxGLhga/alHEvBW23moigF0WMIMpcZKFXJVq8CfQyedbsKfjslvf7Y9en5SX4MvykjKVrfnEyzZi3A==
+docusaurus-plugin-openapi-docs@1.0.2, docusaurus-plugin-openapi-docs@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-openapi-docs/-/docusaurus-plugin-openapi-docs-1.0.2.tgz#bd97eee358b62913b8ac139fed18993cec2cbb80"
+  integrity sha512-KzPo32ecIbZCPIp86Hgqrk6A0Jj2Jr5FRBXuTqwIeJuNhkmLSuq/ud5piRkp+Y5rrOwOx0x5hZ4Hysi8bYKRsA==
   dependencies:
     "@docusaurus/mdx-loader" "2.0.0-beta.18"
     "@docusaurus/plugin-content-docs" "2.0.0-beta.18"
@@ -4253,10 +4253,10 @@ docusaurus-plugin-openapi-docs@0.0.0-355:
     mustache "^4.2.0"
     webpack "^5.61.0"
 
-docusaurus-theme-openapi-docs@0.0.0-355:
-  version "0.0.0-355"
-  resolved "https://registry.yarnpkg.com/docusaurus-theme-openapi-docs/-/docusaurus-theme-openapi-docs-0.0.0-355.tgz#cfb809ba360cbb292796c83e0402171e4877ac93"
-  integrity sha512-jtUD7MiDg2UjerKa+qALdv8mNFzkAPZk4qxEnuH0YG5dv/KqTbIipQ0NdDDcoMtkli0OlMW+b6yW5XIWS90niA==
+docusaurus-theme-openapi-docs@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/docusaurus-theme-openapi-docs/-/docusaurus-theme-openapi-docs-1.0.2.tgz#6bf83081c494f6d620758bb1c561c07f22e4cfb7"
+  integrity sha512-ad/VE2+cwR6IDzjf635jFgASfZDZEqeZhwPXWu5FtaEBtYp1mArTrgqoVuenJAGM7BRdlu39DbwrGRh9NkezSA==
   dependencies:
     "@docusaurus/theme-common" "2.0.0-beta.18"
     "@mdx-js/react" "^1.6.21"
@@ -4267,7 +4267,7 @@ docusaurus-theme-openapi-docs@0.0.0-355:
     buffer "^6.0.3"
     clsx "^1.1.1"
     crypto-js "^4.1.1"
-    docusaurus-plugin-openapi-docs "0.0.0-355"
+    docusaurus-plugin-openapi-docs "^1.0.2"
     immer "^9.0.7"
     lodash "^4.17.20"
     monaco-editor "^0.31.1"
