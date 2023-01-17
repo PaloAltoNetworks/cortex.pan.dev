@@ -9,33 +9,6 @@ import { useMediaQuery } from "react-responsive";
 
 const features = [
   {
-    title: <>Cortex Data Lake</>,
-    imageUrl: "img/Cortex-Data-Lake-green.svg",
-    description: (
-      <>
-        Get started developing with Cortex Data Lake.
-        <br />
-        <a
-          target="_self"
-          href="/docs/data_lake/develop/quickstart"
-          rel="noopener noreferrer"
-          className={styles.toLink}
-        >
-          Quickstart
-        </a>
-        <br />
-        <a
-          target="_self"
-          href="/docs/data_lake/learn"
-          rel="noopener noreferrer"
-          className={styles.toLink}
-        >
-          CDL API Overview
-        </a>
-      </>
-    ),
-  },
-  {
     title: <>Cortex Xpanse</>,
     imageUrl: "/img/Cortex-Xpanse-green.svg",
     toPage: "/api/expander/annotations-api",
