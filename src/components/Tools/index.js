@@ -9,34 +9,10 @@ import { useMediaQuery } from "react-responsive";
 
 const toolList = [
   {
-    title: <>CDL Python SDK</>,
-    imageUrl: "img/python.png",
-    toPage: "/docs/data_lake/develop/cdl_python_installation",
-    description: <>Python idiomatic SDK for the Cortex Data Lake</>,
-  },
-  {
-    title: <>CDL NodeJS Library</>,
-    imageUrl: "/img/nodejs.png",
-    description: <>NodeJS idiomatic SDK for Cortex®</>,
-    toPage: "/docs/data_lake/develop/pan_cortex_data_lake_nodejs_qs",
-  },
-  {
-    title: <>CDL Java Library</>,
-    imageUrl: "/img/java.png",
-    toPage: "/docs/data_lake/develop/pan_cortex_data_lake_java_qs",
-    description: <>JAVA idiomatic SDK for Cortex®</>,
-  },
-  {
     title: <>Expander SDK</>,
     imageUrl: "img/xpanse_logo.png",
     toSite: "https://cortex-xpanse-python-sdk.readthedocs.io/en/latest/",
     description: <>Interface to the Xpanse Expander API.</>,
-  },
-  {
-    title: <>CDL API Explorer</>,
-    imageUrl: "/img/apiex.png",
-    toPage: "/docs/data_lake/learn/apiexplorer_intro",
-    description: <>Jumpstart your next CDL app or integration!</>,
   },
 ];
 
