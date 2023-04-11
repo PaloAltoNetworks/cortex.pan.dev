@@ -18,6 +18,11 @@ module.exports = {
   organizationName: "PaloAltoNetworks", // Usually your GitHub org/user name.
   projectName: "cortex.pan.dev", // Usually your repo name.
   themeConfig: {
+    announcementBar: {
+      id: "expanderV2",
+      content:
+      `These are API docs for Cortex Xpanse Expander v1, API Reference docs for Expander v2 can be found <a rel="noopener noreferrer" href="https://docs-cortex.paloaltonetworks.com/r/Cortex-XPANSE/Cortex-Xpanse-API-Reference/APIs-Overview">here</a>.`,
+    },
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/oceanicNext"),
