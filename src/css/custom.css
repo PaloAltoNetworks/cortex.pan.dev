@@ -21,6 +21,10 @@
   --ifm-color-primary-light: #00e070;
   --ifm-color-primary-lighter: #00eb75;
   --ifm-color-primary-lightest: #0aff85;
+  --openapi-code-green: var(--ifm-color-success) !important;
+  --openapi-code-blue: var(--ifm-color-primary) !important;
+  --openapi-code-red: var(--ifm-color-danger) !important;
+  --openapi-code-orange: var(--ifm-color-warning) !important;
   --ifm-hero-background-color: #f9f9f9 !important;
   --ifm-link-color: #00cc66;
   --ifm-background-color: #fff;
@@ -45,40 +49,15 @@
   --ifm-font-family-base: "Montserrat", sans-serif, "Font Awesome 5 Free";
   --ifm-font-family-monospace: "Roboto Mono", monospace;
   /* Links */
-  --ifm-link-color: var(--ifm-color-primary-dark);
+  /* --ifm-link-color: var(--ifm-color-primary-dark);
   --ifm-link-hover-color: var(--ifm-color-primary-darker);
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary-dark);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary-dark); */
 }
 
 /* Dark mode overrides */
 html[data-theme="dark"] {
-  --ifm-color-emphasis-100: var(--ifm-color-gray-900);
-  --ifm-color-emphasis-200: var(--ifm-color-gray-800);
-  --ifm-color-emphasis-300: var(--ifm-color-gray-700);
-  --ifm-color-emphasis-400: var(--ifm-color-gray-600);
-  --ifm-color-emphasis-500: var(--ifm-color-gray-500);
-  --ifm-color-emphasis-600: var(--ifm-color-gray-400);
-  --ifm-color-emphasis-700: var(--ifm-color-gray-300);
-  --ifm-color-emphasis-800: var(--ifm-color-gray-200);
-  --ifm-color-emphasis-900: var(--ifm-color-gray-100);
-
   --ifm-background-color: #121212;
   --ifm-background-surface-color: #1e2125;
-
-  --ifm-hover-overlay: rgba(255, 255, 255, 0.05);
-
-  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(255,255,255,0.6)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
-
-  --ifm-color-content-secondary: rgba(255, 255, 255, 1);
-
-  /* Mardown color in dark mode */
-  --ifm-color-gray-800: var(--ifm-color-gray-300);
-
-  /* Code background and color */
-  /* --ifm-code-background: #282d33; */
-  --ifm-code-color: #000;
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary-dark) !important;
-  --ifm-menu-link-sublist-icon-filter: none !important;
 }
 
 /* Center all columns in main wrapper */
@@ -114,7 +93,7 @@ html[data-theme="dark"] {
 }
 
 .blur {
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   height: 100vh;
 	width: 50%;
@@ -132,28 +111,9 @@ html[data-theme="dark"] {
   max-width: 100%;
 }
 
-/* Docs overrides */
-.markdown p {
-  color: var(--ifm-color-gray-800) !important;
-}
-
-/* Docs overrides */
-.markdown p {
-  color: var(--ifm-color-gray-800) !important;
-}
-
 blockquote {
   border-left: 10px solid var(--ifm-color-primary) !important;
   border-top: 1px solid var(--ifm-color-primary) !important;
-}
-
-.button {
-  z-index: 1;
-}
-
-/* Dropdown menu overrides */
-.dropdown .dropdown__menu {
-  min-width: 14rem !important;
 }
 
 /* Highlight code lines */
@@ -534,91 +494,6 @@ html[data-theme="dark"] .featuredContainer {
   bottom: 0 !important;
 }
 
-.menu__link.get:after {
-  content: "get";
-  display: inline-block;
-  position: relative;
-  top: 1px;
-  margin-right: -6px;
-  padding: 3px 6px;
-  border: 1px solid var(--ifm-color-primary);
-  border-radius: 3px;
-  color: var(--ifm-color-primary);
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 10px;
-  height: 10px;
-  font-weight: 600;
-}
-
-.menu__link.post:after {
-  content: "post";
-  display: inline-block;
-  position: relative;
-  top: 1px;
-  margin-right: -6px;
-  padding: 3px 6px;
-  border: 1px solid var(--ifm-color-warning);
-  border-radius: 3px;
-  color: var(--ifm-color-warning);
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 10px;
-  height: 10px;
-  font-weight: 600;
-}
-
-.menu__link.delete:after {
-  content: "delete";
-  display: inline-block;
-  position: relative;
-  top: 1px;
-  margin-right: -6px;
-  padding: 3px 6px;
-  border: 1px solid var(--ifm-color-danger);
-  border-radius: 3px;
-  color: var(--ifm-color-danger);
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 10px;
-  height: 10px;
-  font-weight: 600;
-}
-
-.menu__link.patch:after {
-  content: "patch";
-  display: inline-block;
-  position: relative;
-  top: 1px;
-  margin-right: -6px;
-  padding: 3px 6px;
-  border: 1px solid var(--ifm-color-warning);
-  border-radius: 3px;
-  color: var(--ifm-color-warning);
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 10px;
-  height: 10px;
-  font-weight: 600;
-}
-
-.menu__link.put:after {
-  content: "put";
-  display: inline-block;
-  position: relative;
-  top: 1px;
-  margin-right: -6px;
-  padding: 3px 6px;
-  border: 1px solid var(--ifm-color-warning);
-  border-radius: 3px;
-  color: var(--ifm-color-warning);
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 10px;
-  height: 10px;
-  font-weight: 600;
-}
-
 /* Add logos to the products menus */
 /* Site dropdown menu */
 .panosItem {
@@ -691,4 +566,54 @@ html[data-theme="dark"] .featuredContainer {
   width: 30px;
   position: relative;
   margin-right: 10px;
+}
+
+/* Sidebar Method labels */
+.api-method>.menu__link {
+  align-items: center;
+  justify-content: start;
+}
+
+.api-method>.menu__link::before {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  margin-right: var(--ifm-spacing-horizontal);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.get>.menu__link::before {
+  content: "get";
+  border-color: var(--openapi-code-blue);
+  color: var(--openapi-code-blue);
+}
+
+.put>.menu__link::before {
+  content: "put";
+  border-color: var(--openapi-code-orange);
+  color: var(--openapi-code-orange);
+}
+
+.post>.menu__link::before {
+  content: "post";
+  border-color: var(--openapi-code-orange);
+  color: var(--openapi-code-orange);
+}
+
+.delete>.menu__link::before {
+  content: "del";
+  border-color: var(--openapi-code-red);
+  color: var(--openapi-code-red);
+}
+
+.patch>.menu__link::before {
+  content: "patch";
+  border-color: var(--openapi-code-orange);
+  color: var(--openapi-code-orange);
 }
