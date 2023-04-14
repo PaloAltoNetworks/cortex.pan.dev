@@ -1,5 +1,5 @@
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
-import merge from "lodash.merge";
+import { merge } from "lodash";
 import useThemeContext from "@theme/hooks/useThemeContext";
 import React from "react";
 
